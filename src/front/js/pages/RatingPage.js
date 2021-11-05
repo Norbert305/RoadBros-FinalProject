@@ -11,7 +11,7 @@ export const RatingPage = () => {
 	return (
 		<div className="container mt-5 text-center">
 			<h1 className="mb-4">Thank You!</h1>
-			<p className="m-5">How would you rate your experience with ___________ ?</p>
+			<h5 className="m-5">How would you rate your experience with ___________ ?</h5>
 
 			<div className="row justify-content-center m-3">
 				<div className="col-2">
@@ -24,7 +24,7 @@ export const RatingPage = () => {
 
 			<div className="mt-5">
 				<label htmlFor="exampleFormControlTextarea1" className="form-label">
-					Use the field below to write additonal comments:
+					<h5>Use the field below to write additonal comments:</h5>
 				</label>
 				<textarea className="form-control" id="exampleFormControlTextarea1" rows="3" />
 			</div>

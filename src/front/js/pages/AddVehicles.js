@@ -7,10 +7,10 @@ export const AddVehicles = () => {
 	const { actions } = useContext(Context);
 
 	const [newVehicle, setnewVehicle] = useState({
-		vehicle_model: null,
-		vehicle_make: null,
-		vehicle_year: null,
-		vehicle_type: null
+		vehicleModel: null,
+		vehicleMake: null,
+		vehicleYear: null,
+		vehicleType: null
 	});
 
 	const handleChange = e => setnewVehicle({ ...newVehicle, [e.target.name]: e.target.value });

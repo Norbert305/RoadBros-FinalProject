@@ -14,7 +14,7 @@ export const ServiceMenu = () => {
 			<div className="list-group text-start">
 				<label className="list-group-item d-flex align-items-center m-0">
 					<select id="inputState" className="form-select my-1">
-						<option selected>Choose Vehicle</option>
+						<option selected>Choose Your Vehicle</option>
 						<option>Car</option>
 						<option>Motorcycle</option>
 						<option>Truck</option>
@@ -22,7 +22,7 @@ export const ServiceMenu = () => {
 				</label>
 				<label className="list-group-item d-flex align-items-center m-0">
 					<input className="form-check-input m-2" type="checkbox" value="" />
-					<h6 className="me-2 m-0 d-flex align-items-center">Flat Tire Change: $40</h6>
+					<h6 className="me-2 m-0 d-flex align-items-center">Flat Tire: $40</h6>
 				</label>
 				<label className="list-group-item d-flex align-items-center m-0">
 					<input className="form-check-input m-2" type="checkbox" value="" />
@@ -30,11 +30,11 @@ export const ServiceMenu = () => {
 				</label>
 				<label className="list-group-item d-flex align-items-center m-0">
 					<input className="form-check-input m-2" type="checkbox" value="" />
-					<h6 className="me-2 m-0 d-flex align-items-center">Empty Gas Tank: $30</h6>
+					<h6 className="me-2 m-0 d-flex align-items-center">Empty Gas: $30</h6>
 				</label>
 				<label className="list-group-item d-flex align-items-center m-0">
 					<input className="form-check-input m-2" type="checkbox" value="" />
-					<h6 className="me-2 m-0 d-flex align-items-center">Jump Start Car: $50</h6>
+					<h6 className="me-2 m-0 d-flex align-items-center">Jump Start: $50</h6>
 				</label>
 				<label className="list-group-item d-flex align-items-center m-0">
 					<input className="form-check-input m-2" type="checkbox" value="" />

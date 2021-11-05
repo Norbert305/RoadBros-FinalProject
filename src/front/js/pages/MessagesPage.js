@@ -36,11 +36,23 @@ export const MessagesPage = () => {
 					</div>
 				</div>
 			</div>
+			{store.user.type == "client" ? (
+				<Link to="/ServiceCompleted">
+					<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
+						Next
+					</button>
+				</Link>
+			) : (
+				<Link to="/ManagingService">
+					<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
+						Next
+					</button>
+				</Link>
+			)}
 			<Link to="/ServiceCompleted">
-				<button className="btn btn-primary m-3 mb-5">Service Completed (Client)</button>
-			</Link>
-			<Link to="/ManagingService">
-				<button className="btn btn-primary m-3 mb-5">Manage Service (Trucker)</button>
+				<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
+					For Customers
+				</button>
 			</Link>
 		</div>
 	);

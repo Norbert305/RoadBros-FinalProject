@@ -6,7 +6,7 @@ import { Context } from "../store/appContext";
 import "../../styles/demo.scss";
 
 export const PaymentPage = () => {
-	const { actions } = useContext(Context);
+	const { actions, store } = useContext(Context);
 
 	return (
 		<div className="container mt-5 text-center">
@@ -24,7 +24,7 @@ export const PaymentPage = () => {
 					</div>
 					<div className="form-group my-1">
 						<label>Name on Card</label>
-						<input type="text" className="form-control" placeholder="Name on Card" name="card_name" />
+						<input type="text" className="form-control" placeholder="Enter Name" name="card_name" />
 					</div>
 					<div className="form-group my-1">
 						<label>Country or Region</label>
@@ -41,11 +41,24 @@ export const PaymentPage = () => {
 						<input type="text" className="form-control" placeholder="Enter city" name="city" />
 					</div>
 				</form>
+				{store.user.type == "client" ? (
+					<Link to="/AddVehicles">
+						<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
+							Next
+						</button>
+					</Link>
+				) : (
+					<Link to="/TruckerHomePage">
+						<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
+							Next
+						</button>
+					</Link>
+				)}
+
 				<Link to="/AddVehicles">
-					<button className="btn btn-primary m-3">Next (Client)</button>
-				</Link>
-				<Link to="/TruckerHomePage">
-					<button className="btn btn-primary m-3">Next (Trucker)</button>
+					<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
+						For Customers
+					</button>
 				</Link>
 			</div>
 		</div>

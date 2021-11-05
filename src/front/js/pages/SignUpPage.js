@@ -7,7 +7,8 @@ export const SignUpPage = () => {
 	const { actions } = useContext(Context);
 
 	const [newContact, setnewContact] = useState({
-		full_name: null,
+		type: null,
+		fullName: null,
 		email: null,
 		phone: null,
 		city: null
@@ -20,6 +21,14 @@ export const SignUpPage = () => {
 			<div>
 				<h1>Sign Up Page</h1>
 				<form className="text-start">
+					<div className="form-group my-1">
+						<label>Client or Trucker</label>
+						<select id="inputState" className="form-select my-1" name="type" onChange={handleChange}>
+							<option selected>Select One</option>
+							<option>Client</option>
+							<option>Trucker</option>
+						</select>
+					</div>
 					<div className="form-group my-1">
 						<label>Full Name</label>
 						<input
