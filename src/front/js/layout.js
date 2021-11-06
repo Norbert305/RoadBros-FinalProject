@@ -12,6 +12,8 @@ import { SignUpPage } from "./pages/SignUpPage";
 
 import { ServiceMenu } from "./pages/ServiceMenu";
 import { AddVehicles } from "./pages/AddVehicles";
+import { VehiclesList } from "./pages/VehiclesList";
+import { ServiceHistory } from "./pages/ServiceHistory";
 import { PaymentPage } from "./pages/PaymentPage";
 
 import { AwaitingResponse } from "./pages/AwaitingResponse";
@@ -80,6 +82,12 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/AddVehicles">
 							<AddVehicles />
+						</Route>
+						<Route exact path="/ServiceHistory">
+							<ServiceHistory />
+						</Route>
+						<Route exact path="/VehiclesList">
+							<VehiclesList />
 						</Route>
 						<Route>
 							<h1>Not found!</h1>

@@ -11,7 +11,8 @@ export const SignUpPage = () => {
 		fullName: null,
 		email: null,
 		phone: null,
-		city: null
+		city: null,
+		picture: null
 	});
 
 	const handleChange = e => setnewContact({ ...newContact, [e.target.name]: e.target.value });
@@ -68,6 +69,20 @@ export const SignUpPage = () => {
 							name="city"
 							onChange={handleChange}
 						/>
+					</div>
+					<div className="form-group my-1">
+						<label>Profile Picture</label>
+						<div className="input-group">
+							<input
+								type="file"
+								className="form-control"
+								id="inputGroupFile04"
+								aria-describedby="inputGroupFileAddon04"
+								aria-label="Upload"
+								name="picture"
+								onChange={handleChange}
+							/>
+						</div>
 					</div>
 				</form>
 				<Link to="/PaymentPage">

@@ -21,7 +21,13 @@ export const ClientHomePage = () => {
 			<h2 className="text-center">Hi Welcome back _____!</h2>
 
 			<Link to="/ServiceMenu">
-				<button className="btn btn-primary m-3">Request help from a Trucker</button>
+				<button className="btn btn-primary m-3">Request Help</button>
+			</Link>
+			<Link to="/ServiceHistory">
+				<button className="btn btn-primary m-3">Service History</button>
+			</Link>
+			<Link to="/VehiclesList">
+				<button className="btn btn-primary m-3">Vehicles List</button>
 			</Link>
 		</div>
 	);
