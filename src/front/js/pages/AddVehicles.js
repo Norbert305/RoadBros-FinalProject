@@ -26,7 +26,7 @@ export const AddVehicles = () => {
 							type="text"
 							className="form-control"
 							placeholder="Type"
-							name="vehicle_type"
+							name="vehicleType"
 							onChange={handleChange}
 						/>
 					</div>
@@ -36,7 +36,7 @@ export const AddVehicles = () => {
 							type="text"
 							className="form-control"
 							placeholder="Make"
-							name="vehicle_make"
+							name="vehicleMake"
 							onChange={handleChange}
 						/>
 					</div>
@@ -46,7 +46,7 @@ export const AddVehicles = () => {
 							type="text"
 							className="form-control"
 							placeholder="Model"
-							name="vehicle_model"
+							name="vehicleModel"
 							onChange={handleChange}
 						/>
 					</div>
@@ -57,7 +57,7 @@ export const AddVehicles = () => {
 							type="text"
 							className="form-control"
 							placeholder="Year"
-							name="vehicle_year"
+							name="vehicleYear"
 							onChange={handleChange}
 						/>
 					</div>
@@ -65,7 +65,7 @@ export const AddVehicles = () => {
 				<Link to="/AddVehicles">
 					<button className="btn btn-primary p-2 mt-3 me-3">Add More Vehicles</button>
 				</Link>
-				<Link to="/ServiceMenu">
+				<Link to="/ClientHomePage">
 					<button className="btn btn-primary p-2 mt-3">Next</button>
 				</Link>
 			</div>

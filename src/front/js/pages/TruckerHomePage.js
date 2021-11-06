@@ -21,7 +21,7 @@ export const TruckerHomePage = () => {
 			<h2 className="text-center">Hi Welcome back _____!</h2>
 
 			<Link to="/ClientRequests">
-				<button className="btn btn-primary m-3">I am Available</button>
+				<button className="btn btn-primary m-3">Available Requests List</button>
 			</Link>
 		</div>
 	);
