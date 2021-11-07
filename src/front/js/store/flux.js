@@ -17,6 +17,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 				vehicleYear: "",
 				rating: ""
 			},
+			activeRequest: {
+				picture:
+					"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mycolombianwife.com%2Fwp-content%2Fuploads%2F2017%2F07%2Fhispanic-woman.png&f=1&nofb=1",
+				fullName: "Mariangel Estrada",
+				city: "Hialeah",
+				service: "Towing Car",
+				vehicleModel: "RAV4",
+				vehicleMake: "Toyota",
+				vehicleYear: "2015",
+				vehicleType: "SUV"
+			},
 			listOfRequests: [
 				{
 					picture:
@@ -53,7 +64,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			]
 		},
-		actions: {}
+		actions: {
+			captureUserInfo: (type, fullName, email, phone, city) => {
+				let user = getStore().user;
+				user.type = type;
+				user.fullName = fullName;
+				user.email = email;
+				user.phone = phone;
+				user.city = city;
+			}
+		}
 	};
 };
 

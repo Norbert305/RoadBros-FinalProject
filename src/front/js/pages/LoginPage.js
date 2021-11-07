@@ -38,7 +38,7 @@ export const LoginPage = () => {
 					/>
 				</div>
 			</form>
-			{store.user.type == "client" ? (
+			{store.user.type == "Client" ? (
 				<Link to="/ClientHomePage">
 					<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
 						Next

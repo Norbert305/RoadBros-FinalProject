@@ -1,68 +1,68 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "../store/appContext";
+import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export const MyNavbar = () => {
-	return (
-		<nav className="navbar navbar-expand-lg navbar-light bg-light">
-			<div className="container-fluid">
-				<Link to="/" className="navbar-brand">
-					RoadBros
-				</Link>
-				<button
-					className="navbar-toggler"
-					type="button"
-					data-bs-toggle="collapse"
-					data-bs-target="#navbarNavAltMarkup"
-					aria-controls="navbarNavAltMarkup"
-					aria-expanded="false"
-					aria-label="Toggle navigation">
-					<span className="navbar-toggler-icon" />
-				</button>
-				<div className="collapse navbar-collapse" id="navbarNavAltMarkup">
-					<div className="navbar-nav">
-						<a className="nav-link active" aria-current="page" href="#">
-							Home
-						</a>
-						<a className="nav-link" href="#">
-							Add Cars
-						</a>
-						<a className="nav-link" href="#">
-							History
-						</a>
-						<a className="nav-link" href="#">
-							Help
-						</a>
-					</div>
-				</div>
-			</div>
-		</nav>
-	);
+	const { store, actions } = useContext(Context);
+
+	if (store.user.type == "Client") {
+		return (
+			<Navbar bg="light" expand="lg">
+				<Container>
+					<Link to="/" style={{ textDecoration: "none" }}>
+						<Navbar.Brand className="fw-bold">RoadBros</Navbar.Brand>
+					</Link>
+					<Navbar.Toggle aria-controls="basic-navbar-nav" />
+					<Navbar.Collapse id="basic-navbar-nav" className="d-flex justify-content-end text-end">
+						<Nav>
+							<NavDropdown title="Menu" id="basic-nav-dropdown" className="text-dark fw-bold">
+								<Link to="/ClientHomePage" style={{ textDecoration: "none" }}>
+									<NavDropdown.Item href="#action/3.1">Client Home Page</NavDropdown.Item>
+								</Link>
+								<Link to="/ServiceMenu" style={{ textDecoration: "none" }}>
+									<NavDropdown.Item href="#action/3.2">Request help</NavDropdown.Item>
+								</Link>
+								<Link to="/VehiclesList" style={{ textDecoration: "none" }}>
+									<NavDropdown.Item href="#action/3.3">Vehicles List</NavDropdown.Item>
+								</Link>
+								<Link to="/ServiceHistory" style={{ textDecoration: "none" }}>
+									<NavDropdown.Item href="#action/3.4">Service History</NavDropdown.Item>
+								</Link>
+								<Link to="/Messages" style={{ textDecoration: "none" }}>
+									<NavDropdown.Item href="#action/3.5">Messages</NavDropdown.Item>
+								</Link>
+							</NavDropdown>
+						</Nav>
+					</Navbar.Collapse>
+				</Container>
+			</Navbar>
+		);
+	} else {
+		return (
+			<Navbar bg="light" expand="lg">
+				<Container>
+					<Link to="/" style={{ textDecoration: "none" }}>
+						<Navbar.Brand className="fw-bold">RoadBros</Navbar.Brand>
+					</Link>
+					<Navbar.Toggle aria-controls="basic-navbar-nav" />
+					<Navbar.Collapse id="basic-navbar-nav" className="d-flex justify-content-end text-end">
+						<Nav>
+							<NavDropdown title="Menu" id="basic-nav-dropdown" className="text-dark fw-bold">
+								<Link to="/TruckerHomePage" style={{ textDecoration: "none" }}>
+									<NavDropdown.Item href="#action/3.1">Home Page</NavDropdown.Item>
+								</Link>
+								<Link to="/ClientRequests" style={{ textDecoration: "none" }}>
+									<NavDropdown.Item href="#action/3.2">Client Requests</NavDropdown.Item>
+								</Link>
+								<Link to="/MessagesPage" style={{ textDecoration: "none" }}>
+									<NavDropdown.Item href="#action/3.3">Messages</NavDropdown.Item>
+								</Link>
+							</NavDropdown>
+						</Nav>
+					</Navbar.Collapse>
+				</Container>
+			</Navbar>
+		);
+	}
 };
-
-/*import Container from "react-bootstrap/Container";
-import Navbar from "react-bootstrap/Navbar";
-import { NavDropdown } from "react-bootstrap";
-import { Nav } from "react-bootstrap";
-
-export const myNavbar = () => {
-	return (
-		<Navbar bg="light" expand="lg">
-			<Container>
-				<Navbar.Brand href="#home">RoadBros</Navbar.Brand>
-				<Navbar.Toggle aria-controls="basic-navbar-nav" />
-				<Navbar.Collapse id="basic-navbar-nav">
-					<Nav className="me-auto">
-						<Nav.Link href="#home">Home</Nav.Link>
-						<NavDropdown title="Dropdown" id="basic-nav-dropdown">
-							<NavDropdown.Item href="#action/3.1">Profile</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.2">Add Cars</NavDropdown.Item>
-							<NavDropdown.Item href="#action/3.3">History</NavDropdown.Item>
-							<NavDropdown.Divider />
-							<NavDropdown.Item href="#action/3.4">Help</NavDropdown.Item>
-						</NavDropdown>
-					</Nav>
-				</Navbar.Collapse>
-			</Container>
-		</Navbar>
-	);
-};*/
