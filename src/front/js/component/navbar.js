@@ -8,15 +8,15 @@ export const MyNavbar = () => {
 
 	if (store.user.type == "Client") {
 		return (
-			<Navbar bg="light" expand="lg">
+			<Navbar bg="dark" expand="lg" variant="dark">
 				<Container>
 					<Link to="/" style={{ textDecoration: "none" }}>
-						<Navbar.Brand className="fw-bold">RoadBros</Navbar.Brand>
+						<Navbar.Brand className="text-white fw-bold">RoadBros</Navbar.Brand>
 					</Link>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav" className="d-flex justify-content-end text-end">
 						<Nav>
-							<NavDropdown title="Menu" id="basic-nav-dropdown" className="text-dark fw-bold">
+							<NavDropdown title="Menu" id="basic-nav-dropdown" className="fw-bold">
 								<Link to="/ClientHomePage" style={{ textDecoration: "none" }}>
 									<NavDropdown.Item href="#action/3.1">Client Home Page</NavDropdown.Item>
 								</Link>
@@ -40,15 +40,15 @@ export const MyNavbar = () => {
 		);
 	} else {
 		return (
-			<Navbar bg="light" expand="lg">
+			<Navbar bg="dark" expand="lg" variant="dark">
 				<Container>
 					<Link to="/" style={{ textDecoration: "none" }}>
-						<Navbar.Brand className="fw-bold">RoadBros</Navbar.Brand>
+						<Navbar.Brand className="text-white fw-bold">RoadBros</Navbar.Brand>
 					</Link>
 					<Navbar.Toggle aria-controls="basic-navbar-nav" />
 					<Navbar.Collapse id="basic-navbar-nav" className="d-flex justify-content-end text-end">
 						<Nav>
-							<NavDropdown title="Menu" id="basic-nav-dropdown" className="text-dark fw-bold">
+							<NavDropdown title="Menu" id="basic-nav-dropdown" className="fw-bold">
 								<Link to="/TruckerHomePage" style={{ textDecoration: "none" }}>
 									<NavDropdown.Item href="#action/3.1">Home Page</NavDropdown.Item>
 								</Link>
