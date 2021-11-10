@@ -62,9 +62,6 @@ export const AddVehicles = () => {
 						/>
 					</div>
 				</form>
-				<Link to="/AddVehicles">
-					<button className="btn btn-primary p-2 mt-3 me-3">Add More Vehicles</button>
-				</Link>
 				<Link to="/ClientHomePage">
 					<button className="btn btn-primary p-2 mt-3">Next</button>
 				</Link>

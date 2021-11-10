@@ -6,7 +6,7 @@ import { Context } from "../store/appContext";
 export const SignUpPage = () => {
 	const { actions } = useContext(Context);
 
-	const [newContact, setnewContact] = useState({
+	const [newUser, setnewUser] = useState({
 		type: null,
 		fullName: null,
 		email: null,
@@ -15,7 +15,7 @@ export const SignUpPage = () => {
 		picture: null
 	});
 
-	const handleChange = e => setnewContact({ ...newContact, [e.target.name]: e.target.value });
+	const handleChange = e => setnewUser({ ...newUser, [e.target.name]: e.target.value });
 
 	return (
 		<div className="container text-center mt-5">
@@ -36,7 +36,7 @@ export const SignUpPage = () => {
 							type="text"
 							className="form-control"
 							placeholder="Full Name"
-							name="full_name"
+							name="fullName"
 							onChange={handleChange}
 						/>
 					</div>

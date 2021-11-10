@@ -13,7 +13,7 @@ export const VehiclesList = () => {
 			<h1 className="text-center">Vehicles List Page</h1>
 
 			<ul className="list-group">
-				{store.listOfRequests.map((item, index) => {
+				{store.listOfVehicles.map((item, index) => {
 					return (
 						<li className="list-group-item d-inline-flex align-items-center" key={index}>
 							<p className="mx-2 text-start">

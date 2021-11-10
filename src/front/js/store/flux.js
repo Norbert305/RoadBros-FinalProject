@@ -17,6 +17,21 @@ const getState = ({ getStore, getActions, setStore }) => {
 				vehicleYear: "",
 				rating: ""
 			},
+			addedVehicle: {
+				vehicleModel: null,
+				vehicleMake: null,
+				vehicleYear: null,
+				vehicleType: null
+			},
+			serviceRequest: {
+				vehicle: null,
+				service: null
+			},
+			rating: {
+				thumbUp: null,
+				thumbDown: null,
+				comments: null
+			},
 			activeRequest: {
 				picture:
 					"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mycolombianwife.com%2Fwp-content%2Fuploads%2F2017%2F07%2Fhispanic-woman.png&f=1&nofb=1",
@@ -28,6 +43,20 @@ const getState = ({ getStore, getActions, setStore }) => {
 				vehicleYear: "2015",
 				vehicleType: "SUV"
 			},
+			listOfVehicles: [
+				{
+					vehicleModel: "RAV4",
+					vehicleMake: "Chevy",
+					vehicleYear: "2015",
+					vehicleType: "SUV"
+				},
+				{
+					vehicleModel: "RAV4",
+					vehicleMake: "Corvet",
+					vehicleYear: "2015",
+					vehicleType: "SUV"
+				}
+			],
 			listOfRequests: [
 				{
 					picture:
@@ -72,6 +101,24 @@ const getState = ({ getStore, getActions, setStore }) => {
 				user.email = email;
 				user.phone = phone;
 				user.city = city;
+			},
+			captureVehicleInfo: (vehicleModel, vehicleMake, vehicleYear, vehicleType) => {
+				let vehicle = getStore().addedVehicle;
+				vehicle.vehicleModel = vehicleModel;
+				vehicle.vehicleMake = vehicleMake;
+				vehicle.vehicleYear = vehicleYear;
+				vehicle.vehicleType = vehicleType;
+			},
+			captureServiceRequest: (vehicle, service) => {
+				let serviceRequest = getStore().serviceRequest;
+				serviceRequest.vehicle = vehicle;
+				serviceRequest.service = service;
+			},
+			captureRating: (thumbUp, thumbDown, comments) => {
+				let rating = getStore().rating;
+				rating.thumbUp = thumbUp;
+				rating.thumbDown = thumbDown;
+				rating.comments = comments;
 			}
 		}
 	};

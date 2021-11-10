@@ -8,6 +8,13 @@ import "../../styles/demo.scss";
 export const RatingPage = () => {
 	const { store, actions } = useContext(Context);
 
+	const [newRating, setnewRating] = useState({
+		thumbUp: null,
+		thumbDown: null,
+		comments: null
+	});
+
+	const handleChange = e => setnewRating({ ...newRating, [e.target.name]: e.target.value });
 	return (
 		<div className="container mt-5 text-center">
 			<h1 className="mb-4">Thank You!</h1>
@@ -26,7 +33,13 @@ export const RatingPage = () => {
 				<label htmlFor="exampleFormControlTextarea1" className="form-label">
 					<h5>Use the field below to write additonal comments:</h5>
 				</label>
-				<textarea className="form-control" id="exampleFormControlTextarea1" rows="3" />
+				<textarea
+					className="form-control"
+					id="exampleFormControlTextarea1"
+					rows="3"
+					name="comments"
+					onChange={handleChange}
+				/>
 			</div>
 
 			<Link to="/ClientHomePage">
