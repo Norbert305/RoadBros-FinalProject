@@ -22,7 +22,7 @@ export const navbarClient = () => {
 						<Link to="/VehiclesList">
 							<Nav>Vehicles List</Nav>
 						</Link>
-						<Link to="/MessagesPage">
+						<Link to="/ClientMessages">
 							<Nav>Messages</Nav>
 						</Link>
 					</Nav>

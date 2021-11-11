@@ -17,8 +17,8 @@ export const AwaitingResponse = () => {
 			</div>
 
 			<div className="row m-2">
-				<Link to="/MessagesPage">
-					<button className="btn btn-primary m-3">Go to Messages</button>
+				<Link to="/ClientMessages">
+					<button className="btn btn-primary m-3">Messages</button>
 				</Link>
 			</div>
 		</div>

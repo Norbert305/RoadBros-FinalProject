@@ -20,8 +20,8 @@ export const TruckerHomePage = () => {
 			</div>
 			<h2 className="text-center">Hi Welcome back _____!</h2>
 
-			<Link to="/ClientRequests">
-				<button className="btn btn-primary m-3">Available Requests List</button>
+			<Link to="/RequestsList">
+				<button className="btn btn-primary m-3">Requests List</button>
 			</Link>
 		</div>
 	);

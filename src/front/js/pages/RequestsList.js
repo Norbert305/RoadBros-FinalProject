@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 
 import "../../styles/demo.scss";
 
-export const ClientRequests = () => {
+export const RequestsList = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
@@ -36,7 +36,7 @@ export const ClientRequests = () => {
 								<strong>Year:</strong> <br /> {item.vehicleYear}
 							</p>
 
-							<Link to="/MessagesPage">
+							<Link to="/TruckerMessages">
 								<button className="btn btn-primary mx-3 p-1">Accept</button>
 							</Link>
 						</li>

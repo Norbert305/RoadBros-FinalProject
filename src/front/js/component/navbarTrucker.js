@@ -16,10 +16,10 @@ export const navbarTrucker = () => {
 						<Link to="/TruckerHomePage">
 							<Nav>Home</Nav>
 						</Link>
-						<Link to="/ClientRequests">
+						<Link to="/RequestsList">
 							<Nav>Requests List</Nav>
 						</Link>
-						<Link to="/MessagesPage">
+						<Link to="/TruckerMessages">
 							<Nav>Messages</Nav>
 						</Link>
 					</Nav>

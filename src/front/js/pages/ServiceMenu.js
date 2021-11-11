@@ -86,6 +86,9 @@ export const ServiceMenu = () => {
 			<Link to="/AwaitingResponse">
 				<button className="btn btn-primary m-3">Request Help</button>
 			</Link>
+			<Link to="/ClientHomePage">
+				<button className="btn btn-primary m-3">Home</button>
+			</Link>
 		</div>
 	);
 };

@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 
 import "../../styles/demo.scss";
 
-export const MessagesPage = () => {
+export const ClientMessages = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
@@ -36,22 +36,9 @@ export const MessagesPage = () => {
 					</div>
 				</div>
 			</div>
-			{store.user.type == "Client" ? (
-				<Link to="/ServiceCompleted">
-					<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
-						Next
-					</button>
-				</Link>
-			) : (
-				<Link to="/ManagingService">
-					<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
-						Next
-					</button>
-				</Link>
-			)}
 			<Link to="/ServiceCompleted">
 				<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
-					For Customers
+					Service Completed
 				</button>
 			</Link>
 		</div>

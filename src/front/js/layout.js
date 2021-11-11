@@ -10,24 +10,25 @@ import { Home } from "./pages/home";
 import { navbarClient } from "./component/navbarClient";
 import { navbarTrucker } from "./component/navbarTrucker";
 
-import { LoginPage } from "./pages/LoginPage";
 import { SignUpPage } from "./pages/SignUpPage";
+import { ClientLoginPage } from "./pages/ClientLoginPage";
+import { TruckerLoginPage } from "./pages/TruckerLoginPage";
 
-import { ServiceMenu } from "./pages/ServiceMenu";
+import { ClientPayment } from "./pages/ClientPayment";
 import { AddVehicles } from "./pages/AddVehicles";
+import { ClientHomePage } from "./pages/ClientHomePage";
 import { VehiclesList } from "./pages/VehiclesList";
 import { ServiceHistory } from "./pages/ServiceHistory";
-import { PaymentPage } from "./pages/PaymentPage";
-
+import { ServiceMenu } from "./pages/ServiceMenu";
 import { AwaitingResponse } from "./pages/AwaitingResponse";
-import { MessagesPage } from "./pages/MessagesPage";
+import { ClientMessages } from "./pages/ClientMessages";
 import { ServiceCompleted } from "./pages/ServiceCompleted";
 import { RatingPage } from "./pages/RatingPage";
 
-import { ClientHomePage } from "./pages/ClientHomePage";
+import { TruckerPayment } from "./pages/TruckerPayment";
 import { TruckerHomePage } from "./pages/TruckerHomePage";
-
-import { ClientRequests } from "./pages/ClientRequests";
+import { RequestsList } from "./pages/RequestsList";
+import { TruckerMessages } from "./pages/TruckerMessages";
 import { ManagingService } from "./pages/ManagingService";
 
 import injectContext from "./store/appContext";
@@ -44,7 +45,7 @@ const Layout = () => {
 		<div>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					{store.userLogin == "client" ? <navbarClient /> : <navbarTrucker />}
+					{store.userLogin == "client" ? <navbarClient /> : <navbarTrucker />}{" "}
 					<Switch>
 						<Route exact path="/">
 							<Home />
@@ -52,20 +53,32 @@ const Layout = () => {
 						<Route exact path="/SignUpPage">
 							<SignUpPage />
 						</Route>
-						<Route exact path="/LoginPage">
-							<LoginPage />
+						<Route exact path="/ClientLoginPage">
+							<ClientLoginPage />
+						</Route>
+						<Route exact path="/ClientPayment">
+							<ClientPayment />
+						</Route>
+						<Route exact path="/AddVehicles">
+							<AddVehicles />
+						</Route>
+						<Route exact path="/ClientHomePage">
+							<ClientHomePage />
+						</Route>
+						<Route exact path="/VehiclesList">
+							<VehiclesList />
+						</Route>
+						<Route exact path="/ServiceHistory">
+							<ServiceHistory />
 						</Route>
 						<Route exact path="/ServiceMenu">
 							<ServiceMenu />
 						</Route>
-						<Route exact path="/PaymentPage">
-							<PaymentPage />
-						</Route>
 						<Route exact path="/AwaitingResponse">
 							<AwaitingResponse />
 						</Route>
-						<Route exact path="/MessagesPage">
-							<MessagesPage />
+						<Route exact path="/ClientMessages">
+							<ClientMessages />
 						</Route>
 						<Route exact path="/ServiceCompleted">
 							<ServiceCompleted />
@@ -73,27 +86,26 @@ const Layout = () => {
 						<Route exact path="/RatingPage">
 							<RatingPage />
 						</Route>
-						<Route exact path="/ClientHomePage">
-							<ClientHomePage />
+
+						<Route exact path="/TruckerLoginPage">
+							<TruckerLoginPage />
+						</Route>
+						<Route exact path="/TruckerPayment">
+							<TruckerPayment />
 						</Route>
 						<Route exact path="/TruckerHomePage">
 							<TruckerHomePage />
 						</Route>
-						<Route exact path="/ClientRequests">
-							<ClientRequests />
+						<Route exact path="/RequestsList">
+							<RequestsList />
+						</Route>
+						<Route exact path="/TruckerMessages">
+							<TruckerMessages />
 						</Route>
 						<Route exact path="/ManagingService">
 							<ManagingService />
 						</Route>
-						<Route exact path="/AddVehicles">
-							<AddVehicles />
-						</Route>
-						<Route exact path="/ServiceHistory">
-							<ServiceHistory />
-						</Route>
-						<Route exact path="/VehiclesList">
-							<VehiclesList />
-						</Route>
+
 						<Route>
 							<h1>Not found!</h1>
 						</Route>

@@ -41,7 +41,7 @@ export const ServiceHistory = () => {
 				})}
 			</ul>
 			<Link to="/ClientHomePage">
-				<button className="btn btn-primary m-3">Back to Home</button>
+				<button className="btn btn-primary m-3">Home</button>
 			</Link>
 		</div>
 	);

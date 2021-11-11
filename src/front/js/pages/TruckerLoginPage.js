@@ -3,7 +3,7 @@ import { PropTypes } from "prop-types";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const LoginPage = () => {
+export const TruckerLoginPage = () => {
 	const { actions, store } = useContext(Context);
 
 	const [newContact, setnewContact] = useState({
@@ -15,7 +15,7 @@ export const LoginPage = () => {
 
 	return (
 		<div className="container text-center mt-5">
-			<h1 className="">Login Page</h1>
+			<h1 className="">Trucker Login Page</h1>
 			<form className="text-start">
 				<div className="form-group my-1">
 					<label>Email</label>
@@ -38,7 +38,7 @@ export const LoginPage = () => {
 					/>
 				</div>
 			</form>
-			<Link to="/">
+			<Link to="/TruckerPayment">
 				<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
 					Next
 				</button>
@@ -47,6 +47,6 @@ export const LoginPage = () => {
 	);
 };
 
-LoginPage.propTypes = {
+TruckerLoginPage.propTypes = {
 	history: PropTypes.object
 };

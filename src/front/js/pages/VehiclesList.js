@@ -32,12 +32,11 @@ export const VehiclesList = () => {
 					);
 				})}
 			</ul>
-
-			<Link to="/ClientHomePage">
-				<button className="btn btn-primary m-3">Back Home</button>
-			</Link>
 			<Link to="/AddVehicles">
 				<button className="btn btn-primary m-3">Add Vehicles</button>
+			</Link>
+			<Link to="/ClientHomePage">
+				<button className="btn btn-primary m-3">Home</button>
 			</Link>
 		</div>
 	);

@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 
 import "../../styles/demo.scss";
 
-export const PaymentPage = () => {
+export const ClientPayment = () => {
 	const { actions, store } = useContext(Context);
 
 	return (
@@ -43,7 +43,7 @@ export const PaymentPage = () => {
 				</form>
 				<Link to="/AddVehicles">
 					<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
-						For Customers
+						Next
 					</button>
 				</Link>
 			</div>
