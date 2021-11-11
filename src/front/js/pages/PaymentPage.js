@@ -41,20 +41,6 @@ export const PaymentPage = () => {
 						<input type="text" className="form-control" placeholder="Enter city" name="city" />
 					</div>
 				</form>
-				{store.user.type == "Client" ? (
-					<Link to="/AddVehicles">
-						<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
-							Next
-						</button>
-					</Link>
-				) : (
-					<Link to="/TruckerHomePage">
-						<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
-							Next
-						</button>
-					</Link>
-				)}
-
 				<Link to="/AddVehicles">
 					<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
 						For Customers

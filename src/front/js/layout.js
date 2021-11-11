@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
+import { Context } from "./store/appContext";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
 
 import { Home } from "./pages/home";
 
 //PAGES
-import { MyNavbar } from "./component/navbar";
+
+import { navbarClient } from "./component/navbarClient";
+import { navbarTrucker } from "./component/navbarTrucker";
 
 import { LoginPage } from "./pages/LoginPage";
 import { SignUpPage } from "./pages/SignUpPage";
@@ -35,11 +38,13 @@ const Layout = () => {
 	// you can set the basename on the .env file located at the root of this project, E.g: BASENAME=/react-hello-webapp/
 	const basename = process.env.BASENAME || "";
 
+	const { store, actions } = useContext(Context);
+
 	return (
 		<div>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					<MyNavbar />
+					{store.userLogin == "client" ? <navbarClient /> : <navbarTrucker />}
 					<Switch>
 						<Route exact path="/">
 							<Home />

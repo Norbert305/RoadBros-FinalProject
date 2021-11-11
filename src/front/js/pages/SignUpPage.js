@@ -85,7 +85,7 @@ export const SignUpPage = () => {
 						</div>
 					</div>
 				</form>
-				<Link to="/PaymentPage">
+				<Link to="/">
 					<button className="btn btn-primary p-2 mt-3">Next</button>
 				</Link>
 			</div>

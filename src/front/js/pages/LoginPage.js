@@ -38,22 +38,9 @@ export const LoginPage = () => {
 					/>
 				</div>
 			</form>
-			{store.user.type == "Client" ? (
-				<Link to="/ClientHomePage">
-					<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
-						Next
-					</button>
-				</Link>
-			) : (
-				<Link to="/TruckerHomePage">
-					<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
-						Next
-					</button>
-				</Link>
-			)}
-			<Link to="/ClientHomePage">
+			<Link to="/">
 				<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
-					For Customers
+					Next
 				</button>
 			</Link>
 		</div>

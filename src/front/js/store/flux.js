@@ -17,6 +17,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				vehicleYear: "",
 				rating: ""
 			},
+			userLogin: "client",
 			addedVehicle: {
 				vehicleModel: null,
 				vehicleMake: null,
