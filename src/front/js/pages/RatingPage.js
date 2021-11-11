@@ -43,7 +43,16 @@ export const RatingPage = () => {
 			</div>
 
 			<Link to="/ClientHomePage">
-				<button className="btn btn-primary mt-4">Send Rating</button>
+				<button
+					className="btn btn-primary mt-4"
+					/*
+					onClick={() => {
+						actions.addRating(newRating);
+					}}
+					*/
+				>
+					Send Rating
+				</button>
 			</Link>
 		</div>
 	);

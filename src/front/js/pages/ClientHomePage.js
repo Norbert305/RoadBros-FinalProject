@@ -29,6 +29,9 @@ export const ClientHomePage = () => {
 			<Link to="/VehiclesList">
 				<button className="btn btn-primary m-3">Vehicles List</button>
 			</Link>
+			<Link to="/">
+				<button className="btn btn-primary m-3">Back to Landing Page</button>
+			</Link>
 		</div>
 	);
 };

@@ -6,7 +6,7 @@ import { Context } from "../store/appContext";
 export const SignUpPage = () => {
 	const { actions } = useContext(Context);
 
-	const [newUser, setnewUser] = useState({
+	const [newUser, setNewUser] = useState({
 		type: null,
 		fullName: null,
 		email: null,
@@ -15,7 +15,7 @@ export const SignUpPage = () => {
 		picture: null
 	});
 
-	const handleChange = e => setnewUser({ ...newUser, [e.target.name]: e.target.value });
+	const handleChange = e => setNewUser({ ...newUser, [e.target.name]: e.target.value });
 
 	const [tab, setTab] = useState("client");
 
@@ -36,7 +36,10 @@ export const SignUpPage = () => {
 								role="tab"
 								aria-controls="pills-client"
 								aria-selected="true"
-								onClick={() => setTab("client")}>
+								onClick={() => {
+									setTab("client");
+									setNewUser({ ...newUser, type: "client" });
+								}}>
 								Client
 							</button>
 						</li>
@@ -50,7 +53,10 @@ export const SignUpPage = () => {
 								role="tab"
 								aria-controls="pills-trucker"
 								aria-selected="false"
-								onClick={() => setTab("trucker")}>
+								onClick={() => {
+									setTab("trucker");
+									setNewUser({ ...newUser, type: "trucker" });
+								}}>
 								Trucker
 							</button>
 						</li>
@@ -123,7 +129,13 @@ export const SignUpPage = () => {
 						</div>
 					</form>
 					<Link to="/ClientLoginPage">
-						<button className="btn btn-primary p-2 mt-3">Save</button>
+						<button
+							className="btn btn-primary p-2 mt-3"
+							onClick={() => {
+								actions.addUser(newUser);
+							}}>
+							Save
+						</button>
 					</Link>
 				</div>
 				<div
@@ -193,7 +205,13 @@ export const SignUpPage = () => {
 						</div>
 					</form>
 					<Link to="/TruckerLoginPage">
-						<button className="btn btn-primary p-2 mt-3">Save</button>
+						<button
+							className="btn btn-primary p-2 mt-3"
+							onClick={() => {
+								actions.addUser(newUser);
+							}}>
+							Save
+						</button>
 					</Link>
 				</div>
 			</div>

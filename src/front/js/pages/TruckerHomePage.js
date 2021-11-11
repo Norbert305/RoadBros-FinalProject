@@ -23,6 +23,10 @@ export const TruckerHomePage = () => {
 			<Link to="/RequestsList">
 				<button className="btn btn-primary m-3">Requests List</button>
 			</Link>
+
+			<Link to="/">
+				<button className="btn btn-primary m-3">Back to Landing Page</button>
+			</Link>
 		</div>
 	);
 };

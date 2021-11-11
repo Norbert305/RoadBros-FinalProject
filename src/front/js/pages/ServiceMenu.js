@@ -84,7 +84,16 @@ export const ServiceMenu = () => {
 				</label>
 			</div>
 			<Link to="/AwaitingResponse">
-				<button className="btn btn-primary m-3">Request Help</button>
+				<button
+					className="btn btn-primary m-3"
+					/*
+					onClick={() => {
+						actions.addRequest(newRequest);
+					}}
+					*/
+				>
+					Send Request
+				</button>
 			</Link>
 			<Link to="/ClientHomePage">
 				<button className="btn btn-primary m-3">Home</button>
