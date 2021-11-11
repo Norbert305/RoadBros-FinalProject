@@ -6,6 +6,10 @@ import { Context } from "../store/appContext";
 export const SignUpPage = () => {
 	const { actions } = useContext(Context);
 
+	const addNewUser = () => {
+		actions.addUser(newUser);
+	};
+
 	const [newUser, setNewUser] = useState({
 		type: null,
 		fullName: null,
@@ -131,9 +135,9 @@ export const SignUpPage = () => {
 					<Link to="/ClientLoginPage">
 						<button
 							className="btn btn-primary p-2 mt-3"
-							onClick={() => {
-								actions.addUser(newUser);
-							}}>
+							onClick={() => addNewUser()
+								
+							}>
 							Save
 						</button>
 					</Link>
@@ -207,9 +211,9 @@ export const SignUpPage = () => {
 					<Link to="/TruckerLoginPage">
 						<button
 							className="btn btn-primary p-2 mt-3"
-							onClick={() => {
-								actions.addUser(newUser);
-							}}>
+							onClick={() => addNewUser()
+								
+							}>
 							Save
 						</button>
 					</Link>
