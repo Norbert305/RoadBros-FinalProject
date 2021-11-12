@@ -133,11 +133,7 @@ export const SignUpPage = () => {
 						</div>
 					</form>
 					<Link to="/ClientLoginPage">
-						<button
-							className="btn btn-primary p-2 mt-3"
-							onClick={() => addNewUser()
-								
-							}>
+						<button className="btn btn-primary p-2 mt-3" onClick={() => addNewUser()}>
 							Save
 						</button>
 					</Link>
@@ -209,11 +205,7 @@ export const SignUpPage = () => {
 						</div>
 					</form>
 					<Link to="/TruckerLoginPage">
-						<button
-							className="btn btn-primary p-2 mt-3"
-							onClick={() => addNewUser()
-								
-							}>
+						<button className="btn btn-primary p-2 mt-3" onClick={() => addNewUser()}>
 							Save
 						</button>
 					</Link>

@@ -118,12 +118,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				rating.thumbUp = thumbUp;
 				rating.thumbDown = thumbDown;
 				rating.comments = comments;
-			}
-			/*
+			},
 
 			addUser: newUser => {
 				setStore({ listOfUsers: newUser });
-			},
+			}
+			/*,
 			addVehicle: newVehicle => {
 				setStore({ listOfVehicles: newVehicle });
 			},
