@@ -3,7 +3,7 @@ import { PropTypes } from "prop-types";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
-export const ClientLoginPage = () => {
+export const ClientLoginPage = props => {
 	const { actions, store } = useContext(Context);
 
 	const [newContact, setnewContact] = useState({
@@ -39,7 +39,11 @@ export const ClientLoginPage = () => {
 				</div>
 			</form>
 			<Link to="/ClientPayment">
-				<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
+				<button
+					type="button"
+					className="btn btn-primary btn-lg my-3 p-2 me-3"
+					/*onClick={() => props.setUserLogin("client")}*/
+				>
 					Next
 				</button>
 			</Link>
@@ -48,5 +52,6 @@ export const ClientLoginPage = () => {
 };
 
 ClientLoginPage.propTypes = {
-	history: PropTypes.object
+	history: PropTypes.object,
+	setUserLogin: PropTypes.func
 };

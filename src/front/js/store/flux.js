@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			listOfUsers: {
+			user: {
 				id: "",
 				type: "",
 				fullName: "",
@@ -66,74 +66,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 					vehicleType: "Van"
 				}
 			],
-			newRequest: {
-				picture:
-					"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fwww.mycolombianwife.com%2Fwp-content%2Fuploads%2F2017%2F07%2Fhispanic-woman.png&f=1&nofb=1",
-				fullName: "Mariangel Estrada",
-				city: "Hialeah",
-				service: "Towing Car",
-				vehicleModel: "RAV4",
-				vehicleMake: "Toyota",
-				vehicleYear: "2015",
-				vehicleType: "SUV",
-				vehicle: null,
-				service: null
-			},
-			newVehicle: {
-				vehicleModel: null,
-				vehicleMake: null,
-				vehicleYear: null,
-				vehicleType: null
-			},
-			newRating: {
-				thumbUp: null,
-				thumbDown: null,
-				comments: null
-			},
 			userLogin: "client"
 		},
 		actions: {
-			captureUserInfo: (type, fullName, email, phone, city) => {
-				let user = getStore().user;
-				user.type = type;
-				user.fullName = fullName;
-				user.email = email;
-				user.phone = phone;
-				user.city = city;
+			addVehicle: vehicle => {
+				let newList = getStore().listOfVehicles;
+				newList.push(vehicle);
+				setStore({ listOfVehicles: newList });
 			},
-			captureVehicleInfo: (vehicleModel, vehicleMake, vehicleYear, vehicleType) => {
-				let vehicle = getStore().addedVehicle;
-				vehicle.vehicleModel = vehicleModel;
-				vehicle.vehicleMake = vehicleMake;
-				vehicle.vehicleYear = vehicleYear;
-				vehicle.vehicleType = vehicleType;
-			},
-			captureServiceRequest: (vehicle, service) => {
-				let serviceRequest = getStore().serviceRequest;
-				serviceRequest.vehicle = vehicle;
-				serviceRequest.service = service;
-			},
-			captureRating: (thumbUp, thumbDown, comments) => {
-				let rating = getStore().rating;
-				rating.thumbUp = thumbUp;
-				rating.thumbDown = thumbDown;
-				rating.comments = comments;
-			},
-
-			addUser: newUser => {
-				setStore({ listOfUsers: newUser });
+			changeUserType: type => {
+				setStore({ userLogin: type });
 			}
-			/*,
-			addVehicle: newVehicle => {
-				setStore({ listOfVehicles: newVehicle });
-			},
-			addRequest: newRequest => {
-				setStore({ listOfRequests: newRequest });
-			},
-			addRating: newRating => {
-				setStore({ listOfUsers: newRating });
-			}
-			*/
 		}
 	};
 };

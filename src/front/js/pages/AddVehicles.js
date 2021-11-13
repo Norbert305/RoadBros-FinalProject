@@ -65,12 +65,9 @@ export const AddVehicles = () => {
 				<Link to="/ClientHomePage">
 					<button
 						className="btn btn-primary p-2 m-3"
-						/*
 						onClick={() => {
 							actions.addVehicle(newVehicle);
-						}}
-						*/
-					>
+						}}>
 						Add Vehicle
 					</button>
 				</Link>

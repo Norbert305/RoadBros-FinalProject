@@ -1,4 +1,4 @@
-import React, { useContext } from "react";
+import React, { useContext, useState } from "react";
 import { Context } from "./store/appContext";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import ScrollToTop from "./component/scrollToTop";
@@ -41,11 +41,12 @@ const Layout = () => {
 
 	const { store, actions } = useContext(Context);
 
+	const [userLogin, setUserLogin] = useState("");
+
 	return (
 		<div>
 			<BrowserRouter basename={basename}>
 				<ScrollToTop>
-					{store.userLogin == "client" ? <navbarClient /> : <navbarTrucker />}{" "}
 					<Switch>
 						<Route exact path="/">
 							<Home />
@@ -53,7 +54,7 @@ const Layout = () => {
 						<Route exact path="/SignUpPage">
 							<SignUpPage />
 						</Route>
-						<Route exact path="/ClientLoginPage">
+						<Route exact path="/ClientLoginPage" setUserLogin={setUserLogin}>
 							<ClientLoginPage />
 						</Route>
 						<Route exact path="/ClientPayment">
@@ -87,7 +88,7 @@ const Layout = () => {
 							<RatingPage />
 						</Route>
 
-						<Route exact path="/TruckerLoginPage">
+						<Route exact path="/TruckerLoginPage" setUserLogin={setUserLogin}>
 							<TruckerLoginPage />
 						</Route>
 						<Route exact path="/TruckerPayment">
