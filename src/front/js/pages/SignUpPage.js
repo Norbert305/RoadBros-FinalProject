@@ -131,7 +131,7 @@ export const SignUpPage = () => {
 					<Link to="/CLientLoginPage">
 						<button
 							className="btn btn-warning btn-lg col-4 p-2 mt-3"
-							onClick={() => actions.createUser(newUser)}>
+							onClick={() => actions.addRequest(newUser)}>
 							Save
 						</button>
 					</Link>
@@ -205,7 +205,7 @@ export const SignUpPage = () => {
 					<Link to="/TruckerLoginPage">
 						<button
 							className="btn btn-warning btn-lg col-4 p-2 mt-3"
-							onClick={() => actions.createUser(newUser)}>
+							onClick={() => actions.addRequest(newUser)}>
 							Save
 						</button>
 					</Link>

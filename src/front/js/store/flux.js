@@ -71,6 +71,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 				newRequest.push(request);
 				setStore({ listOfRequests: newRequest });
 			},
+			deleteRequest: request => {
+				let newList = getStore().listOfVehicles;
+				newList = newList.filter(item => request !== item);
+				setStore({ listOfRequests: newList });
+			},
 			createUser: user => {
 				let newList = getStore().users;
 				newList.push(user);

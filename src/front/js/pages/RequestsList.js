@@ -35,9 +35,19 @@ export const RequestsList = () => {
 							<p className="mx-2 text-start">
 								<strong>Year:</strong> <br /> {item.vehicleYear}
 							</p>
+							<p className="mx-2 text-start">
+								<button
+									type="button"
+									className="btn btn-warning mx-3 p-1"
+									onClick={() => actions.deleteRequest(item)}>
+									Remove
+								</button>
+							</p>
 
 							<Link to="/TruckerMessages">
-								<button className="btn btn-primary mx-3 p-1">Accept</button>
+								<p className="mx-2 text-start">
+									<button className="btn btn-primary mx-3 p-1">Accept</button>
+								</p>
 							</Link>
 						</li>
 					);
