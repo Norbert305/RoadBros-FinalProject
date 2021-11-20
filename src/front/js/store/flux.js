@@ -81,6 +81,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				newList.push(vehicle);
 				setStore({ listOfVehicles: newList });
 			},
+
+			deleteVehicle: vehicle => {
+				let newList = getStore().listOfVehicles;
+				newList = newList.filter(item => vehicle !== item);
+				setStore({ listOfVehicles: newList });
+			},
 			changeUserType: type => {
 				setStore({ userLogin: type });
 			},

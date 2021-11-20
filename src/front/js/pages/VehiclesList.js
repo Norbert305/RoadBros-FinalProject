@@ -28,6 +28,12 @@ export const VehiclesList = () => {
 							<p className="mx-2 text-start">
 								<strong>Year:</strong> <br /> {item.vehicleYear}
 							</p>
+							<button
+								type="button"
+								className="btn btn-primary"
+								onClick={() => actions.deleteVehicle(item)}>
+								Remove Vehicle
+							</button>
 						</li>
 					);
 				})}
