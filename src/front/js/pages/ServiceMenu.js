@@ -34,6 +34,15 @@ export const ServiceMenu = () => {
 				</label>
 				<label className="list-group-item d-flex align-items-center m-0">
 					<input
+						className="m-2"
+						type="textarea"
+						placeholder="Zip Code"
+						name="zip code"
+						onChange={handleChange}
+					/>
+				</label>
+				<label className="list-group-item d-flex align-items-center m-0">
+					<input
 						className="form-check-input m-2"
 						type="checkbox"
 						value="Flat Tire: $40"
