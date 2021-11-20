@@ -1,22 +1,19 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			user: {
-				id: "",
-				type: "",
-				fullName: "",
-				picture: "",
-				city: "",
-				email: "",
-				phone: "",
-				licensePicture: "",
-				RegistrationPicture: "",
-				InsurancePicture: "",
-				vehicleModel: "",
-				vehicleMake: "",
-				vehicleYear: "",
-				rating: ""
-			},
+			loggedin: "",
+			users: [
+				{
+					id: "",
+					type: "",
+					fullName: "",
+					picture: "",
+					city: "",
+					email: "",
+					phone: ""
+				}
+			],
+			ratings: [],
 			listOfVehicles: [
 				{
 					vehicleModel: "RAV4",
@@ -69,6 +66,16 @@ const getState = ({ getStore, getActions, setStore }) => {
 			userLogin: "client"
 		},
 		actions: {
+			addRequest: request => {
+				let newRequest = getStore().listOfRequests;
+				newRequest.push(request);
+				setStore({ listOfRequests: newRequest });
+			},
+			createUser: user => {
+				let newList = getStore().users;
+				newList.push(user);
+				setStore({ users: newList });
+			},
 			addVehicle: vehicle => {
 				let newList = getStore().listOfVehicles;
 				newList.push(vehicle);
@@ -76,7 +83,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 			},
 			changeUserType: type => {
 				setStore({ userLogin: type });
-			}
+			},
+			login: userName => {
+				setStore({ loggedin: userName });
+			},
+			logout: () => setStore({ loggedin: "" })
 		}
 	};
 };

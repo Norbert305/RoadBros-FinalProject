@@ -41,7 +41,7 @@ export const ClientLoginPage = props => {
 				<button
 					type="button"
 					className="btn btn-warning btn-lg my-3 p-2 me-3"
-					/*onClick={() => props.setUserLogin("client")}*/
+					onClick={() => actions.login(newContact.email)}
 				>
 					Next
 				</button>

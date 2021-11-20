@@ -8,19 +8,24 @@ import "../../styles/demo.scss";
 export const ServiceMenu = () => {
 	const { store, actions } = useContext(Context);
 
-	const [newRequest, setnewRequest] = useState({
-		vehicle: null,
-		service: null
+	const [newVehicle, setnewVehicle] = useState({
+		vehicle: ""
 	});
 
-	const handleChange = e => setnewRequest({ ...newRequest, [e.target.name]: e.target.value });
+	const [newService, setnewService] = useState({
+		service: []
+	});
+
+	const [newZipCode, setnewZipCode] = useState({
+		zipCode: ""
+	});
 
 	return (
 		<div className="container pt-5 text-center">
 			<h1 className="text-center mt-5 mb-4">Service Menu Page</h1>
 			<div className="list-group text-start">
 				<label className="list-group-item d-flex align-items-center m-0">
-					<select id="inputState" className="form-select my-1" name="vehicle" onChange={handleChange}>
+					<select id="inputState" className="form-select my-1" name="vehicle" onChange={e => setnewVehicle(e.target.value)}>
 						<option selected>Choose Your Vehicle</option>
 						{store.listOfVehicles.map((item, index) => {
 							return (
@@ -38,7 +43,7 @@ export const ServiceMenu = () => {
 						type="textarea"
 						placeholder="Zip Code"
 						name="zip code"
-						onChange={handleChange}
+						onChange={e => setnewZipCode(e.target.value)}
 					/>
 				</label>
 				<label className="list-group-item d-flex align-items-center m-0">
@@ -47,7 +52,7 @@ export const ServiceMenu = () => {
 						type="checkbox"
 						value="Flat Tire: $40"
 						name="service"
-						onChange={handleChange}
+						onChange={e => setnewService([...newService, e.target.value])}
 					/>
 					<h6 className="me-2 m-0 d-flex align-items-center">Flat Tire: $40</h6>
 				</label>
@@ -57,7 +62,7 @@ export const ServiceMenu = () => {
 						type="checkbox"
 						value="Dead Battery: $150"
 						name="service"
-						onChange={handleChange}
+						onChange={e => setnewService([...newService, e.target.value])}
 					/>
 					<h6 className="me-2 m-0 d-flex align-items-center">Dead Battery: $150</h6>
 				</label>
@@ -67,7 +72,7 @@ export const ServiceMenu = () => {
 						type="checkbox"
 						value="Empty Gas: $30"
 						name="service"
-						onChange={handleChange}
+						onChange={e => setnewService([...newService, e.target.value])}
 					/>
 					<h6 className="me-2 m-0 d-flex align-items-center">Empty Gas: $30</h6>
 				</label>
@@ -77,7 +82,7 @@ export const ServiceMenu = () => {
 						type="checkbox"
 						value="Jump Start: $50"
 						name="service"
-						onChange={handleChange}
+						onChange={e => setnewService([...newService, e.target.value])}
 					/>
 					<h6 className="me-2 m-0 d-flex align-items-center">Jump Start: $50</h6>
 				</label>
@@ -87,7 +92,7 @@ export const ServiceMenu = () => {
 						type="checkbox"
 						value="Towing Car: $150"
 						name="service"
-						onChange={handleChange}
+						onChange={e => setnewService([...newService, e.target.value])}
 					/>
 					<h6 className="me-2 m-0 d-flex align-items-center">Towing Car: $150</h6>
 				</label>
@@ -95,11 +100,9 @@ export const ServiceMenu = () => {
 			<Link to="/AwaitingResponse">
 				<button
 					className="btn btn-warning btn-lg m-3"
-					/*
 					onClick={() => {
 						actions.addRequest(newRequest);
 					}}
-					*/
 				>
 					Send Request
 				</button>
