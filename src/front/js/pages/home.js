@@ -8,7 +8,7 @@ export const Home = () => {
 
 	return (
 		<div className="container text-center mt-5">
-			<h1>Welcome to RoadBros!</h1>
+			<h1>Welcome to RoadBros! Rafa</h1>
 			<h5>
 				<img
 					src={
