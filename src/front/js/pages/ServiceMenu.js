@@ -25,7 +25,11 @@ export const ServiceMenu = () => {
 			<h1 className="text-center mt-5 mb-4">Service Menu Page</h1>
 			<div className="list-group text-start">
 				<label className="list-group-item d-flex align-items-center m-0">
-					<select id="inputState" className="form-select my-1" name="vehicle" onChange={e => setnewVehicle(e.target.value)}>
+					<select
+						id="inputState"
+						className="form-select my-1"
+						name="vehicle"
+						onChange={e => setnewVehicle(e.target.value)}>
 						<option selected>Choose Your Vehicle</option>
 						{store.listOfVehicles.map((item, index) => {
 							return (
@@ -102,8 +106,7 @@ export const ServiceMenu = () => {
 					className="btn btn-warning btn-lg m-3"
 					onClick={() => {
 						actions.addRequest(newRequest);
-					}}
-				>
+					}}>
 					Send Request
 				</button>
 			</Link>

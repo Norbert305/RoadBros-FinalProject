@@ -128,9 +128,13 @@ export const SignUpPage = () => {
 							</div>
 						</div>
 					</form>
-						<button className="btn btn-warning btn-lg col-4 p-2 mt-3" onClick={() => actions.createUser(newUser)}>
+					<Link to="/CLientLoginPage">
+						<button
+							className="btn btn-warning btn-lg col-4 p-2 mt-3"
+							onClick={() => actions.createUser(newUser)}>
 							Save
 						</button>
+					</Link>
 				</div>
 				<div
 					className={
@@ -199,7 +203,9 @@ export const SignUpPage = () => {
 						</div>
 					</form>
 					<Link to="/TruckerLoginPage">
-						<button className="btn btn-warning btn-lg col-4 p-2 mt-3" onClick={() => actions.createUser(newUser)}>
+						<button
+							className="btn btn-warning btn-lg col-4 p-2 mt-3"
+							onClick={() => actions.createUser(newUser)}>
 							Save
 						</button>
 					</Link>

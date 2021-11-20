@@ -63,7 +63,7 @@ export const Home = () => {
 							<p>Already memeber?</p>
 						</div>
 						<div className="col-4">
-							<Link to="/LoginPage">
+							<Link to="/ClientLoginPage">
 								<button type="button" className="btn btn-outline-primary btn-lg">
 									Login
 								</button>
@@ -92,7 +92,7 @@ export const Home = () => {
 							<p>Already memeber?</p>
 						</div>
 						<div className="col-2">
-							<Link to="/LoginPage">
+							<Link to="/TruckerLoginPage">
 								<button type="button" className="btn btn-outline-primary btn-lg">
 									Login
 								</button>

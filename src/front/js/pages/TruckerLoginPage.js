@@ -42,8 +42,7 @@ export const TruckerLoginPage = props => {
 				<button
 					type="button"
 					className="btn btn-primary btn-lg my-3 p-2 me-3"
-					onClick={() => actions.login(newContact.email)}
-				>
+					onClick={() => actions.login(newContact.email)}>
 					Next
 				</button>
 			</Link>
