@@ -9,16 +9,17 @@ export const ServiceCompleted = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container mt-5 text-center">
+		<div className="container pt-5 text-center text-light fs-4">
 			<h1>
 				Congratulations! <br />
+				<br />
 				Your Service was Completed
 			</h1>
 
 			<h5 className="m-4">Please rate your trucker below</h5>
 
 			<Link to="/RatingPage">
-				<button className="btn btn-primary m-3">Rate Trucker</button>
+				<button className="btn btn-warning btn-lg m-3">Rate Trucker</button>
 			</Link>
 		</div>
 	);

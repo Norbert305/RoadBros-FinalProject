@@ -16,7 +16,7 @@ export const ServiceMenu = () => {
 	const handleChange = e => setnewRequest({ ...newRequest, [e.target.name]: e.target.value });
 
 	return (
-		<div className="container mt-5 text-center">
+		<div className="container pt-5 text-center">
 			<h1 className="text-center mt-5 mb-4">Service Menu Page</h1>
 			<div className="list-group text-start">
 				<label className="list-group-item d-flex align-items-center m-0">
@@ -94,7 +94,7 @@ export const ServiceMenu = () => {
 			</div>
 			<Link to="/AwaitingResponse">
 				<button
-					className="btn btn-primary m-3"
+					className="btn btn-warning btn-lg m-3"
 					/*
 					onClick={() => {
 						actions.addRequest(newRequest);
@@ -105,7 +105,7 @@ export const ServiceMenu = () => {
 				</button>
 			</Link>
 			<Link to="/ClientHomePage">
-				<button className="btn btn-primary m-3">Home</button>
+				<button className="btn btn-warning btn-lg m-3">Home</button>
 			</Link>
 		</div>
 	);

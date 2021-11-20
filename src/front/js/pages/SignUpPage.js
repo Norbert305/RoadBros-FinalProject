@@ -24,15 +24,15 @@ export const SignUpPage = () => {
 	const [tab, setTab] = useState("client");
 
 	return (
-		<div className="container text-center mt-5">
+		<div className="container text-center pt-5 text-light fs-5">
 			<h1>Sign Up Page</h1>
 			<div className="row">
 				<div className="col" />
-				<div className="col-2 text-center m-2 mb-1">
+				<div className="col-2 text-center m-2 mb-1 text-light">
 					<ul className="nav nav-pills p-0 m-0 d-flex justify-content-center" id="pills-tab" role="tablist">
 						<li className="nav-item" role="presentation">
 							<button
-								className={tab === "client" ? "nav-link active" : "nav-link"}
+								className={tab === "client" ? "nav-link active bg-warning text-dark" : "nav-link"}
 								id="pills-client-tab"
 								data-bs-toggle="pill"
 								data-bs-target="#pills-client"
@@ -49,7 +49,7 @@ export const SignUpPage = () => {
 						</li>
 						<li className="nav-item" role="presentation">
 							<button
-								className={tab === "trucker" ? "nav-link active" : "nav-link"}
+								className={tab === "trucker" ? "nav-link active bg-warning text-dark" : "nav-link"}
 								id="pills-trucker-tab"
 								data-bs-toggle="pill"
 								data-bs-target="#pills-trucker"
@@ -133,7 +133,7 @@ export const SignUpPage = () => {
 						</div>
 					</form>
 					<Link to="/ClientLoginPage">
-						<button className="btn btn-primary p-2 mt-3" onClick={() => addNewUser()}>
+						<button className="btn btn-warning btn-lg col-6 p-2 mt-3" onClick={() => addNewUser()}>
 							Save
 						</button>
 					</Link>
@@ -205,7 +205,7 @@ export const SignUpPage = () => {
 						</div>
 					</form>
 					<Link to="/TruckerLoginPage">
-						<button className="btn btn-primary p-2 mt-3" onClick={() => addNewUser()}>
+						<button className="btn btn-warning btn-lg col-4 p-2 mt-3" onClick={() => addNewUser()}>
 							Save
 						</button>
 					</Link>

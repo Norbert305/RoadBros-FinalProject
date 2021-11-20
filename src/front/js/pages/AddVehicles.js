@@ -16,7 +16,7 @@ export const AddVehicles = () => {
 	const handleChange = e => setnewVehicle({ ...newVehicle, [e.target.name]: e.target.value });
 
 	return (
-		<div className="container mt-5 text-center">
+		<div className="container pt-5 text-center text-light fs-4">
 			<div>
 				<h1 className="text-center">Add Vehicles Page</h1>
 				<form className="text-start">
@@ -64,7 +64,7 @@ export const AddVehicles = () => {
 				</form>
 				<Link to="/ClientHomePage">
 					<button
-						className="btn btn-primary p-2 m-3"
+						className="btn btn-warning btn-lg p-2 m-3"
 						onClick={() => {
 							actions.addVehicle(newVehicle);
 						}}>
@@ -72,7 +72,7 @@ export const AddVehicles = () => {
 					</button>
 				</Link>
 				<Link to="/ClientHomePage">
-					<button className="btn btn-primary p-2 m-3">Home</button>
+					<button className="btn btn-warning btn-lg p-2 m-3">Home</button>
 				</Link>
 			</div>
 		</div>

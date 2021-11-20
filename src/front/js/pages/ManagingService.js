@@ -9,7 +9,7 @@ export const ManagingService = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container mt-5 text-center">
+		<div className="container pt-5 text-center">
 			<h1 className="mb-5">Manage your Service</h1>
 
 			<button className="btn btn-primary m-3" onc>

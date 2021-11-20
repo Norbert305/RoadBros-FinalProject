@@ -9,8 +9,8 @@ export const ServiceHistory = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container mt-5 text-center">
-			<h1 className="text-center mt-5 mb-4">Service History Page</h1>
+		<div className="container pt-5 text-center">
+			<h1 className="text-center mt-4 p-5">Service History Page</h1>
 			<ul className="list-group">
 				{store.listOfRequests.map((item, index) => {
 					return (
@@ -41,7 +41,7 @@ export const ServiceHistory = () => {
 				})}
 			</ul>
 			<Link to="/ClientHomePage">
-				<button className="btn btn-primary m-3">Home</button>
+				<button className="btn btn-warning btn-lg m-3">Home</button>
 			</Link>
 		</div>
 	);

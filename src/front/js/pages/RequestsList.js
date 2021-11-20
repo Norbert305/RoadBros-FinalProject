@@ -9,7 +9,7 @@ export const RequestsList = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container mt-5 text-center">
+		<div className="container pt-5 text-center">
 			<h1 className="mb-4">Client Requests Page</h1>
 
 			<ul className="list-group">

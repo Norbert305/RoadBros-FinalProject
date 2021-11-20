@@ -16,7 +16,7 @@ export const RatingPage = () => {
 
 	const handleChange = e => setnewRating({ ...newRating, [e.target.name]: e.target.value });
 	return (
-		<div className="container mt-5 text-center">
+		<div className="container pt-5 text-center text-light fs-4">
 			<h1 className="mb-4">Thank You!</h1>
 			<h5 className="m-5">How would you rate your experience with ___________ ?</h5>
 
@@ -29,13 +29,13 @@ export const RatingPage = () => {
 				</div>
 			</div>
 
-			<div className="mt-5">
-				<label htmlFor="exampleFormControlTextarea1" className="form-label">
+			<div className="mt-5 p-3">
+				<label htmlFor="exampleFormControlTextarea2" className="form-label">
 					<h5>Use the field below to write additonal comments:</h5>
 				</label>
 				<textarea
 					className="form-control"
-					id="exampleFormControlTextarea1"
+					id="exampleFormControlTextarea2"
 					rows="3"
 					name="comments"
 					onChange={handleChange}
@@ -44,7 +44,7 @@ export const RatingPage = () => {
 
 			<Link to="/ClientHomePage">
 				<button
-					className="btn btn-primary mt-4"
+					className="btn btn-warning btn-lg mt-4"
 					/*
 					onClick={() => {
 						actions.addRating(newRating);

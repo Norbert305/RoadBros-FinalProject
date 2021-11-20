@@ -9,10 +9,10 @@ export const ClientPayment = () => {
 	const { actions, store } = useContext(Context);
 
 	return (
-		<div className="container mt-5 text-center">
+		<div className="container pt-5 text-center">
 			<div>
 				<h1>Payment Page</h1>
-				<form className="text-start">
+				<form className="text-start text-light fs-4">
 					<div className="form-group my-1">
 						<label>Card Information</label>
 						<input
