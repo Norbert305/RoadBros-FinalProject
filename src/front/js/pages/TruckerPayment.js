@@ -9,7 +9,7 @@ export const TruckerPayment = () => {
 	const { actions, store } = useContext(Context);
 
 	return (
-		<div className="container mt-5 text-center">
+		<div className="container pt-5 p-5 text-center text-light">
 			<div>
 				<h1>Payment Page</h1>
 				<form className="text-start">
@@ -42,7 +42,7 @@ export const TruckerPayment = () => {
 					</div>
 				</form>
 				<Link to="/TruckerHomePage">
-					<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
+					<button type="button" className="btn btn-warning btn-lg my-3 p-2 me-3">
 						Next
 					</button>
 				</Link>

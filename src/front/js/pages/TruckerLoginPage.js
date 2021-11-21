@@ -14,7 +14,7 @@ export const TruckerLoginPage = props => {
 	const handleChange = e => setnewContact({ ...newContact, [e.target.name]: e.target.value });
 
 	return (
-		<div className="container text-center mt-5">
+		<div className="container text-center pt-5 p-5 text-light">
 			<h1 className="">Trucker Login Page</h1>
 			<form className="text-start">
 				<div className="form-group my-1">
@@ -41,7 +41,7 @@ export const TruckerLoginPage = props => {
 			<Link to="/TruckerPayment">
 				<button
 					type="button"
-					className="btn btn-primary btn-lg my-3 p-2 me-3"
+					className="btn btn-warning btn-lg my-3 p-2 me-3"
 					onClick={() => actions.login(newContact.email)}>
 					Next
 				</button>

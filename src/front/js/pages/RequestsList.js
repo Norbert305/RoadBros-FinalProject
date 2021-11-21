@@ -16,7 +16,7 @@ export const RequestsList = () => {
 				{store.listOfRequests.map((item, index) => {
 					return (
 						<li className="list-group-item d-inline-flex align-items-center" key={index}>
-							<img src={item.picture} className="img-fluid m-1" width="15%" height="50%" alt="..." />
+							<img src={item.picture} className="img-fluid m-1" width="15%" height="400px" alt="..." />
 							<p className="mx-2 text-start">
 								<strong>Name:</strong> <br /> {item.fullName}
 							</p>

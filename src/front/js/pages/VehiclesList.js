@@ -16,21 +16,27 @@ export const VehiclesList = () => {
 				{store.listOfVehicles.map((item, index) => {
 					return (
 						<li className="list-group-item d-inline-flex align-items-center" key={index}>
-							<p className="mx-2 text-start">
+							<p className="mx-5 text-start">
 								<strong>Type:</strong> <br /> {item.vehicleType}
 							</p>
-							<p className="mx-2 text-start">
+							<p className="mx-5 text-start">
 								<strong>Make:</strong> <br /> {item.vehicleMake}
 							</p>
-							<p className="mx-2 text-start">
+							<p className="mx-5 text-start">
 								<strong>Model:</strong> <br /> {item.vehicleModel}
 							</p>
-							<p className="mx-2 text-start">
+							<p className="mx-5 text-start">
 								<strong>Year:</strong> <br /> {item.vehicleYear}
+							</p>
+							<p className="mx-5 text-start">
+								<strong>Color:</strong> <br /> {item.vehicleColor}
+							</p>
+							<p className="mx-5 text-start">
+								<strong>Plate Number:</strong> <br /> {item.vehiclePlate}
 							</p>
 							<button
 								type="button"
-								className="btn btn-primary"
+								className="btn btn-danger position-absolute top-25 end-0 me-5"
 								onClick={() => actions.deleteVehicle(item)}>
 								Remove Vehicle
 							</button>

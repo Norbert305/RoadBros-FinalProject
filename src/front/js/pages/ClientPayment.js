@@ -13,7 +13,7 @@ export const ClientPayment = () => {
 			<div>
 				<h1>Payment Page</h1>
 				<form className="text-start text-light fs-4">
-					<div className="form-group my-1">
+					<div className="form-group my-2">
 						<label>Card Information</label>
 						<input
 							type="text"
@@ -22,11 +22,11 @@ export const ClientPayment = () => {
 							name="card_info"
 						/>
 					</div>
-					<div className="form-group my-1">
+					<div className="form-group my-2">
 						<label>Name on Card</label>
 						<input type="text" className="form-control" placeholder="Enter Name" name="card_name" />
 					</div>
-					<div className="form-group my-1">
+					<div className="form-group my-2">
 						<label>Country or Region</label>
 						<select id="inputState" className="form-select my-1">
 							<option selected>United States</option>
@@ -36,13 +36,13 @@ export const ClientPayment = () => {
 						</select>
 						<input type="phone" className="form-control" placeholder="ZIP" name="zip" />
 					</div>
-					<div className="form-group my-1">
+					<div className="form-group my-2">
 						<label>City</label>
 						<input type="text" className="form-control" placeholder="Enter city" name="city" />
 					</div>
 				</form>
 				<Link to="/AddVehicles">
-					<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
+					<button type="button" className="btn btn-warning btn-lg my-3 p-2 me-3">
 						Next
 					</button>
 				</Link>

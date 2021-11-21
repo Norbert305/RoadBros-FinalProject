@@ -30,9 +30,9 @@ export const RatingPage = () => {
 			<h5 className="m-5">How would you rate your experience with ___________ ?</h5>
 
 			<div className="row justify-content-center m-3 ">
-				<button type="button" className="btn btn-light col" onClick={handleShowUp}>
+				<button type="button" className="btn btn-light bg-transparent border-0 col-2" onClick={handleShowUp}>
 					<div className="col">
-						<i className="fas fa-thumbs-up fa-4x" />
+						<i className="fas fa-thumbs-up fa-4x text-light" />
 					</div>
 				</button>
 				<Modal show={showUp} onHide={handleCloseUp}>
@@ -51,9 +51,9 @@ export const RatingPage = () => {
 						</Button>
 					</Modal.Footer>
 				</Modal>
-				<button type="button" className="btn btn-light col" onClick={handleShowDown}>
+				<button type="button" className="btn btn-light bg-transparent border-0 col-2" onClick={handleShowDown}>
 					<div className="col">
-						<i className="fas fa-thumbs-down fa-4x" />
+						<i className="fas fa-thumbs-down text-light fa-4x" />
 					</div>
 				</button>
 				<Modal show={showDown} onHide={handleCloseDown}>

@@ -10,7 +10,9 @@ export const AddVehicles = () => {
 		vehicleModel: null,
 		vehicleMake: null,
 		vehicleYear: null,
-		vehicleType: null
+		vehicleType: null,
+		vehicleColor: null,
+		vehiclePlate: null
 	});
 
 	const handleChange = e => setnewVehicle({ ...newVehicle, [e.target.name]: e.target.value });
@@ -20,7 +22,7 @@ export const AddVehicles = () => {
 			<div>
 				<h1 className="text-center">Add Vehicles Page</h1>
 				<form className="text-start">
-					<div className="form-group my-1">
+					<div className="form-group my-2">
 						<label>Type</label>
 						<input
 							type="text"
@@ -30,7 +32,7 @@ export const AddVehicles = () => {
 							onChange={handleChange}
 						/>
 					</div>
-					<div className="form-group my-1">
+					<div className="form-group my-2">
 						<label>Make</label>
 						<input
 							type="text"
@@ -40,7 +42,7 @@ export const AddVehicles = () => {
 							onChange={handleChange}
 						/>
 					</div>
-					<div className="form-group my-1">
+					<div className="form-group my-2">
 						<label>Model</label>
 						<input
 							type="text"
@@ -51,13 +53,33 @@ export const AddVehicles = () => {
 						/>
 					</div>
 
-					<div className="form-group my-1">
+					<div className="form-group my-2">
 						<label>Year</label>
 						<input
 							type="text"
 							className="form-control"
 							placeholder="Year"
 							name="vehicleYear"
+							onChange={handleChange}
+						/>
+					</div>
+					<div className="form-group my-2">
+						<label>Color</label>
+						<input
+							type="text"
+							className="form-control"
+							placeholder="Color"
+							name="vehicleColor"
+							onChange={handleChange}
+						/>
+					</div>
+					<div className="form-group my-2">
+						<label>Plate Number</label>
+						<input
+							type="text"
+							className="form-control"
+							placeholder="Plate"
+							name="vehiclePlate"
 							onChange={handleChange}
 						/>
 					</div>
