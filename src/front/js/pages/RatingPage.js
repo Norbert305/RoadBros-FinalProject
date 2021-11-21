@@ -20,13 +20,31 @@ export const RatingPage = () => {
 			<h1 className="mb-4">Thank You!</h1>
 			<h5 className="m-5">How would you rate your experience with ___________ ?</h5>
 
-			<div className="row justify-content-center m-3">
-				<div className="col-2">
-					<i className="fas fa-thumbs-up fa-4x" />
-				</div>
-				<div className="col-2">
-					<i className="fas fa-thumbs-down fa-4x" />
-				</div>
+			<div className="row justify-content-center m-3 ">
+				<button
+					type="button"
+					className="btn btn-light col"
+					onClick={() =>
+						alert(
+							"Thank you for your feed back! You will recieve an notifcation email in regards to todays service! Please fill out our comment section below on how we can improve! "
+						)
+					}>
+					<div className="col">
+						<i className="fas fa-thumbs-up fa-4x" />
+					</div>
+				</button>
+				<button
+					type="button"
+					className="btn btn-light col"
+					onClick={() =>
+						alert(
+							"We apoligize! Sorry for the inconvenience! Please fill out our comment section below on how we can improve!"
+						)
+					}>
+					<div className="col">
+						<i className="fas fa-thumbs-down fa-4x" />
+					</div>
+				</button>
 			</div>
 
 			<div className="mt-5 p-3">
