@@ -258,7 +258,8 @@ h1 {
         font-size: 35px;
         text-shadow: 15px 10px 30px black;
         padding-top: -50px;
-        margin-bottom: 50px;
+        margin-bottom: 40px;
+        margin-top: 0px;
         font-family: 'Playball', cursive;
     
     }
@@ -266,24 +267,50 @@ h1 {
     .login-area {
     
         width: 100%;
-    
-        .card {
-            background-color: white;
-            width: 200px;
-            height: 200px;
-            margin-top: 50px;
-            
-            margin: auto;
-            border-radius: 5px;
+
+        #nonUser-area {
+            display: block;
+
+            .card {
+                background-color: white;
+                width: 200px;
+                height: 110px;
+                margin-top: 30px;
+                margin: auto;
+                border-radius: 5px;
             
             p {
-            display: none;
+                display: none;
             
                 
             }
-            .btn {
-                margin-top: 0px;
+            
+        }
+        }
+    
+         #signUp-area {
+            display: block;
+
+            .card {
+                background-color: white;
+                width: 200px;
+                height: 400px;
+                              
+                
+                border-radius: 5px;
+
+                p {
+                    margin-top: -30px;
+                    padding-top: 0px;
+                }
+                .or{
+                    margin-top: 5px;
+                }
+                .btn {
+                    margin-top: -25px;
+                }
             }
+            
         }
     }
 }    

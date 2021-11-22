@@ -68,15 +68,18 @@ export const Home = () => {
 					<div className="card">
 						<div className="card-body text-center">
 							<div className="col-12 pt-5 mb-5">
-								<p>Already memeber?</p>
-								<p>You can sign as... </p>
+								<p>
+									Already memeber?
+									<br />
+									You can sign as...
+								</p>
 							</div>
 							<Link to="/ClientLoginPage">
 								<button type="button" className="btn btn-warning btn-lg col-10 mb-3">
 									Client
 								</button>
 							</Link>
-							<p>or</p>
+							<p className="or">or</p>
 							<Link to="/TruckerLoginPage">
 								<button type="button" className="btn btn-warning btn-lg col-10 mt-3 mb-5">
 									Trucker
