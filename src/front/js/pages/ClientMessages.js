@@ -10,8 +10,7 @@ export const ClientMessages = () => {
 
 	return (
 		<div className="container pt-5 text-center text-light">
-			<h1>Messaging Page</h1>
-
+			<h1>Messages</h1>
 			<h5 className="pt-5 p-5 fs-4">Here, you can message your client/Trucker direclty!</h5>
 
 			<div className="card mb-3">

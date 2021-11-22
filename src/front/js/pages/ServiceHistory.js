@@ -10,7 +10,7 @@ export const ServiceHistory = () => {
 
 	return (
 		<div className="container pt-5 text-center">
-			<h1 className="text-center mt-4 p-5">Service History Page</h1>
+			<h1 className="text-center mt-4 p-5">Service History</h1>
 			<ul className="list-group">
 				{store.listOfRequests.map((item, index) => {
 					return (

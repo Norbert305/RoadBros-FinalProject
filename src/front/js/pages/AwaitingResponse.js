@@ -16,7 +16,7 @@ export const AwaitingResponse = () => {
 
 	return (
 		<div className="container pt-5 text-center">
-			<h1 className="mb-4">Awaiting Response Page</h1>
+			<h1 className="mb-4">Awaiting Response</h1>
 
 			<div className="row spinner-border text-info m-5 spinnerSize" role="status">
 				<span className="visually-hidden">Loading...</span>

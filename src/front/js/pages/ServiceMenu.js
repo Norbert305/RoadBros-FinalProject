@@ -8,21 +8,15 @@ import "../../styles/demo.scss";
 export const ServiceMenu = () => {
 	const { store, actions } = useContext(Context);
 
-	const [newVehicle, setnewVehicle] = useState({
-		vehicle: ""
-	});
+	const [newVehicle, setnewVehicle] = useState("");
 
-	const [newService, setnewService] = useState({
-		service: []
-	});
+	const [newService, setnewService] = useState([]);
 
-	const [newZipCode, setnewZipCode] = useState({
-		zipCode: ""
-	});
+	const [newZipCode, setnewZipCode] = useState("");
 
 	return (
 		<div className="container pt-5 text-center">
-			<h1 className="text-center mt-5 mb-4">Service Menu Page</h1>
+			<h1 className="text-center mt-5 mb-4">Request Help</h1>
 			<div className="list-group text-start">
 				<label className="list-group-item d-flex align-items-center m-0">
 					<select
@@ -102,7 +96,18 @@ export const ServiceMenu = () => {
 				</label>
 			</div>
 			<Link to="/AwaitingResponse">
-				<button className="btn btn-warning btn-lg m-3">Send Request</button>
+				<button
+					className="btn btn-warning btn-lg m-3"
+					onClick={() => {
+						actions.addRequest({
+							fullName: store.loggedUser.fullName,
+							service: newService,
+							vehicle: newVehicle,
+							zipCode: newZipCode
+						});
+					}}>
+					Send Request
+				</button>
 			</Link>
 			<Link to="/ClientHomePage">
 				<button className="btn btn-warning btn-lg m-3">Home</button>

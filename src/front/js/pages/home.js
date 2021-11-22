@@ -71,13 +71,13 @@ export const Home = () => {
 								<p>Already memeber?</p>
 								<p>You can sign as... </p>
 							</div>
-							<Link to="/SignUpPage">
+							<Link to="/ClientLoginPage">
 								<button type="button" className="btn btn-warning btn-lg col-10 mb-3">
 									Client
 								</button>
 							</Link>
 							<p>or</p>
-							<Link to="/SignUpPage">
+							<Link to="/TruckerLoginPage">
 								<button type="button" className="btn btn-warning btn-lg col-10 mt-3 mb-5">
 									Trucker
 								</button>

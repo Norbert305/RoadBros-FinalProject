@@ -10,7 +10,7 @@ export const VehiclesList = () => {
 
 	return (
 		<div className="container pt-5 text-center">
-			<h1 className="text-center p-5">Vehicles List Page</h1>
+			<h1 className="text-center p-5">Vehicles List</h1>
 
 			<ul className="list-group">
 				{store.listOfVehicles.map((item, index) => {

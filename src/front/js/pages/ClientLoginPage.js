@@ -15,7 +15,7 @@ export const ClientLoginPage = props => {
 
 	return (
 		<div className="container text-center pt-5">
-			<h1 className="">Client Login Page</h1>
+			<h1 className="">Client Login</h1>
 			<form className="text-start mt-5">
 				<div className="form-group my-1">
 					<input

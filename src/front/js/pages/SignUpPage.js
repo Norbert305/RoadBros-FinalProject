@@ -10,9 +10,7 @@ export const SignUpPage = () => {
 		type: null,
 		fullName: null,
 		email: null,
-		phone: null,
-		city: null,
-		picture: null
+		phone: null
 	});
 
 	const handleChange = e => setNewUser({ ...newUser, [e.target.name]: e.target.value });
@@ -103,34 +101,10 @@ export const SignUpPage = () => {
 								onChange={handleChange}
 							/>
 						</div>
-						<div className="form-group my-1">
-							<label>City</label>
-							<input
-								type="text"
-								className="form-control"
-								placeholder="Enter city"
-								name="city"
-								onChange={handleChange}
-							/>
-						</div>
-						<div className="form-group my-1">
-							<label>Profile Picture</label>
-							<div className="input-group">
-								<input
-									type="file"
-									className="form-control"
-									id="inputGroupFile04"
-									aria-describedby="inputGroupFileAddon04"
-									aria-label="Upload"
-									name="picture"
-									onChange={handleChange}
-								/>
-							</div>
-						</div>
 					</form>
 					<Link to="/CLientLoginPage">
 						<button
-							className="btn btn-warning btn-lg col-4 p-2 mt-3"
+							className="btn btn-warning btn-lg col-4 p-2 mt-3 mb-5"
 							onClick={() => actions.addRequest(newUser)}>
 							Save
 						</button>
@@ -177,35 +151,11 @@ export const SignUpPage = () => {
 								onChange={handleChange}
 							/>
 						</div>
-						<div className="form-group my-1">
-							<label>City</label>
-							<input
-								type="text"
-								className="form-control"
-								placeholder="Enter city"
-								name="city"
-								onChange={handleChange}
-							/>
-						</div>
-						<div className="form-group my-1">
-							<label>Profile Picture</label>
-							<div className="input-group">
-								<input
-									type="file"
-									className="form-control"
-									id="inputGroupFile04"
-									aria-describedby="inputGroupFileAddon04"
-									aria-label="Upload"
-									name="picture"
-									onChange={handleChange}
-								/>
-							</div>
-						</div>
 					</form>
 					<Link to="/TruckerLoginPage">
-						<button
-							className="btn btn-warning btn-lg col-4 p-2 mt-3"
-							onClick={() => actions.addRequest(newUser)}>
+						<button /*Previously, we had addRequest instead of createUser*/
+							className="btn btn-warning btn-lg col-4 p-2 mt-3 mb-5"
+							onClick={() => actions.createUser(newUser)}>
 							Save
 						</button>
 					</Link>

@@ -10,37 +10,28 @@ export const RequestsList = () => {
 
 	return (
 		<div className="container pt-5 text-center">
-			<h1 className="mb-4">Client Requests Page</h1>
+			<h1 className="mb-4">Requests List</h1>
 
 			<ul className="list-group position-relative">
 				{store.listOfRequests.map((item, index) => {
 					return (
 						<li className="list-group-item d-inline-flex align-items-center" key={index}>
-							<img
-								src={item.picture}
-								className="img-fluid m-0 overflow-hidden h-50"
-								width="10%"
-								height="5%"
-								alt="..."
-							/>
 							<p className="mx-2 text-start">
-								<strong>Name:</strong> <br /> {item.fullName}
+								<strong>Full Name:</strong> <br /> {item.fullName}
 							</p>
 							<p className="mx-2 text-start">
-								<strong>City:</strong> <br /> {item.city}
+								<strong>Zip Code:</strong> <br /> {item.zipCode}
 							</p>
 							<p className="mx-2 text-start">
-								<strong>Type:</strong> <br /> {item.vehicleType}
+								<strong>Vehicle:</strong> <br /> {item.vehicle}
 							</p>
 							<p className="mx-2 text-start">
-								<strong>Make:</strong> <br /> {item.vehicleMake}
+								<strong>Service:</strong>
+								{item.service.map((service, index) => (
+									<li key={index}>{service}</li>
+								))}
 							</p>
-							<p className="mx-2 text-start">
-								<strong>Model:</strong> <br /> {item.vehicleModel}
-							</p>
-							<p className="mx-2 text-start">
-								<strong>Year:</strong> <br /> {item.vehicleYear}
-							</p>
+
 							<div
 								className="btn-group position-absolute top-25 end-0 me-5"
 								role="group"
@@ -48,12 +39,6 @@ export const RequestsList = () => {
 								<Link to="/TruckerMessages" className="btn btn-warning">
 									Accept
 								</Link>
-								<button
-									type="button"
-									className="btn btn-danger"
-									onClick={() => actions.deleteRequest(item)}>
-									Remove
-								</button>
 							</div>
 
 							<p className="mx-2 text-start" />
@@ -68,3 +53,10 @@ export const RequestsList = () => {
 		</div>
 	);
 };
+
+/*<button
+	type="button"
+	lassName="btn btn-danger"
+	onClick={() => actions.deleteRequest(item)}>
+	Remove
+	</button>*/

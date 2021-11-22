@@ -15,7 +15,7 @@ export const TruckerLoginPage = props => {
 
 	return (
 		<div className="container text-center pt-5 p-5 text-light">
-			<h1 className="">Trucker Login Page</h1>
+			<h1 className="">Trucker Login</h1>
 			<form className="text-start">
 				<div className="form-group my-1">
 					<label>Email</label>
