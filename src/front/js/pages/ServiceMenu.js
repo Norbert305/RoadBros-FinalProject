@@ -43,8 +43,8 @@ export const ServiceMenu = () => {
 				</label>
 				<label className="list-group-item d-flex align-items-center m-0">
 					<input
-						className="m-2"
-						type="textarea"
+						className="my-2 form-control"
+						type="text"
 						placeholder="Zip Code"
 						name="zip code"
 						onChange={e => setnewZipCode(e.target.value)}

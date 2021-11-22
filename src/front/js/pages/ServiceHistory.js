@@ -19,19 +19,11 @@ export const ServiceHistory = () => {
 								<strong>Trucker Name:</strong> <br /> {item.fullName}
 							</p>
 							<p className="mx-2 text-start">
-								<strong>Type:</strong> <br /> {item.vehicleType}
+								<strong>Vehicle:</strong> <br /> {item.vehicleType} {item.vehicleMake}{" "}
+								{item.vehicleModel} {item.vehicleYear}
 							</p>
 							<p className="mx-2 text-start">
-								<strong>Make:</strong> <br /> {item.vehicleMake}
-							</p>
-							<p className="mx-2 text-start">
-								<strong>Model:</strong> <br /> {item.vehicleModel}
-							</p>
-							<p className="mx-2 text-start">
-								<strong>Year:</strong> <br /> {item.vehicleYear}
-							</p>
-							<p className="mx-2 text-start">
-								<strong>Service:</strong> <br /> Service Name: $$
+								<strong>Service:</strong> <br /> {item.service}
 							</p>
 							<p className="mx-2 text-start">
 								<strong>Date:</strong> <br /> TimeStamp

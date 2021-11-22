@@ -24,6 +24,7 @@ export const RatingPage = () => {
 	});
 
 	const handleChange = e => setnewRating({ ...newRating, [e.target.name]: e.target.value });
+
 	return (
 		<div className="container pt-5 text-center text-light fs-4">
 			<h1 className="mb-4">Thank You!</h1>
@@ -37,17 +38,12 @@ export const RatingPage = () => {
 				</button>
 				<Modal show={showUp} onHide={handleCloseUp}>
 					<Modal.Header closeButton>
-						<Modal.Title>Modal heading</Modal.Title>
+						<Modal.Title>Thanks for your feedback!</Modal.Title>
 					</Modal.Header>
-					<Modal.Body>
-						Thanks for your feedback! Please fill out form bellow on how we can improve!
-					</Modal.Body>
+					<Modal.Body>Please fill out form bellow on how we can improve!</Modal.Body>
 					<Modal.Footer>
 						<Button variant="secondary" onClick={handleCloseUp} className="btn-warning">
 							Close
-						</Button>
-						<Button variant="primary" onClick={handleCloseUp}>
-							Save Changes
 						</Button>
 					</Modal.Footer>
 				</Modal>
@@ -58,15 +54,12 @@ export const RatingPage = () => {
 				</button>
 				<Modal show={showDown} onHide={handleCloseDown}>
 					<Modal.Header closeButton>
-						<Modal.Title>Modal heading</Modal.Title>
+						<Modal.Title>Sorry for the inconvenience!</Modal.Title>
 					</Modal.Header>
-					<Modal.Body>Sorry for the inconvenience! Please feel free to fill out our form bellow.</Modal.Body>
+					<Modal.Body>Please feel free to fill out our form bellow.</Modal.Body>
 					<Modal.Footer>
 						<Button variant="secondary" onClick={handleCloseDown} className="btn-warning">
 							Close
-						</Button>
-						<Button variant="primary" onClick={handleCloseDown}>
-							Save Changes
 						</Button>
 					</Modal.Footer>
 				</Modal>
