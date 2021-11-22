@@ -1,3 +1,6 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Playball&family=Roboto&display=swap');
+
 html, body {
     background: url(https://cdn.wallpapersafari.com/32/53/Koy4EZ.jpg);
     width: 100%;
@@ -11,39 +14,38 @@ html, body {
 }
 
 h1 {
-        color: white;
-        font-size: 80px;
-        margin-top: 70px;
+    color: white;
+    font-size: 110px;
+    text-shadow: 15px 10px 30px black;
+    margin-top: 70px;
+    margin-bottom: 100px;
+    font-family: 'Playball', cursive;
 
 }
 
+*{
+    font-family: 'Roboto', sans-serif;
+}
 .login-area {
-    display: flex;
+    
     width: 100%;
 
-    #nonUser-area {
-        background-color: white;
+    .card {
+        width: 400px;
+        height: 500px;
         margin-top: 150px;
         margin-bottom: 300px;
-        text-align: center;
-        margin-left: 15%;
-        width: 400px;
-        height: 450px;
+        margin: auto;
+        border-radius: 15px;
+        
     }
-    #signUp-area {
-        background-color: white;
-        margin-top: 150px;
-        margin-bottom: 300px;
-        text-align: center;
-        margin-left: 320px;
-        width: 400px;
-        height: 450px;
-    }
+    
     p {
         font-size: 20px;
         width: 80%;
         margin: auto;
     }
+
 }
 
         
@@ -53,7 +55,7 @@ h1 {
 
 
 .AboutUsTitleCard {
-    margin-top: 150px;
+    margin-top: 300px;
     margin-bottom: 150px;
     border-bottom: 6px solid goldenrod;
     margin-left: 40%;
@@ -235,3 +237,53 @@ h1 {
     text-align: center;
     padding-bottom: 20px;
 }
+
+
+//CELLPHONE SCREEN//
+
+@media(max-width: 376px) {
+
+    .navbar {
+        height: 0px;
+        
+        .navbar-toggler {
+        display: none;
+    }
+    }
+    
+
+
+    h1 {
+        color: white;
+        font-size: 35px;
+        text-shadow: 15px 10px 30px black;
+        padding-top: -50px;
+        margin-bottom: 50px;
+        font-family: 'Playball', cursive;
+    
+    }
+
+    .login-area {
+    
+        width: 100%;
+    
+        .card {
+            background-color: white;
+            width: 200px;
+            height: 200px;
+            margin-top: 50px;
+            
+            margin: auto;
+            border-radius: 5px;
+            
+            p {
+            display: none;
+            
+                
+            }
+            .btn {
+                margin-top: 0px;
+            }
+        }
+    }
+}    

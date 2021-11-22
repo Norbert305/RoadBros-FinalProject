@@ -21,7 +21,7 @@ export const Home = () => {
 						<span className="navbar-toggler-icon" />
 					</button>
 					<div className="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-						<div className="navbar-nav">
+						<div className="navbar-nav fs-5">
 							<a className="nav-link active" href="#aboutUs">
 								About Us
 							</a>
@@ -39,62 +39,47 @@ export const Home = () => {
 				</div>
 			</nav>
 
-			<h1>Welcome to RoadBros!</h1>
+			<h1>Welcome to RoadBros</h1>
 
-			<div className="login-area container-fluid">
-				<div id="nonUser-area" className="text-center">
-					<p>
-						<img
-							src={
-								"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthecardoctor.in%2Fwp-content%2Fuploads%2F2020%2F02%2FCarAssist512.png&f=1&nofb=1"
-							}
-							width="90vh"
-						/>
-					</p>
-					<p>The app that helps you get road assistance near you!</p>
-					<p>If you want to get help now, or become a trucker to help others, sign up now!</p>
-					<Link to="/SignUpPage">
-						<button type="button" className="btn btn-outline-warning btn-lg">
-							Sign Up Now!
-						</button>
-					</Link>
-					<div className="row justify-content-center p-4">
-						<div className="col-4">
-							<p>Already memeber?</p>
-						</div>
-						<div className="col-4">
-							<Link to="/ClientLoginPage">
-								<button type="button" className="btn btn-outline-primary btn-lg">
-									Login
+			<div className="login-area row row-cols-1 row-cols-md-2 g-4 text-center mx-auto">
+				<div id="nonUser-area" className="col mx-auto ">
+					<div className="card">
+						<p>
+							<img
+								src={
+									"https://thumbs.dreamstime.com/b/tow-truck-road-sign-towing-truck-van-car-icon-isolated-white-background-tow-truck-road-sign-towing-truck-van-car-icon-186278673.jpg"
+								}
+								width="180vh"
+							/>
+						</p>
+						<p>The app that helps you get road assistance near you!</p>
+						<p>If you want to get help now, or become a trucker to help others, sign up now!</p>
+						<div className="card-body">
+							<Link to="/SignUpPage">
+								<button type="button" className="btn btn-warning btn-lg mt-3">
+									Sign Up Now!
 								</button>
 							</Link>
 						</div>
 					</div>
 				</div>
-				<div id="signUp-area" className="text-center">
-					<p>
-						<img
-							src={
-								"https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fthecardoctor.in%2Fwp-content%2Fuploads%2F2020%2F02%2FCarAssist512.png&f=1&nofb=1"
-							}
-							width="90vh"
-						/>
-					</p>
-					<p>The app that helps you get road assistance near you!</p>
-					<p>If you want to get help now, or become a trucker to help others, sign up now!</p>
-					<Link to="/SignUpPage">
-						<button type="button" className="btn btn-outline-warning btn-lg">
-							Sign Up Now!
-						</button>
-					</Link>
-					<div className="row justify-content-center p-4">
-						<div className="col-2">
-							<p>Already memeber?</p>
-						</div>
-						<div className="col-2">
-							<Link to="/TruckerLoginPage">
-								<button type="button" className="btn btn-outline-primary btn-lg">
-									Login
+
+				<div id="signUp-area" className="col mx-auto">
+					<div className="card">
+						<div className="card-body text-center">
+							<div className="col-12 pt-5 mb-5">
+								<p>Already memeber?</p>
+								<p>You can sign as... </p>
+							</div>
+							<Link to="/SignUpPage">
+								<button type="button" className="btn btn-warning btn-lg col-10 mb-3">
+									Client
+								</button>
+							</Link>
+							<p>or</p>
+							<Link to="/SignUpPage">
+								<button type="button" className="btn btn-warning btn-lg col-10 mt-3 mb-5">
+									Trucker
 								</button>
 							</Link>
 						</div>
