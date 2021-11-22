@@ -38,7 +38,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					vehicleModel: "RAV4",
 					vehicleMake: "Toyota",
 					vehicleYear: "2015",
-					vehicleType: "SUV"
+					vehicleType: "SUV",
+					service: "flat tire: $40",
+					vehicleColor: "Red",
+					vehiclePlate: "VUUU8"
 				},
 				{
 					picture:
@@ -49,7 +52,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					vehicleModel: "Corolla",
 					vehicleMake: "Toyota",
 					vehicleYear: "2017",
-					vehicleType: "Car"
+					vehicleType: "Car",
+					service: "Dead Battery: $150",
+					vehicleColor: "Red",
+					vehiclePlate: "VUUU8"
 				},
 				{
 					picture:
@@ -60,7 +66,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 					vehicleModel: "Odyssey",
 					vehicleMake: "Honda",
 					vehicleYear: "2018",
-					vehicleType: "Van"
+					vehicleType: "Van",
+					service: "Empty Gas: $30",
+					vehicleColor: "Red",
+					vehiclePlate: "VUUU8"
 				}
 			],
 			userLogin: "client"

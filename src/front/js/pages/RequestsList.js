@@ -36,6 +36,15 @@ export const RequestsList = () => {
 								<strong>Year:</strong> <br /> {item.vehicleYear}
 							</p>
 							<p className="mx-2 text-start">
+								<strong>Service:</strong> <br /> {item.service}
+							</p>
+							<p className="mx-2 text-start">
+								<strong>Color:</strong> <br /> {item.vehicleColor}
+							</p>
+							<p className="mx-2 text-start">
+								<strong>Plate:</strong> <br /> {item.vehiclePlate}
+							</p>
+							<p className="mx-2 text-start">
 								<button
 									type="button"
 									className="btn btn-warning mx-3 p-1"
