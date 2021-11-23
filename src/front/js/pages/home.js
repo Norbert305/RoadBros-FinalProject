@@ -194,12 +194,14 @@ export const Home = () => {
 						<div className="col-md-6">
 							<div className="card-body text-center">
 								<h1 className="card-title">New York</h1>
-								<p className="card-text">
-									This is a wider card with supporting text below as a natural lead-in to additional
-									content. This content is a little bit longer.
+								<p className="card-text col-10 ps-5 ms-5">
+									New York State population in 2021 is estimated to be 20.4 million and its fourth
+									most populous US state.
+									<br />
+									In most urban areas 77% use a vehicle
 								</p>
 								<p className="card-text">
-									<small className="text-muted">Last updated 3 mins ago</small>
+									<small className="text-muted">information extracted from newyork.gov</small>
 								</p>
 							</div>
 						</div>
@@ -210,12 +212,14 @@ export const Home = () => {
 						<div className="col-md-6">
 							<div className="card-body text-center">
 								<h1 className="card-title">Chicago</h1>
-								<p className="card-text">
-									This is a wider card with supporting text below as a natural lead-in to additional
-									content. This content is a little bit longer.
+								<p className="card-text text-center col-10 ps-5 ms-5">
+									Chicago population in 2021 is estimated to be 8.8 million and its third most
+									populous US cities.
+									<br />
+									In some areas it reaches up to 53% of vehicles per capita
 								</p>
 								<p className="card-text">
-									<small className="text-muted">Last updated 3 mins ago</small>
+									<small className="text-muted">Information extracted from illinois.gov</small>
 								</p>
 							</div>
 						</div>
@@ -240,12 +244,13 @@ export const Home = () => {
 						<div className="col-md-6">
 							<div className="card-body text-center">
 								<h1 className="card-title">Los Angeles</h1>
-								<p className="card-text">
-									This is a wider card with supporting text below as a natural lead-in to additional
-									content. This content is a little bit longer.
+								<p className="card-text col-10 ps-5 ms-5">
+									Los Angeles population in 2021 is estimated to be 10.1 million
+									<br />
+									In some areas it reaches up to 64% of vehicles per capita
 								</p>
 								<p className="card-text">
-									<small className="text-muted">Last updated 3 mins ago</small>
+									<small className="text-muted">Iformation extracted from california.gov</small>
 								</p>
 							</div>
 						</div>
