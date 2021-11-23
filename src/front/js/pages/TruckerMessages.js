@@ -9,18 +9,18 @@ export const TruckerMessages = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container pt-5 text-center">
+		<div className="container p-5 text-center">
 			<h1>Messaging Page</h1>
 
-			<h5 className="m-4">Here, you can message your client/Trucker direclty!</h5>
+			<h5 className="m-2">Here, you can message your client direclty!</h5>
 
 			<div className="card mb-3">
-				<div className="row d-flex justify-content-end px-5 pt-5 pt-1">
+				<div className="row d-flex justify-content-end p-3">
 					<div className="col-3 bg-secondary text-light text-start p-2 rounded">
 						Hello, I am 20 mins away.
 					</div>
 				</div>
-				<div className="row d-flex justify-content-start px-5 pb-5 pb-1">
+				<div className="row d-flex justify-content-start p-3">
 					<div className="col-3 bg-warning text-light text-start p-2 rounded">
 						Thank You for keeping me updated!
 					</div>
@@ -42,7 +42,7 @@ export const TruckerMessages = () => {
 				</div>
 			</div>
 			<Link to="/ManagingService">
-				<button type="button" className="btn btn-primary btn-lg my-3 p-2 me-3">
+				<button type="button" className="btn btn-warning btn-lg p-2 m-3">
 					Manage Service
 				</button>
 			</Link>

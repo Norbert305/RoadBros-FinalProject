@@ -19,7 +19,7 @@ export const SignUpPage = () => {
 	const [tab, setTab] = useState("client");
 
 	return (
-		<div className="container text-center pt-5 text-light fs-5">
+		<div className="container text-center pt-5 px-3 text-light fs-5">
 			<h1>Sign Up Page</h1>
 			<div className="row">
 				<div className="col" />

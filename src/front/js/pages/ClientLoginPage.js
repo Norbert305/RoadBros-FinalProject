@@ -14,10 +14,11 @@ export const ClientLoginPage = props => {
 	const handleChange = e => setnewContact({ ...newContact, [e.target.name]: e.target.value });
 
 	return (
-		<div className="container text-center pt-5">
+		<div className="container text-center p-5 text-light">
 			<h1 className="">Client Login</h1>
 			<form className="text-start mt-5">
 				<div className="form-group my-1">
+					<label>Email</label>
 					<input
 						type="email"
 						className="form-control"

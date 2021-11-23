@@ -9,7 +9,7 @@ export const TruckerHomePage = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container pt-5 text-center text-light">
+		<div className="container pt-5 px-3 text-center text-light">
 			<h1 className="text-center">Home Page</h1>
 
 			<h2 className="text-center mb-4">Hi, Welcome back _______!</h2>
@@ -21,7 +21,7 @@ export const TruckerHomePage = () => {
 			<Link to="/">
 				<button className="btn btn-warning btn-lg m-3">Back to Landing Page</button>
 			</Link>
-			<Link to="/ServiceHistory">
+			<Link to="/TruckerServiceHistory">
 				<button className="btn btn-warning btn-lg m-3">Service History</button>
 			</Link>
 		</div>

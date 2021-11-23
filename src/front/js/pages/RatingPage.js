@@ -26,13 +26,16 @@ export const RatingPage = () => {
 	const handleChange = e => setnewRating({ ...newRating, [e.target.name]: e.target.value });
 
 	return (
-		<div className="container pt-5 text-center text-light fs-4">
-			<h1 className="mb-4">Thank You!</h1>
-			<h5 className="m-5">How would you rate your experience with ___________ ?</h5>
+		<div className="container pt-5 px-3 text-center text-light fs-4">
+			<h1 className="m-3">Thank You!</h1>
+			<h5 className="m-3">How would you rate your experience with ___________ ?</h5>
 
-			<div className="row justify-content-center m-3 ">
-				<button type="button" className="btn btn-light bg-transparent border-0 col-2" onClick={handleShowUp}>
-					<div className="col">
+			<div className="row justify-content-center my-3 ">
+				<button
+					type="button"
+					className="btn btn-light bg-transparent border-0 col-2 text-center"
+					onClick={handleShowUp}>
+					<div className="col-1">
 						<i className="fas fa-thumbs-up fa-4x text-light" />
 					</div>
 				</button>
@@ -47,8 +50,12 @@ export const RatingPage = () => {
 						</Button>
 					</Modal.Footer>
 				</Modal>
-				<button type="button" className="btn btn-light bg-transparent border-0 col-2" onClick={handleShowDown}>
-					<div className="col">
+				<div className="col-2" />
+				<button
+					type="button"
+					className="btn btn-light bg-transparent border-0 col-2 text-center"
+					onClick={handleShowDown}>
+					<div className="col-1">
 						<i className="fas fa-thumbs-down text-light fa-4x" />
 					</div>
 				</button>

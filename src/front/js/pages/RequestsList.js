@@ -9,39 +9,31 @@ export const RequestsList = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container pt-5 text-center">
-			<h1 className="mb-4">Requests List</h1>
+		<div className="container pt-5 px-3 text-center">
+			<h1 className="text-center p-2">Requests List</h1>
 
 			<ul className="list-group position-relative">
 				{store.listOfRequests.map((item, index) => {
 					return (
-						<li className="list-group-item d-inline-flex align-items-center" key={index}>
-							<p className="mx-2 text-start">
-								<strong>Full Name:</strong> <br /> {item.fullName}
+						<li className="list-group-item d-flex flex-column p-3" key={index}>
+							<p className="mx-2 m-1 text-start">
+								<strong>Full Name:</strong> {item.fullName}
 							</p>
-							<p className="mx-2 text-start">
-								<strong>Zip Code:</strong> <br /> {item.zipCode}
+							<p className="mx-2 m-1 text-start">
+								<strong>Zip Code:</strong> {item.zipCode}
 							</p>
-							<p className="mx-2 text-start">
-								<strong>Vehicle:</strong> <br /> {item.vehicle}
+							<p className="mx-2 m-1 text-start">
+								<strong>Vehicle:</strong> {item.vehicle}
 							</p>
-							<p className="mx-2 text-start">
+							<p className="mx-2 m-1 mb-3 text-start">
 								<strong>Service:</strong>
 								{item.service.map((service, index) => (
 									<li key={index}>{service}</li>
 								))}
 							</p>
-
-							<div
-								className="btn-group position-absolute top-25 end-0 me-5"
-								role="group"
-								aria-label="Basic mixed styles example">
-								<Link to="/TruckerMessages" className="btn btn-warning">
-									Accept
-								</Link>
-							</div>
-
-							<p className="mx-2 text-start" />
+							<Link to="/TruckerMessages">
+								<button className="btn btn-success mx-2 px-3">Accept</button>
+							</Link>
 						</li>
 					);
 				})}

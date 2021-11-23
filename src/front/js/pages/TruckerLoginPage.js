@@ -14,7 +14,7 @@ export const TruckerLoginPage = props => {
 	const handleChange = e => setnewContact({ ...newContact, [e.target.name]: e.target.value });
 
 	return (
-		<div className="container text-center pt-5 p-5 text-light">
+		<div className="container text-center pt-5 px-3 text-light">
 			<h1 className="">Trucker Login</h1>
 			<form className="text-start">
 				<div className="form-group my-1">

@@ -5,7 +5,7 @@ import { Context } from "../store/appContext";
 
 import "../../styles/demo.scss";
 
-export const ServiceHistory = () => {
+export const TruckerServiceHistory = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
@@ -16,7 +16,7 @@ export const ServiceHistory = () => {
 					return (
 						<li className="list-group-item d-flex flex-column p-3" key={index}>
 							<p className="mx-2 m-1 text-start">
-								<strong>Trucker Name:</strong> {item.fullName}
+								<strong>Client Name:</strong> {item.fullName}
 							</p>
 							<p className="mx-2 m-1 text-start">
 								<strong>Vehicle:</strong> {item.vehicleType} {item.vehicleMake} {item.vehicleModel}{" "}
@@ -32,7 +32,7 @@ export const ServiceHistory = () => {
 					);
 				})}
 			</ul>
-			<Link to="/ClientHomePage">
+			<Link to="/TruckerHomePage">
 				<button className="btn btn-warning btn-lg p-2 m-3">Home</button>
 			</Link>
 		</div>

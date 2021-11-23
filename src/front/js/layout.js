@@ -30,6 +30,7 @@ import { TruckerHomePage } from "./pages/TruckerHomePage";
 import { RequestsList } from "./pages/RequestsList";
 import { TruckerMessages } from "./pages/TruckerMessages";
 import { ManagingService } from "./pages/ManagingService";
+import { TruckerServiceHistory } from "./pages/TruckerServiceHistory";
 
 import injectContext from "./store/appContext";
 
@@ -108,6 +109,10 @@ const Layout = () => {
 						<Route exact path="/TruckerHomePage">
 							<NavbarTrucker />
 							<TruckerHomePage />
+						</Route>
+						<Route exact path="/TruckerServiceHistory">
+							<NavbarTrucker />
+							<TruckerServiceHistory />
 						</Route>
 						<Route exact path="/RequestsList">
 							<NavbarTrucker />

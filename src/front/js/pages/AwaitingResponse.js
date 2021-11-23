@@ -15,7 +15,7 @@ export const AwaitingResponse = () => {
 	const [showDown, setShowDown] = useState(false);
 
 	return (
-		<div className="container pt-5 text-center">
+		<div className="container pt-5 px-3 text-center">
 			<h1 className="mb-4">Awaiting Response</h1>
 
 			<div className="row spinner-border text-warning text-info m-5 spinnerSize" role="status">

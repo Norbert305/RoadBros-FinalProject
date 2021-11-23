@@ -9,7 +9,7 @@ export const ClientPayment = () => {
 	const { actions, store } = useContext(Context);
 
 	return (
-		<div className="container pt-5 text-center">
+		<div className="container pt-5 px-3 text-center">
 			<div>
 				<h1>Payment Page</h1>
 				<form className="text-start text-light fs-4">

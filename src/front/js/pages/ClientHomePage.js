@@ -9,7 +9,7 @@ export const ClientHomePage = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container pt-5 text-center text-light fs-4">
+		<div className="container pt-5 px-3 text-center text-light fs-4">
 			<h1 className="text-center">Home Page</h1>
 
 			<h2 className="text-center mb-4">Hi, Welcome back</h2>

@@ -9,7 +9,7 @@ export const ServiceCompleted = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container pt-5 text-center text-light fs-4">
+		<div className="container pt-5 px-3 text-center text-light fs-4">
 			<h1>
 				Congratulations!
 				<br />

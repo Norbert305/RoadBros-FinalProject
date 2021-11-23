@@ -15,7 +15,7 @@ export const ServiceMenu = () => {
 	const [newZipCode, setnewZipCode] = useState("");
 
 	return (
-		<div className="container pt-5 text-center">
+		<div className="container pt-5 px-3 text-center">
 			<h1 className="text-center mt-5 mb-4">Request Help</h1>
 			<div className="list-group text-start">
 				<label className="list-group-item d-flex align-items-center m-0">

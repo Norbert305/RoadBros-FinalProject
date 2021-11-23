@@ -9,7 +9,7 @@ export const TruckerPayment = () => {
 	const { actions, store } = useContext(Context);
 
 	return (
-		<div className="container pt-5 p-5 text-center text-light">
+		<div className="container pt-5 px-3 text-center text-light">
 			<div>
 				<h1>Payment Page</h1>
 				<form className="text-start">
