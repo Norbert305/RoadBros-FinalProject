@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import "../../styles/index.scss";
 import { Link } from "react-router-dom";
+import { Tabs, Tab, Carousel, CarouselItem, Caption } from "react-bootstrap";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
@@ -39,7 +40,7 @@ export const Home = () => {
 				</div>
 			</nav>
 
-			<h1>Welcome to RoadBros rafa</h1>
+			<h1>Welcome to RoadBros</h1>
 
 			<div className="login-area row row-cols-1 row-cols-md-2 g-4 text-center mx-auto">
 				<div id="nonUser-area" className="col mx-auto ">
@@ -94,79 +95,27 @@ export const Home = () => {
 				About us
 			</h2>
 
-			<div id="info-cards" className="info-cards container">
-				<nav className="nav nav-pills mb-3 justify-content-center" id="tab" role="tablist">
-					<li className="nav-item" role="presentation">
-						<button
-							className="nav-link active"
-							id="home"
-							href="#home"
-							data-bs-toggle="tab"
-							data-bs-target="#home"
-							type="button"
-							role="tab"
-							aria-controls="home"
-							aria-selected="true">
-							Home
-						</button>
-					</li>
-					<li className="nav-item" role="presentation">
-						<button
-							className="nav-link"
-							id="profile"
-							href="#profile"
-							data-bs-toggle="tab"
-							data-bs-target="#profile"
-							type="button"
-							role="tab"
-							aria-controls="profile"
-							aria-selected="false">
-							Profile
-						</button>
-					</li>
-					<li className="nav-item" role="presentation">
-						<button
-							className="nav-link"
-							id="contact"
-							data-bs-toggle="tab"
-							data-bs-target="#contact"
-							type="button"
-							role="tab"
-							aria-controls="contact"
-							aria-selected="false">
-							Contact
-						</button>
-					</li>
-				</nav>
-				<div className="tab-content" id="tabContent">
-					<div className="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-						Home Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been
-						the industrys standard dummy text ever since the 1500s, when an unknown printer took a galley of
-						type and scrambled it to make a type specimen book. It has survived not only five centuries, but
-						also the leap into electronic typesetting, remaining essentially unchanged. It was popularised
-						in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more
-						recently with desktop publishing software like Aldus PageMaker including versions of Lorem
-						Ipsum.
-					</div>
-					<div className="tab-pane fade" id="profile" role="tabpanel" aria-labelledby="profile-tab">
-						Profile Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-						been the industrys standard dummy text ever since the 1500s, when an unknown printer took a
-						galley of type and scrambled it to make a type specimen book. It has survived not only five
-						centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It
-						was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-						passages, and more recently with desktop publishing software like Aldus PageMaker including
-						versions of Lorem Ipsum.
-					</div>
-					<div className="tab-pane fade" id="contact" role="tabpanel" aria-labelledby="contact-tab">
-						Contact Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has
-						been the industrys standard dummy text ever since the 1500s, when an unknown printer took a
-						galley of type and scrambled it to make a type specimen book. It has survived not only five
-						centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It
-						was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum
-						passages, and more recently with desktop publishing software like Aldus PageMaker including
-						versions of Lorem Ipsum.
-					</div>
-				</div>
+			<div id="info-cards" className="container">
+				<Tabs
+					defaultActiveKey="Who We Are"
+					id="uncontrolled-tab-example"
+					className="mb-3 justify-content-center">
+					<Tab eventKey="Who We Are" title="Who We Are">
+						<p>
+							<strong className="text-warning">We are</strong> an app based in{" "}
+							<strong className="text-warning">Miami</strong> created in order to help people to{" "}
+							<strong className="text-warning">help each other</strong>
+						</p>
+					</Tab>
+					<Tab eventKey="Our Mission" title="Our Mission">
+						<p>
+							<strong className="text-warning">Create</strong> a healthy and safe environment in our{" "}
+							<strong className="text-warning">Community</strong> in order to avoid accidents, incidents,
+							and annoyances when having a problem with your car on the{" "}
+							<strong className="text-warning">Road</strong>
+						</p>
+					</Tab>
+				</Tabs>
 			</div>
 
 			<h2 className="servicesTitleCard" id="services">
@@ -174,69 +123,58 @@ export const Home = () => {
 			</h2>
 
 			<div id="service-sliders" className="container">
-				<div id="carouselExampleCaptions" className="carousel slide" data-bs-ride="carousel">
-					<div className="carousel-indicators">
-						<button
-							type="button"
-							data-bs-target="#carouselExampleInterval"
-							data-bs-slide-to="0"
-							className="active"
-							aria-current="true"
-							aria-label="Slide 1"
+				<Carousel>
+					<Carousel.Item interval={2000}>
+						<Carousel.Caption>
+							<h1>Flat Tire</h1>
+						</Carousel.Caption>
+						<img
+							className="d-block w-100"
+							src="https://media.istockphoto.com/photos/car-tire-with-a-flat-tire-in-the-yard-near-a-multistorey-building-of-picture-id1224593244?b=1&k=20&m=1224593244&s=170667a&w=0&h=4chACaKJDZczAsMcevys-_nlxExRE78Yi5GDmBvjbmY="
+							alt="First slide"
 						/>
-						<button
-							type="button"
-							data-bs-target="#carouselExampleInterval"
-							data-bs-slide-to="1"
-							aria-label="Slide 2"
+					</Carousel.Item>
+					<Carousel.Item interval={2000}>
+						<img
+							className="d-block w-100"
+							src="https://www.misterworker.com/it/img/cms/Mister%20Worker/ENG/Dead-car-battery.jpg"
+							alt="Second slide"
 						/>
-						<button
-							type="button"
-							data-bs-target="#carouselExampleInterval"
-							data-bs-slide-to="2"
-							aria-label="Slide 3"
+						<Carousel.Caption>
+							<h1>Dead Battery</h1>
+						</Carousel.Caption>
+					</Carousel.Item>
+					<Carousel.Item interval={2000}>
+						<img
+							className="d-block w-100"
+							src="https://cdn.hswstatic.com/gif/empty-gas.jpg"
+							alt="Third slide"
 						/>
-					</div>
-					<div className="carousel-inner">
-						<div className="carousel-item active" data-bs-interval="1000">
-							<img src="https://wallpapercave.com/wp/wp2150816.jpg" className="d-block w-100" alt="..." />
-							<div className="carousel-caption d-none d-md-block">
-								<h1>First slide label</h1>
-								<p>Some representative placeholder content for the first slide.</p>
-							</div>
-						</div>
-						<div className="carousel-item" data-bs-interval="1000">
-							<img src="https://wallpapercave.com/wp/wp2150816.jpg" className="d-block w-100" alt="..." />
-							<div className="carousel-caption d-none d-md-block">
-								<h1>Second slide label</h1>
-								<p>Some representative placeholder content for the second slide.</p>
-							</div>
-						</div>
-						<div className="carousel-item" data-bs-interval="1000">
-							<img src="https://wallpapercave.com/wp/wp2150816.jpg" className="d-block w-100" alt="..." />
-							<div className="carousel-caption d-none d-md-block">
-								<h1>Third slide label</h1>
-								<p>Some representative placeholder content for the third slide.</p>
-							</div>
-						</div>
-					</div>
-					<button
-						className="carousel-control-prev"
-						type="button"
-						data-bs-target="#carouselExampleCaptions"
-						data-bs-slide="prev">
-						<span className="carousel-control-prev-icon" aria-hidden="true" />
-						<span className="visually-hidden">Previous</span>
-					</button>
-					<button
-						className="carousel-control-next"
-						type="button"
-						data-bs-target="#carouselExampleCaptions"
-						data-bs-slide="next">
-						<span className="carousel-control-next-icon" aria-hidden="true" />
-						<span className="visually-hidden">Next</span>
-					</button>
-				</div>
+						<Carousel.Caption>
+							<h1>Empty Gas</h1>
+						</Carousel.Caption>
+					</Carousel.Item>
+					<Carousel.Item interval={2000}>
+						<img
+							className="d-block w-100"
+							src="https://grimmermotors.co.nz/wp-content/uploads/2017/06/jumpstarter.jpg"
+							alt="Fourth slide"
+						/>
+						<Carousel.Caption>
+							<h1>Jump Start</h1>
+						</Carousel.Caption>
+					</Carousel.Item>
+					<Carousel.Item interval={2000}>
+						<img
+							className="d-block w-100"
+							src="https://bramptonist.com/wp-content/uploads/2018/09/car-towing-brampton.jpg"
+							alt="Fifth slide"
+						/>
+						<Carousel.Caption>
+							<h1>Towing Car</h1>
+						</Carousel.Caption>
+					</Carousel.Item>
+				</Carousel>
 			</div>
 
 			<h2 className="expansionsTitleCard" id="expansions">
