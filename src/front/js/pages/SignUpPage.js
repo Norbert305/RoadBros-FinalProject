@@ -10,6 +10,7 @@ export const SignUpPage = () => {
 		type: null,
 		fullName: null,
 		email: null,
+		password: null,
 		phone: null
 	});
 
@@ -92,6 +93,16 @@ export const SignUpPage = () => {
 							/>
 						</div>
 						<div className="form-group my-1">
+							<label>Password</label>
+							<input
+								type="password"
+								className="form-control"
+								placeholder="Enter Password"
+								name="password"
+								onChange={handleChange}
+							/>
+						</div>
+						<div className="form-group my-1">
 							<label>Phone</label>
 							<input
 								type="phone"
@@ -138,6 +149,16 @@ export const SignUpPage = () => {
 								className="form-control"
 								placeholder="Enter email"
 								name="email"
+								onChange={handleChange}
+							/>
+						</div>
+						<div className="form-group my-1">
+							<label>Password</label>
+							<input
+								type="password"
+								className="form-control"
+								placeholder="Enter Password"
+								name="password"
 								onChange={handleChange}
 							/>
 						</div>

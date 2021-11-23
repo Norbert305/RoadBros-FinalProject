@@ -1,6 +1,6 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-import "../../styles/home.scss";
+import "../../styles/index.scss";
 import { Link } from "react-router-dom";
 
 export const Home = () => {
@@ -99,7 +99,8 @@ export const Home = () => {
 					<li className="nav-item" role="presentation">
 						<button
 							className="nav-link active"
-							id="home-tab"
+							id="home"
+							href="#home"
 							data-bs-toggle="tab"
 							data-bs-target="#home"
 							type="button"
@@ -112,7 +113,8 @@ export const Home = () => {
 					<li className="nav-item" role="presentation">
 						<button
 							className="nav-link"
-							id="profile-tab"
+							id="profile"
+							href="#profile"
 							data-bs-toggle="tab"
 							data-bs-target="#profile"
 							type="button"
@@ -125,7 +127,7 @@ export const Home = () => {
 					<li className="nav-item" role="presentation">
 						<button
 							className="nav-link"
-							id="contact-tab"
+							id="contact"
 							data-bs-toggle="tab"
 							data-bs-target="#contact"
 							type="button"
