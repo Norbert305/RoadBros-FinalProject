@@ -9,8 +9,8 @@ export const ServiceHistory = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container pt-5 px-3 text-center">
-			<h1 className="text-center p-2">Service History</h1>
+		<div className="container p-4 text-center text-light fs-6">
+			<h1 className="text-center m-3">Service History</h1>
 			<ul className="list-group position-relative">
 				{store.listOfRequests.map((item, index) => {
 					return (

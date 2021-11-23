@@ -9,12 +9,10 @@ export const ClientMessages = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container pt-5 px-3 text-center text-light">
-			<h1>Messages</h1>
-
+		<div className="container p-4 text-center text-light fs-6">
+			<h1 className="m-3">Messages</h1>
 			<h5 className="m-2">Here, you can message your trucker direclty!</h5>
-
-			<div className="card mb-3">
+			<div className="card">
 				<div className="row d-flex justify-content-start p-3">
 					<div className="col-3 bg-warning text-start p-2 rounded">Hello, I am 20 mins away.</div>
 				</div>

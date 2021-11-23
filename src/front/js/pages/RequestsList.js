@@ -9,9 +9,8 @@ export const RequestsList = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container pt-5 px-3 text-center">
-			<h1 className="text-center p-2">Requests List</h1>
-
+		<div className="container p-4 text-center text-light fs-6">
+			<h1 className="text-center m-3">Requests List</h1>
 			<ul className="list-group position-relative">
 				{store.listOfRequests.map((item, index) => {
 					return (
@@ -40,7 +39,7 @@ export const RequestsList = () => {
 			</ul>
 
 			<Link to="/TruckerHomePage">
-				<button className="btn btn-warning btn-lg px-5 m-3">Home</button>
+				<button className="btn btn-warning btn-lg p-2 m-3">Home</button>
 			</Link>
 		</div>
 	);

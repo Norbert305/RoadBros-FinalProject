@@ -9,7 +9,11 @@ export const NavbarTrucker = () => {
 	return (
 		<Navbar bg="dark" variant="dark" expand="lg">
 			<Container className="md-mx-5 sm-mx-2">
-				<Navbar.Brand className="fs-3">RoadBros</Navbar.Brand>
+				<Navbar.Brand className="fs-3">
+					<Link to="/" className="text-decoration-none text-white">
+						RoadBros
+					</Link>
+				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="m-auto position-absolute bg-dark top-25 end-0">

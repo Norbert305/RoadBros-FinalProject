@@ -26,11 +26,11 @@ export const RatingPage = () => {
 	const handleChange = e => setnewRating({ ...newRating, [e.target.name]: e.target.value });
 
 	return (
-		<div className="container pt-5 px-3 text-center text-light fs-4">
+		<div className="container py-4 px-3 text-center text-light fs-4">
 			<h1 className="m-3">Thank You!</h1>
 			<h5 className="m-3">How would you rate your experience with ___________ ?</h5>
 
-			<div className="row justify-content-center my-3 ">
+			<div className="row justify-content-center my-3">
 				<button
 					type="button"
 					className="btn btn-light bg-transparent border-0 col-2 text-center"
@@ -87,7 +87,7 @@ export const RatingPage = () => {
 
 			<Link to="/ClientHomePage">
 				<button
-					className="btn btn-warning btn-lg mt-4"
+					className="btn btn-warning btn-lg p-2 m-3"
 					/*
 				onClick={() => {
 					actions.addRating(newRating);

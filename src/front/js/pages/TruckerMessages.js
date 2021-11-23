@@ -9,11 +9,9 @@ export const TruckerMessages = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container p-5 text-center">
+		<div className="container p-4 text-center text-light fs-6">
 			<h1>Messaging Page</h1>
-
-			<h5 className="m-2">Here, you can message your client direclty!</h5>
-
+			<h5 className="m-3">Here, you can message your client direclty!</h5>
 			<div className="card mb-3">
 				<div className="row d-flex justify-content-end p-3">
 					<div className="col-3 bg-secondary text-light text-start p-2 rounded">
@@ -25,7 +23,6 @@ export const TruckerMessages = () => {
 						Thank You for keeping me updated!
 					</div>
 				</div>
-
 				<div className="card-footer d-inline-flex align-items-center justify-content-start">
 					<div className="input-group m-3">
 						<input

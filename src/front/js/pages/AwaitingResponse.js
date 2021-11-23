@@ -15,15 +15,15 @@ export const AwaitingResponse = () => {
 	const [showDown, setShowDown] = useState(false);
 
 	return (
-		<div className="container pt-5 px-3 text-center">
-			<h1 className="mb-4">Awaiting Response</h1>
+		<div className="container p-4 text-center text-light fs-6">
+			<h1 className="m-3">Awaiting Response</h1>
 
-			<div className="row spinner-border text-warning text-info m-5 spinnerSize" role="status">
+			<div className="row spinner-border text-warning text-info m-3 spinnerSize" role="status">
 				<span className="visually-hidden">Loading...</span>
 			</div>
 
-			<div className="row m-2 d-flex justify-content-center">
-				<div className="col-3">
+			<div className="row m-3 d-flex justify-content-center">
+				<div className="col">
 					<button type="button" className="btn btn-warning btn-lg" onClick={handleShowUp}>
 						Request Accepted by trucker
 					</button>
@@ -36,7 +36,7 @@ export const AwaitingResponse = () => {
 					<Modal.Body>Your request has been accepted, click button below to text your trucker.</Modal.Body>
 					<Modal.Footer>
 						<Link to="/ClientMessages">
-							<Button variant="secondary" className="btn btn-warning btn-lg">
+							<Button variant="secondary" className="btn btn-warning btn-lg fs-6">
 								Go to Messages
 							</Button>
 						</Link>

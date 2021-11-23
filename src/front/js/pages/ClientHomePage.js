@@ -9,22 +9,19 @@ export const ClientHomePage = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container pt-5 px-3 text-center text-light fs-4">
-			<h1 className="text-center">Home Page</h1>
+		<div className="container py-4 px-3 text-center text-light fs-4">
+			<h1 className="text-center m-3">Home Page</h1>
 
-			<h2 className="text-center mb-4">Hi, Welcome back</h2>
+			<h2 className="text-center m-3">Hi, Welcome back</h2>
 
 			<Link to="/ServiceMenu">
-				<button className="btn btn-warning btn-lg m-3">Request Help</button>
+				<button className="btn btn-warning btn-lg p-2 m-3">Request Help</button>
 			</Link>
 			<Link to="/ServiceHistory">
 				<button className="btn btn-warning btn-lg m-3">Service History</button>
 			</Link>
 			<Link to="/VehiclesList">
-				<button className="btn btn-warning btn-lg m-3">Vehicles List</button>
-			</Link>
-			<Link to="/">
-				<button className="btn btn-warning btn-lg m-3">Back to Landing Page</button>
+				<button className="btn btn-warning btn-lg p-2 m-3">Vehicles List</button>
 			</Link>
 		</div>
 	);

@@ -123,8 +123,10 @@ const Layout = () => {
 							<TruckerMessages />
 						</Route>
 						<Route exact path="/ManagingService">
+							<NavbarTrucker />
 							<ManagingService />
 						</Route>
+
 						<Route exact path="/navbarClient">
 							<NavbarClient />
 						</Route>

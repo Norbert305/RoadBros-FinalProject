@@ -19,8 +19,8 @@ export const SignUpPage = () => {
 	const [tab, setTab] = useState("client");
 
 	return (
-		<div className="container text-center pt-5 px-3 text-light fs-5">
-			<h1>Sign Up Page</h1>
+		<div className="container p-4 text-center text-light fs-6">
+			<h1 className="m-3">Sign Up Page</h1>
 			<div className="row">
 				<div className="col" />
 				<div className="col-2 text-center m-2 mb-1 text-light">
