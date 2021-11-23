@@ -35,13 +35,17 @@ const getState = ({ getStore, getActions, setStore }) => {
 					vehicleModel: "RAV4",
 					vehicleMake: "Chevy",
 					vehicleYear: "2015",
-					vehicleType: "SUV"
+					vehicleType: "SUV",
+					vehicleColor: "red",
+					vehiclePlate: "dhfgh"
 				},
 				{
 					vehicleModel: "RAV4",
 					vehicleMake: "Corvet",
 					vehicleYear: "2015",
-					vehicleType: "SUV"
+					vehicleType: "SUV",
+					vehicleColor: "red",
+					vehiclePlate: "dhfgh"
 				}
 			],
 			listOfRequests: [
