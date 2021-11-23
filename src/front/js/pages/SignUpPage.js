@@ -7,7 +7,7 @@ export const SignUpPage = () => {
 	const { actions } = useContext(Context);
 
 	const [newUser, setNewUser] = useState({
-		type: null,
+		type: "client",
 		fullName: null,
 		email: null,
 		password: null,
