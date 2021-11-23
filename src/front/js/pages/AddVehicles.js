@@ -2,7 +2,7 @@ import React, { useState, useContext } from "react";
 import { PropTypes } from "prop-types";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
-
+import { NavbarClient } from "../component/navbarClient";
 export const AddVehicles = () => {
 	const { actions } = useContext(Context);
 

@@ -7,8 +7,8 @@ import { Home } from "./pages/home";
 
 //PAGES
 
-import { navbarClient } from "./component/navbarClient";
-import { navbarTrucker } from "./component/navbarTrucker";
+import { NavbarClient } from "./component/navbarClient";
+import { NavbarTrucker } from "./component/navbarTrucker";
 
 import { SignUpPage } from "./pages/SignUpPage";
 import { ClientLoginPage } from "./pages/ClientLoginPage";
@@ -58,33 +58,43 @@ const Layout = () => {
 							<ClientLoginPage />
 						</Route>
 						<Route exact path="/ClientPayment">
+							<NavbarClient />
 							<ClientPayment />
 						</Route>
 						<Route exact path="/AddVehicles">
+							<NavbarClient />
 							<AddVehicles />
 						</Route>
 						<Route exact path="/ClientHomePage">
+							<NavbarClient />
 							<ClientHomePage />
 						</Route>
 						<Route exact path="/VehiclesList">
+							<NavbarClient />
 							<VehiclesList />
 						</Route>
 						<Route exact path="/ServiceHistory">
+							<NavbarClient />
 							<ServiceHistory />
 						</Route>
 						<Route exact path="/ServiceMenu">
+							<NavbarClient />
 							<ServiceMenu />
 						</Route>
 						<Route exact path="/AwaitingResponse">
+							<NavbarClient />
 							<AwaitingResponse />
 						</Route>
 						<Route exact path="/ClientMessages">
+							<NavbarClient />
 							<ClientMessages />
 						</Route>
 						<Route exact path="/ServiceCompleted">
+							<NavbarClient />
 							<ServiceCompleted />
 						</Route>
 						<Route exact path="/RatingPage">
+							<NavbarClient />
 							<RatingPage />
 						</Route>
 
@@ -92,19 +102,29 @@ const Layout = () => {
 							<TruckerLoginPage />
 						</Route>
 						<Route exact path="/TruckerPayment">
+							<NavbarTrucker />
 							<TruckerPayment />
 						</Route>
 						<Route exact path="/TruckerHomePage">
+							<NavbarTrucker />
 							<TruckerHomePage />
 						</Route>
 						<Route exact path="/RequestsList">
+							<NavbarTrucker />
 							<RequestsList />
 						</Route>
 						<Route exact path="/TruckerMessages">
+							<NavbarTrucker />
 							<TruckerMessages />
 						</Route>
 						<Route exact path="/ManagingService">
 							<ManagingService />
+						</Route>
+						<Route exact path="/navbarClient">
+							<NavbarClient />
+						</Route>
+						<Route exact path="/navbarTrucker">
+							<NavbarTrucker />
 						</Route>
 
 						<Route>

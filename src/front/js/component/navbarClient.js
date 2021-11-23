@@ -3,7 +3,7 @@ import { Context } from "../store/appContext";
 import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
-export const navbarClient = () => {
+export const NavbarClient = () => {
 	const { store } = useContext(Context);
 
 	return (

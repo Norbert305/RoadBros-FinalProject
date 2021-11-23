@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-
+import { NavbarClient } from "../component/navbarClient";
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.scss";
