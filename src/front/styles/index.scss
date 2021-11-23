@@ -184,6 +184,7 @@ h1 {
 // CONTACT SECTION
 
 .contact {
+    margin-top: 100px;
     width: 800px;
 
 }
@@ -274,9 +275,14 @@ h1 {
             height: 100%;
             transform: translateX(300px);
         }
+
+        
      
     }
     
+    #menu-btn {
+        display: none;
+    }
 
 
     h1 {
@@ -285,7 +291,7 @@ h1 {
         text-shadow: 15px 10px 30px black;
         padding-top: -50px;
         margin-bottom: 40px;
-        margin-top: 0px;
+        margin-top: -10px;
         font-family: 'Playball', cursive;
     
     }
@@ -301,7 +307,7 @@ h1 {
                 background-color: white;
                 width: 200px;
                 height: 110px;
-                margin-top: 30px;
+                margin-top: 40px;
                 margin: auto;
                 border-radius: 5px;
             
@@ -337,6 +343,124 @@ h1 {
                 }
             }
             
+        }
+    }
+
+    //TITLES
+
+    .AboutUsTitleCard {
+        margin-top: 150px;
+        margin-bottom: 50px;
+        border-bottom: 4px solid goldenrod;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-bottom: 20px;
+    
+        
+    }
+    .servicesTitleCard {
+        margin-top: 40px;
+        margin-bottom: 50px;
+        border-bottom: 4px solid goldenrod;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-bottom: 20px;
+    
+        
+    }
+    .expansionsTitleCard {
+        margin-top: 0px;
+        margin-bottom: 50px;
+        border-bottom: 4px solid goldenrod;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-bottom: 20px;
+    
+        
+    }
+    .contactTitleCard {
+        margin-top: 50px;
+        margin-bottom: 50px;
+        border-bottom: 4px solid goldenrod;
+        margin-left: 10%;
+        margin-right: 10%;
+        padding-bottom: 20px;
+    
+        
+    }
+
+    //ABOUT US SECTION
+
+    #info-cards {
+        background-color: rgb(78, 78, 78);
+        color: white;
+        margin-top: 0px;
+        font-size: 20px;
+        margin-bottom: 0px;
+        height: 250px;
+        
+    
+        .nav-link {
+            background-color: rgb(78, 78, 78);
+            font-size: 15px;
+            color: white;
+            padding: 15px;
+            
+        }
+        .tab-pane {
+            margin: auto;
+            width: 60%;
+            margin-top: 40px;
+            font-size: 15px;
+            text-align: center;
+        }
+    }
+
+    #service-sliders {
+        img {
+            height: 300px;
+        }
+    }
+
+    //FUTERE EXPANSION SECTION
+
+    #future-expansion {
+        margin-bottom: 50px;
+        width: 100%;
+    
+        .card {
+            
+            margin-bottom: 0px;
+            height: 0px;
+            background-color: rgb(78, 78, 78);
+            color: white;
+    
+            h1 {
+                margin-top: 20px;
+                font-size: 50px;
+            }
+    
+            p {display: none;
+                font-size: 5px; 
+            }
+    
+            img:hover {
+                transform: scale(1.5);
+            }
+        }
+    
+        
+    
+        img {
+            width: 100%;
+            height: 500px;
+            transition: all 0.3s ease-in-out; 
+            
+        }
+        
+    
+        .overflow {
+            overflow: hidden; 
         }
     }
 }    

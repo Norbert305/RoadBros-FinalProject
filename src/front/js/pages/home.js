@@ -12,6 +12,7 @@ export const Home = () => {
 			<nav className="navbar navbar-expand-lg navbar-dark shadow-5-strong">
 				<div className="container-fluid">
 					<button
+						id="menu-btn"
 						className="navbar-toggler"
 						type="button"
 						data-bs-toggle="collapse"
