@@ -7,11 +7,15 @@ from api.utils import generate_sitemap, APIException
 
 api = Blueprint('api', __name__)
 
+#First get method
 @api.route('/user', methods=['GET'])
 def get_user():
 
     return "This is the GET method"
 
+#Missing a login action
+
+#Adding new users
 @api.route('/user', methods=['POST'])
 def add_new_user():
 
@@ -32,6 +36,7 @@ def add_new_user():
     all_users = list(map(lambda x: x.serialize(), users_query))
     return jsonify(all_users), 200
 
+#Adding new vehicles
 @api.route('/vehicle', methods=['POST'])
 def add_vehicle():
 
@@ -53,6 +58,7 @@ def add_vehicle():
     all_vehicles = list(map(lambda x: x.serialize(), vehicles_query))
     return jsonify(all_vehicles), 200
 
+#List of Requests of every trucker
 @api.route('/request', methods=['POST'])
 def add_request():
 
@@ -71,6 +77,7 @@ def add_request():
     all_requests = list(map(lambda x: x.serialize(), requests_query))
     return jsonify(all_requests), 200
 
+#List of vehicles, different for every user
 @api.route('/vehicle', methods=['GET'])
 def get_vehicles():
     #How to get vehicles for one user .filter_by(user_id=user_id) for list of user vehicles
@@ -81,12 +88,16 @@ def get_vehicles():
         "vehicles" : all_vehicles
     }), 200
 
+#List of requests (completed), for service history purposes (for client and trucker alike)
 @api.route('/request', methods=['GET'])
 def get_requests():
-    #How to get requests for one user .filter_by(user_id=user_id) for service history
+    #How to get requests for one user .filter_by(user_id=user_id) for service history (user and trucker)
     requests_query = Request.query.all()
     all_requests = list(map(lambda x: x.serialize(), requests_query))
 
     return jsonify({
         "requests" : all_requests
     }), 200
+
+#Do I need a table or endpoint for messages or payment information?
+#Missing client rating method
