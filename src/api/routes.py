@@ -52,3 +52,41 @@ def add_vehicle():
     vehicles_query = Vehicle.query.all()
     all_vehicles = list(map(lambda x: x.serialize(), vehicles_query))
     return jsonify(all_vehicles), 200
+
+@api.route('/request', methods=['POST'])
+def add_request():
+
+    body = request.get_json()
+
+    new_request = Request(
+        zip_code=body["zip_code"], 
+        service=body["service"], 
+        trucker_id=body["trucker_id"]
+    )
+
+    db.session.add(new_request)
+    db.session.commit()
+
+    requests_query = Request.query.all()
+    all_requests = list(map(lambda x: x.serialize(), requests_query))
+    return jsonify(all_requests), 200
+
+@api.route('/vehicle', methods=['GET'])
+def get_vehicles():
+    #How to get vehicles for one user .filter_by(user_id=user_id) for list of user vehicles
+    vehicles_query = Vehicle.query.all()
+    all_vehicles = list(map(lambda x: x.serialize(), vehicles_query))
+
+    return jsonify({
+        "vehicles" : all_vehicles
+    }), 200
+
+@api.route('/request', methods=['GET'])
+def get_requests():
+    #How to get requests for one user .filter_by(user_id=user_id) for service history
+    requests_query = Request.query.all()
+    all_requests = list(map(lambda x: x.serialize(), requests_query))
+
+    return jsonify({
+        "requests" : all_requests
+    }), 200
