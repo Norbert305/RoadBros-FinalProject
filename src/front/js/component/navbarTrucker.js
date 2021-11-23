@@ -7,7 +7,7 @@ export const NavbarTrucker = () => {
 	const { store } = useContext(Context);
 
 	return (
-		<Navbar bg="transparent" variant="dark" expand="lg">
+		<Navbar bg="dark" variant="dark" expand="lg">
 			<Container>
 				<Navbar.Brand href="#home" className="fs-3" fontFamily="">
 					RoadBros

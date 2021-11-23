@@ -7,7 +7,7 @@ export const NavbarClient = () => {
 	const { store } = useContext(Context);
 
 	return (
-		<Navbar bg="transparent" variant="dark" expand="lg">
+		<Navbar bg="dark" variant="dark" expand="lg">
 			<Container>
 				<Navbar.Brand className="fs-3">RoadBros</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />

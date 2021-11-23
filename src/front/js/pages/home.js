@@ -124,7 +124,7 @@ export const Home = () => {
 
 			<div id="service-sliders" className="container">
 				<Carousel>
-					<Carousel.Item interval={2000}>
+					<Carousel.Item interval={1000}>
 						<Carousel.Caption>
 							<h1>Flat Tire</h1>
 						</Carousel.Caption>
@@ -134,7 +134,7 @@ export const Home = () => {
 							alt="First slide"
 						/>
 					</Carousel.Item>
-					<Carousel.Item interval={2000}>
+					<Carousel.Item interval={1000}>
 						<img
 							className="d-block w-100"
 							src="https://www.misterworker.com/it/img/cms/Mister%20Worker/ENG/Dead-car-battery.jpg"
@@ -144,7 +144,7 @@ export const Home = () => {
 							<h1>Dead Battery</h1>
 						</Carousel.Caption>
 					</Carousel.Item>
-					<Carousel.Item interval={2000}>
+					<Carousel.Item interval={1000}>
 						<img
 							className="d-block w-100"
 							src="https://cdn.hswstatic.com/gif/empty-gas.jpg"
@@ -154,7 +154,7 @@ export const Home = () => {
 							<h1>Empty Gas</h1>
 						</Carousel.Caption>
 					</Carousel.Item>
-					<Carousel.Item interval={2000}>
+					<Carousel.Item interval={1000}>
 						<img
 							className="d-block w-100"
 							src="https://grimmermotors.co.nz/wp-content/uploads/2017/06/jumpstarter.jpg"
@@ -164,7 +164,7 @@ export const Home = () => {
 							<h1>Jump Start</h1>
 						</Carousel.Caption>
 					</Carousel.Item>
-					<Carousel.Item interval={2000}>
+					<Carousel.Item interval={1000}>
 						<img
 							className="d-block w-100"
 							src="https://bramptonist.com/wp-content/uploads/2018/09/car-towing-brampton.jpg"
