@@ -1,4 +1,8 @@
+
+// FONTS 
 @import url('https://fonts.googleapis.com/css2?family=Playball&family=Roboto&display=swap');
+
+// CONTAINER AND BACKGROUND
 
 html, body {
     background: url(https://cdn.wallpapersafari.com/32/53/Koy4EZ.jpg);
@@ -25,6 +29,9 @@ h1 {
 *{
     font-family: 'Roboto', sans-serif;
 }
+
+// HOME PAGE LOGIN
+
 .login-area {
     
     width: 100%;
@@ -47,11 +54,7 @@ h1 {
 
 }
 
-        
-    
-    
-    
-
+// TITLES
 
 .AboutUsTitleCard {
     margin-top: 300px;
@@ -94,7 +97,7 @@ h1 {
     
 }
 
-
+// ABOUT US SECTION
 
 #info-cards {
     background-color: rgb(78, 78, 78);
@@ -125,9 +128,13 @@ h1 {
      }
 }
 
+// SLIDERS SECTIONS
+
 #service-sliders {
     margin-bottom: 150px;
 }
+
+// FUTURE EXPANSIONS SECTION
 
 #future-expansion {
     margin-bottom: 150px;
@@ -171,10 +178,14 @@ h1 {
     }
 }
 
+// CONTACT SECTION
+
 .contact {
     width: 800px;
 
 }
+
+// SOCIAL ICONS SECTIONS
 
 .social {
     margin: 50px;
@@ -202,6 +213,8 @@ h1 {
     }
 
 }
+
+// FOOTER SECTION
 
 .footer-links {
     background: rgb(78, 78, 78);
@@ -238,7 +251,11 @@ h1 {
 }
 
 
-//CELLPHONE SCREEN//
+// navbar
+
+
+
+//CELLPHONE VIEW//
 
 @media(max-width: 376px) {
 

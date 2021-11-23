@@ -18,13 +18,13 @@ export const AwaitingResponse = () => {
 		<div className="container pt-5 text-center">
 			<h1 className="mb-4">Awaiting Response</h1>
 
-			<div className="row spinner-border text-info m-5 spinnerSize" role="status">
+			<div className="row spinner-border text-warning text-info m-5 spinnerSize" role="status">
 				<span className="visually-hidden">Loading...</span>
 			</div>
 
 			<div className="row m-2 d-flex justify-content-center">
 				<div className="col-3">
-					<button type="button" className="btn btn-warning btn-sm" onClick={handleShowUp}>
+					<button type="button" className="btn btn-warning btn-lg" onClick={handleShowUp}>
 						Request Accepted by trucker
 					</button>
 				</div>

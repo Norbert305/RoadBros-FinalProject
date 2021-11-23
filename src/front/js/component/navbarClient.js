@@ -1,29 +1,29 @@
 import React, { useContext } from "react";
 import { Context } from "../store/appContext";
-import { Navbar, Nav, NavDropdown, Container } from "react-bootstrap";
+import { Navbar, Nav, NavDropdown, Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
 
 export const NavbarClient = () => {
 	const { store } = useContext(Context);
 
 	return (
-		<Navbar bg="dark" variant="dark" expand="lg">
+		<Navbar bg="transparent" variant="dark" expand="lg">
 			<Container>
-				<Navbar.Brand>RoadBros</Navbar.Brand>
+				<Navbar.Brand className="fs-3">RoadBros</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
-					<Nav className="me-auto">
+					<Nav className="m-auto position-absolute top-25 end-0 me-5">
 						<Link to="/ClientHomePage">
-							<Nav className="px-2">Home</Nav>
+							<Button className="btn btn-outline-warning border-0 bg-transparent">Home</Button>
 						</Link>
 						<Link to="/ServiceMenu">
-							<Nav> Request Help</Nav>
+							<Button className="btn btn-outline-warning border-0 bg-transparent"> Request Help</Button>
 						</Link>
 						<Link to="/VehiclesList">
-							<Nav>Vehicles List</Nav>
+							<Button className="btn btn-outline-warning border-0 bg-transparent">Vehicle List</Button>
 						</Link>
 						<Link to="/ClientMessages">
-							<Nav>Messages</Nav>
+							<Button className="btn btn-outline-warning border-0 bg-transparent">Messages</Button>
 						</Link>
 					</Nav>
 				</Navbar.Collapse>

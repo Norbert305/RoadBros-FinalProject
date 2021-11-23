@@ -12,7 +12,7 @@ export const ClientHomePage = () => {
 		<div className="container pt-5 text-center text-light fs-4">
 			<h1 className="text-center">Home Page</h1>
 
-			<h2 className="text-center mb-4">Hi, Welcome back _____!</h2>
+			<h2 className="text-center mb-4">Hi, Welcome back</h2>
 
 			<Link to="/ServiceMenu">
 				<button className="btn btn-warning btn-lg m-3">Request Help</button>
