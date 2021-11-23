@@ -263,8 +263,17 @@ h1 {
 @media(max-width: 376px) {
 
     .navbar {
-        height: 5px;
+        height: 65px;
         
+        .collapse show {
+            display: block;
+            position: relative;
+            top: 0;
+            left: 0;
+            background: #2f3640;
+            height: 100%;
+            transform: translateX(300px);
+        }
      
     }
     

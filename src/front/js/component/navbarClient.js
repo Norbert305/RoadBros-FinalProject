@@ -8,11 +8,11 @@ export const NavbarClient = () => {
 
 	return (
 		<Navbar bg="dark" variant="dark" expand="lg">
-			<Container>
+			<Container className="md-mx-5 sm-mx-2">
 				<Navbar.Brand className="fs-3">RoadBros</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" />
 				<Navbar.Collapse id="basic-navbar-nav">
-					<Nav className="m-auto position-absolute top-25 end-0 me-5">
+					<Nav className="m-auto position-absolute bg-dark top-25 end-0">
 						<Link to="/ClientHomePage">
 							<Button className="btn btn-outline-warning border-0 bg-transparent">Home</Button>
 						</Link>
