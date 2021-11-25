@@ -261,7 +261,7 @@ h1 {
 
 //CELLPHONE VIEW//
 
-@media(max-width: 376px) {
+@media(max-width: 390px) {
 
     .navbar {
         height: 65px;
@@ -305,7 +305,7 @@ h1 {
 
             .card {
                 background-color: white;
-                width: 200px;
+                width: 90%;
                 height: 110px;
                 margin-top: 40px;
                 margin: auto;
@@ -349,7 +349,7 @@ h1 {
     //TITLES
 
     .AboutUsTitleCard {
-        margin-top: 150px;
+        margin-top: 200px;
         margin-bottom: 50px;
         border-bottom: 4px solid goldenrod;
         margin-left: 10%;
@@ -369,12 +369,7 @@ h1 {
         
     }
     .expansionsTitleCard {
-        margin-top: 0px;
-        margin-bottom: 50px;
-        border-bottom: 4px solid goldenrod;
-        margin-left: 10%;
-        margin-right: 10%;
-        padding-bottom: 20px;
+        display: none;
     
         
     }
@@ -427,6 +422,7 @@ h1 {
     #future-expansion {
         margin-bottom: 50px;
         width: 100%;
+        display: none;
     
         .card {
             
