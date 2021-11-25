@@ -58,7 +58,7 @@ export const Home = () => {
 						<p>If you want to get help now, or become a trucker to help others, sign up now!</p>
 						<div className="card-body">
 							<Link to="/SignUpPage">
-								<button type="button" className="btn btn-warning btn-lg mt-3">
+								<button type="button" className="btn btn-warning btn-lg">
 									Sign Up Now!
 								</button>
 							</Link>
@@ -68,25 +68,23 @@ export const Home = () => {
 
 				<div id="signUp-area" className="col mx-auto">
 					<div className="card">
-						<div className="card-body text-center">
-							<div className="col-12 pt-5 mb-5">
-								<p>
-									Already memeber?
-									<br />
-									You can sign as...
-								</p>
+						<div className=" card-body text-center">
+							<div>
+								<p>Already memeber? You can sign as...</p>
 							</div>
-							<Link to="/ClientLoginPage">
-								<button type="button" className="btn btn-warning btn-lg col-10 mb-3">
-									Client
-								</button>
-							</Link>
-							<p className="or">or</p>
-							<Link to="/TruckerLoginPage">
-								<button type="button" className="btn btn-warning btn-lg col-10 mt-3 mb-5">
-									Trucker
-								</button>
-							</Link>
+							<div>
+								<Link to="/ClientLoginPage">
+									<button type="button" id="client-btn" className="btn btn-warning btn-lg ">
+										Client
+									</button>
+								</Link>
+								<p className="or">or</p>
+								<Link to="/TruckerLoginPage">
+									<button type="button" id="trucker-btn" className="btn btn-warning btn-lg mb-5">
+										Trucker
+									</button>
+								</Link>
+							</div>
 						</div>
 					</div>
 				</div>
