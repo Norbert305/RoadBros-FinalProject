@@ -3,7 +3,7 @@ from flask_sqlalchemy import SQLAlchemy
 db = SQLAlchemy()
 
 class User(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.String(120), primary_key=True)
     user_type = db.Column(db.String(120), nullable=True)
     full_name = db.Column(db.String(120), nullable=True)
     email = db.Column(db.String(120), unique=False, nullable=True)
@@ -30,14 +30,14 @@ class User(db.Model):
         }
 
 class Vehicle(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.String(120), primary_key=True)
     vehicle_type = db.Column(db.String(80), unique=False, nullable=True)
     vehicle_model = db.Column(db.String(80), unique=False, nullable=True)
     vehicle_make = db.Column(db.String(80), unique=False, nullable=True)
     vehicle_year = db.Column(db.String(80), unique=False, nullable=True)
     vehicle_color = db.Column(db.String(80), unique=False, nullable=True)
     vehicle_plate = db.Column(db.String(80), unique=False, nullable=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), unique=False, nullable=True)
+    user_id = db.Column(db.String(120), db.ForeignKey('user.id'), unique=False, nullable=True)
 
     def __repr__(self):
         return '<User %r>' % self.vehicle_type # add more representations
@@ -55,14 +55,15 @@ class Vehicle(db.Model):
         }
 
 class Request(db.Model):
-    id = db.Column(db.Integer, primary_key=True)
+    id = db.Column(db.String(120), primary_key=True)
     zip_code = db.Column(db.String(120), unique=False, nullable=True)
     service = db.Column(db.String(120), unique=False, nullable=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('user.id'), unique=False, nullable=True)
-    trucker_id = db.Column(db.Integer, unique=False, nullable=True)
+    user_id = db.Column(db.String(120), db.ForeignKey('user.id'), unique=False, nullable=True)
+    trucker_id = db.Column(db.String(120), unique=False, nullable=True)
+    completed = db.Column(db.String(120), unique=False, nullable=True)
 
     def __repr__(self):
-        return '<User %r>' % self.username # add more representations
+        return '<User %r>' % self.service # add more representations
 
     def serialize(self):
         return {
@@ -70,5 +71,6 @@ class Request(db.Model):
             "zip_code": self.zip_code,
             "service": self.service,
             "user_id": self.user_id,
-            "trucker_id": self.trucker_id
+            "trucker_id": self.trucker_id,
+            "completed": self.completed
         }
