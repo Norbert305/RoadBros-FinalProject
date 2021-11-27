@@ -24,11 +24,13 @@ def add_new_user():
     body = request.get_json()
 
     new_user = User(
+        id=body["id"], 
         user_type=body["user_type"], 
         full_name=body["full_name"], 
         email=body["email"], 
         password=body["password"], 
-        phone=body["phone"]
+        phone=body["phone"],
+        rating="null"
     )
 
     db.session.add(new_user)
@@ -45,13 +47,14 @@ def add_vehicle():
     body = request.get_json()
 
     new_vehicle = Vehicle(
-        user_id=body["user_id"],
+        id=body["id"],
         vehicle_type=body["vehicle_type"], 
         vehicle_model=body["vehicle_model"], 
         vehicle_make=body["vehicle_make"], 
         vehicle_year=body["vehicle_year"], 
         vehicle_color=body["vehicle_color"],
-        vehicle_plate=body["vehicle_plate"]
+        vehicle_plate=body["vehicle_plate"],
+        user_id=body["user_id"]
     )
 
     db.session.add(new_vehicle)
@@ -68,9 +71,10 @@ def add_request():
     body = request.get_json()
 
     new_request = Request(
-        user_id=body["user_id"],
+        id=body["id"],
         zip_code=body["zip_code"], 
         service=body["service"], 
+        user_id=body["user_id"],
         trucker_id="None Assigned",
         completed="Not completed"
     )
@@ -82,7 +86,7 @@ def add_request():
     all_requests = list(map(lambda x: x.serialize(), requests_query))
     return jsonify(all_requests), 200
 
-#List of all requests for Truckers' Requests List
+#List of all requests for Truckers' List
 @api.route('/request', methods=['GET'])
 def get_requests():
     
@@ -93,7 +97,7 @@ def get_requests():
         "requests" : all_requests
     }), 200
 
-#List of vehicles, needs to show only vehicles of certain users
+#List of vehicles based on user id
 @api.route('/vehicle/user/<user_id>', methods=['GET'])
 def get_vehicles(user_id):
 
@@ -104,7 +108,7 @@ def get_vehicles(user_id):
         "vehicles" : all_vehicles
     }), 200
 
-#Trucker accepting request
+#Mark requests as accepted (assigning a trucker id)
 @api.route('/request/<id>', methods=['PUT'])
 def accept_request(id):
 
@@ -122,7 +126,7 @@ def accept_request(id):
         return "Request Accepted", 200
     return "Update Failed"
 
-#Completed Requests
+#Mark requests as completed
 @api.route('/request/<id>', methods=['PUT'])
 def complete_request(id):
 

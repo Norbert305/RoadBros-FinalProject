@@ -14,7 +14,7 @@ class User(db.Model):
     request = db.relationship('Request', backref='user')
 
     def __repr__(self):
-        return '<User %r>' % self.full_name # add more representations
+        return '<User %r>' % self.full_name
 
     def serialize(self):
         return {
