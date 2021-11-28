@@ -24,7 +24,6 @@ def add_new_user():
     body = request.get_json()
 
     new_user = User(
-        id=body["id"], 
         user_type=body["user_type"], 
         full_name=body["full_name"], 
         email=body["email"], 
@@ -40,14 +39,13 @@ def add_new_user():
     all_users = list(map(lambda x: x.serialize(), users_query))
     return jsonify(all_users), 200
 
-#Adding a new vehicle, Done
+#Adding a new vehicle
 @api.route('/vehicle', methods=['POST'])
 def add_vehicle():
 
     body = request.get_json()
 
     new_vehicle = Vehicle(
-        id=body["id"],
         vehicle_type=body["vehicle_type"], 
         vehicle_model=body["vehicle_model"], 
         vehicle_make=body["vehicle_make"], 
@@ -71,12 +69,11 @@ def add_request():
     body = request.get_json()
 
     new_request = Request(
-        id=body["id"],
         zip_code=body["zip_code"], 
         service=body["service"], 
-        user_id=body["user_id"],
+        completed="Not completed",
         trucker_id="None Assigned",
-        completed="Not completed"
+        user_id=body["user_id"] 
     )
 
     db.session.add(new_request)
@@ -111,12 +108,12 @@ def get_vehicles(user_id):
 #Mark requests as accepted (assigning a trucker id)
 @api.route('/request/<id>', methods=['PUT'])
 def accept_request(id):
+    
+    my_request = Request.query.get(id)
 
     body = request.get_json()
-    
-    request = Request.query.get(id)
 
-    request.trucker_id = body["trucker_id"]
+    my_request.trucker_id = body["trucker_id"]
 
     db.session.commit()
 
@@ -130,17 +127,17 @@ def accept_request(id):
 @api.route('/request/<id>', methods=['PUT'])
 def complete_request(id):
 
-    body = request.get_json()
-    
-    request = Request.query.get(id)
+    my_request = Request.query.get(id)
 
-    request.completed = "Completed"
+    body = request.get_json()
+
+    my_request.completed = body["completed"]
 
     db.session.commit()
 
     request_query = Request.query.get(id)
 
-    if request_query.completed == "Completed":
+    if request_query.completed == body["completed"]:
         return "Request Completed", 200
     return "Update Failed"
 
