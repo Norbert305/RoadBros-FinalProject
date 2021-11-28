@@ -24,6 +24,14 @@ h1 {
     margin-bottom: 100px;
     font-family: 'Playball', cursive;
 
+    span {
+        font-size: 130px;
+        text-shadow: 15px 10px 30px black;
+        margin-top: 70px;
+        margin-bottom: 100px;
+        font-family: 'Playball', cursive;
+    }
+
 }
 
 *{
@@ -46,10 +54,27 @@ h1 {
         
     }
     
-    p {
+    #nonUser-area p {
         font-size: 20px;
         width: 80%;
         margin: auto;
+    }
+    #signUp-area {
+        font-size: 20px;
+        
+        p {
+                margin-top: 5vh;
+            }
+
+        #client-btn {
+
+            width: 50%;
+            margin-top: 5vh;
+        }
+        #trucker-btn {
+            width: 50%;
+            margin-top: 5vh;
+        }
     }
 
 }
@@ -262,12 +287,16 @@ h1 {
 //CELLPHONE VIEW//
 
 @media(max-width: 391px) {
-    *{
-     margin: auto;   
+    
+
+    body {
+        background-attachment: fixed;
+        background-position-y: center;
     }
 
     .navbar {
         height: 65px;
+
         
         .collapse show {
             display: block;
@@ -298,6 +327,10 @@ h1 {
         margin-bottom: 40px;
         margin-top: -10px;
         font-family: 'Playball', cursive;
+
+        span {
+            font-size: 40px;
+        }
     
     }
 
@@ -435,6 +468,10 @@ h1 {
         img {
             height: 300px;
         }
+    }
+
+    #future-expansion {
+        display: none;
     }
 
 }    

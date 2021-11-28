@@ -3,14 +3,15 @@ import { Context } from "../store/appContext";
 import "../../styles/index.scss";
 import { Link } from "react-router-dom";
 import { Tabs, Tab, Carousel, CarouselItem, Caption } from "react-bootstrap";
+import { ContactUs } from "../component/contactForm";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
 		<>
-			<nav className="navbar navbar-expand-lg navbar-dark shadow-5-strong">
-				<div className="container-fluid">
+			<nav className="navbar navbar-expand-lg navbar-dark shadow-5-strong ">
+				<div className="container-fluid ">
 					<button
 						id="menu-btn"
 						className="navbar-toggler"
@@ -41,7 +42,10 @@ export const Home = () => {
 				</div>
 			</nav>
 
-			<h1>Welcome to RoadBros</h1>
+			<h1>
+				Welcome to
+				<span className="text-warning"> RoadBros</span>
+			</h1>
 
 			<div className="login-area row row-cols-1 row-cols-md-2 g-4 text-center mx-auto">
 				<div id="nonUser-area" className="col mx-auto ">
@@ -261,39 +265,7 @@ export const Home = () => {
 				Contact
 			</h2>
 
-			<div className="contact container">
-				<div className="input-group mb-3">
-					<input
-						type="text"
-						className="form-control"
-						placeholder="FullName"
-						aria-label="FullName"
-						aria-describedby="basic-addon1"
-					/>
-				</div>
-
-				<div className="input-group mb-3">
-					<input
-						type="text"
-						className="form-control"
-						placeholder="User Email"
-						aria-label="User Email"
-						aria-describedby="basic-addon2"
-					/>
-					<span className="input-group-text" id="basic-addon2">
-						@example.com
-					</span>
-				</div>
-
-				<div className="input-group mb-3">
-					<input type="text" className="form-control" placeholder="Subject" aria-label="Subject" />
-				</div>
-
-				<div className="input-group">
-					<span className="input-group-text">Your Message</span>
-					<textarea className="form-control" aria-label="With textarea" />
-				</div>
-			</div>
+			<ContactUs />
 
 			<section className="social">
 				<h2>Follow RoadBros</h2>
