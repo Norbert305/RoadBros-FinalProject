@@ -25,7 +25,6 @@ class User(db.Model):
             "user_type": self.user_type,
             "full_name": self.full_name,
             "email": self.email,
-            "password": self.password,
             "phone": self.phone,
             "rating": self.rating,
             "vehicle": [vehicle.serialize() for vehicle in self.vehicle],
