@@ -124,7 +124,7 @@ def accept_request(id):
     return "Update Failed"
 
 #Mark requests as completed
-@api.route('/request/<id>/completed', methods=['PUT'])
+@api.route('/request/<id>', methods=['PUT'])
 def complete_request(id):
 
     my_request = Request.query.get(id)
