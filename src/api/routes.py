@@ -106,7 +106,7 @@ def get_vehicles(user_id):
     }), 200
 
 #Mark requests as accepted (assigning a trucker id)
-@api.route('/request/<id>', methods=['PUT'])
+@api.route('/request/accepted/<id>', methods=['PUT'])
 def accept_request(id):
     
     my_request = Request.query.get(id)
@@ -124,7 +124,7 @@ def accept_request(id):
     return "Update Failed"
 
 #Mark requests as completed
-@api.route('/request/<id>', methods=['PUT'])
+@api.route('/request/completed/<id>', methods=['PUT'])
 def complete_request(id):
 
     my_request = Request.query.get(id)
