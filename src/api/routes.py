@@ -9,9 +9,14 @@ api = Blueprint('api', __name__)
 
 #First GET method, Done
 @api.route('/user', methods=['GET'])
-def get_user():
+def get_users():
 
-    return "This is the GET method"
+    users_query = User.query.all()
+    all_users = list(map(lambda x: x.serialize(), users_query))
+
+    return jsonify({
+        "users" : all_users
+    }), 200
 
 #-------------------------
 #Missing a login action FOR LATER

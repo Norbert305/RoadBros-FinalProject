@@ -2,52 +2,18 @@ const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
 			loggedin: "",
-			usersList: [
-				{
-					id: "1",
-					type: "client",
-					fullName: "Estela",
-					email: "estela@gmail.com",
-					password: "4564",
-					phone: "123",
-					rating: null
-				},
-				{
-					id: "2",
-					type: "trucker",
-					fullName: "Juan",
-					email: "juan@gmail.com",
-					password: "49898",
-					phone: "456",
-					rating: [{ comments: "", thumbup: "" }, { comments: "", thumbup: "" }]
-				}
-			],
 			loggedUser: {
-				id: "",
-				type: "",
-				fullName: "",
-				email: "",
-				phone: ""
+				email: "paolasc2652@gmail.com",
+				full_name: "Paola A Sanchez Carrero",
+				id: 1,
+				phone: "9549825249",
+				rating: "null",
+				request: [],
+				user_type: "client",
+				vehicle: []
 			},
 			ratings: [],
-			listOfVehicles: [
-				{
-					vehicleModel: "RAV4",
-					vehicleMake: "Chevy",
-					vehicleYear: "2015",
-					vehicleType: "SUV",
-					vehicleColor: "red",
-					vehiclePlate: "dhfgh"
-				},
-				{
-					vehicleModel: "RAV4",
-					vehicleMake: "Corvet",
-					vehicleYear: "2015",
-					vehicleType: "SUV",
-					vehicleColor: "red",
-					vehiclePlate: "dhfgh"
-				}
-			],
+			listOfVehicles: [],
 			listOfRequests: [
 				{
 					fullName: "Mariangel Estrada",
@@ -74,14 +40,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 				newList = newList.filter(item => request !== item);
 				setStore({ listOfRequests: newList });
 			},
-			createUser: user => {
-				let newList = getStore().usersList;
-				newList.push(user);
-				setStore({ usersList: newList });
-			},
-			addVehicle: vehicle => {
-				let newList = getStore().listOfVehicles;
-				newList.push(vehicle);
+			addVehicle: newList => {
 				setStore({ listOfVehicles: newList });
 			},
 			deleteVehicle: vehicle => {

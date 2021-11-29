@@ -7,8 +7,8 @@ export const SignUpPage = () => {
 	const { actions } = useContext(Context);
 
 	const [newUser, setNewUser] = useState({
-		type: "client",
-		fullName: null,
+		user_type: "client",
+		full_name: null,
 		email: null,
 		password: null,
 		phone: null
@@ -17,6 +17,18 @@ export const SignUpPage = () => {
 	const handleChange = e => setNewUser({ ...newUser, [e.target.name]: e.target.value });
 
 	const [tab, setTab] = useState("client");
+
+	const addUser = myNewUser => {
+		console.log("new user");
+		fetch(`${process.env.BACKEND_URL}/api/user`, {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(myNewUser)
+		})
+			.then(response => response.json())
+			.then(data => console.log(data))
+			.catch(err => console.error("Error:", err));
+	};
 
 	return (
 		<div className="container p-4 text-center text-light fs-6">
@@ -32,12 +44,13 @@ export const SignUpPage = () => {
 								data-bs-toggle="pill"
 								data-bs-target="#pills-client"
 								type="button"
+								s
 								role="tab"
 								aria-controls="pills-client"
 								aria-selected="true"
 								onClick={() => {
 									setTab("client");
-									setNewUser({ ...newUser, type: "client" });
+									setNewUser({ ...newUser, user_type: "client" });
 								}}>
 								Client
 							</button>
@@ -54,7 +67,7 @@ export const SignUpPage = () => {
 								aria-selected="false"
 								onClick={() => {
 									setTab("trucker");
-									setNewUser({ ...newUser, type: "trucker" });
+									setNewUser({ ...newUser, user_type: "trucker" });
 								}}>
 								Trucker
 							</button>
@@ -78,7 +91,7 @@ export const SignUpPage = () => {
 								type="text"
 								className="form-control"
 								placeholder="Full Name"
-								name="fullName"
+								name="full_name"
 								onChange={handleChange}
 							/>
 						</div>
@@ -114,9 +127,7 @@ export const SignUpPage = () => {
 						</div>
 					</form>
 					<Link to="/CLientLoginPage">
-						<button
-							className="btn btn-warning btn-lg col-4 p-2 mt-3 mb-5"
-							onClick={() => actions.addRequest(newUser)}>
+						<button className="btn btn-warning btn-lg col-4 p-2 mt-3 mb-5" onClick={() => addUser(newUser)}>
 							Save
 						</button>
 					</Link>
@@ -138,7 +149,7 @@ export const SignUpPage = () => {
 								type="text"
 								className="form-control"
 								placeholder="Full Name"
-								name="fullName"
+								name="user_type"
 								onChange={handleChange}
 							/>
 						</div>
@@ -176,7 +187,7 @@ export const SignUpPage = () => {
 					<Link to="/TruckerLoginPage">
 						<button /*Previously, we had addRequest instead of createUser*/
 							className="btn btn-warning btn-lg col-4 p-2 mt-3 mb-5"
-							onClick={() => actions.createUser(newUser)}>
+							onClick={() => addUser(newUser)}>
 							Save
 						</button>
 					</Link>

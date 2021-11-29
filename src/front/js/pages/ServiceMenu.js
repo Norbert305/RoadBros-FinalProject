@@ -14,6 +14,18 @@ export const ServiceMenu = () => {
 
 	const [newZipCode, setnewZipCode] = useState("");
 
+	const addRequest = myNewRequest => {
+		console.log("new vehicle");
+		fetch(`${process.env.BACKEND_URL}/api/vehicle`, {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(myNewVehicle)
+		})
+			.then(response => response.json())
+			.then(data => console.log(data))
+			.catch(err => console.error("Error:", err));
+	};
+
 	return (
 		<div className="container p-4 text-center text-light fs-6">
 			<h1 className="text-center m-3">Request Help</h1>
@@ -99,7 +111,7 @@ export const ServiceMenu = () => {
 				<button
 					className="btn btn-warning btn-lg m-3"
 					onClick={() => {
-						actions.addRequest({
+						addRequest({
 							fullName: store.loggedUser.fullName,
 							service: newService,
 							vehicle: newVehicle,
