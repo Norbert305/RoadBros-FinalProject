@@ -56,7 +56,7 @@ class Vehicle(db.Model):
             "vehicle_year": self.vehicle_year,
             "vehicle_color": self.vehicle_color,
             "vehicle_plate": self.vehicle_plate,
-            "user_id": self.user_id
+            "user_id": self.user_id,
         }
 
 class Request(db.Model):
@@ -64,8 +64,11 @@ class Request(db.Model):
     #Request Body Data
     zip_code = db.Column(db.String(120), unique=False, nullable=True)
     service = db.Column(db.String(120), unique=False, nullable=True)
+    vehicle = db.Column(db.String(450), unique=False, nullable=True)
     completed = db.Column(db.String(120), unique=False, nullable=True)
     trucker_id = db.Column(db.String(120), unique=False, nullable=True)
+    client_name = db.Column(db.String(120), unique=False, nullable=True)
+    client_phone = db.Column(db.String(120), unique=False, nullable=True)
     #Foreign Keys
     user_id = db.Column(db.Integer, db.ForeignKey('user.id'), unique=False, nullable=True)
 
@@ -76,8 +79,11 @@ class Request(db.Model):
         return {
             "id": self.id,
             "zip_code": self.zip_code,
+            "vehicle": self.vehicle,
             "service": self.service,
             "completed": self.completed,
             "trucker_id": self.trucker_id,
-            "usert_id": self.user_id
+            "client_name": self.client_name,
+            "client_phone": self.client_phone,
+            "usert_id": self.user_id,
         }

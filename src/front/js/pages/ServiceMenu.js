@@ -1,8 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-
 import { Context } from "../store/appContext";
-
 import "../../styles/demo.scss";
 
 export const ServiceMenu = () => {
@@ -10,21 +8,9 @@ export const ServiceMenu = () => {
 
 	const [newVehicle, setnewVehicle] = useState("");
 
-	const [newService, setnewService] = useState([]);
+	const [newService, setnewService] = useState("");
 
 	const [newZipCode, setnewZipCode] = useState("");
-
-	const addRequest = myNewRequest => {
-		console.log("new vehicle");
-		fetch(`${process.env.BACKEND_URL}/api/vehicle`, {
-			method: "POST",
-			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify(myNewVehicle)
-		})
-			.then(response => response.json())
-			.then(data => console.log(data))
-			.catch(err => console.error("Error:", err));
-	};
 
 	return (
 		<div className="container p-4 text-center text-light fs-6">
@@ -37,14 +23,16 @@ export const ServiceMenu = () => {
 						name="vehicle"
 						onChange={e => setnewVehicle(e.target.value)}>
 						<option selected>Choose Your Vehicle</option>
-						{store.listOfVehicles.map((item, index) => {
-							return (
-								<option key={index}>
-									{" "}
-									{item.vehicleType} {item.vehicleMake} {item.vehicleModel} {item.vehicleYear}
-								</option>
-							);
-						})}
+						{store.listOfVehicles.length > 0
+							? store.listOfVehicles.map((item, index) => {
+									return (
+										<option key={index}>
+											{item.vehicle_type} {item.vehicle_make} {item.vehicle_model}{" "}
+											{item.vehicle_year} {item.vehicle_color} {item.vehicle_plate}
+										</option>
+									);
+							  })
+							: "Loading..."}
 					</select>
 				</label>
 				<label className="list-group-item d-flex align-items-center m-0">
@@ -52,7 +40,7 @@ export const ServiceMenu = () => {
 						className="my-2 form-control"
 						type="text"
 						placeholder="Zip Code"
-						name="zip code"
+						name="zip_code"
 						onChange={e => setnewZipCode(e.target.value)}
 					/>
 				</label>
@@ -60,9 +48,9 @@ export const ServiceMenu = () => {
 					<input
 						className="form-check-input m-2"
 						type="checkbox"
-						value="Flat Tire: $40"
+						value="Flat Tire"
 						name="service"
-						onChange={e => setnewService([...newService, e.target.value])}
+						onChange={e => setnewService(newService + e.target.value + ", ")}
 					/>
 					<h6 className="me-2 m-0 d-flex align-items-center">Flat Tire: $40</h6>
 				</label>
@@ -70,9 +58,9 @@ export const ServiceMenu = () => {
 					<input
 						className="form-check-input m-2"
 						type="checkbox"
-						value="Dead Battery: $150"
+						value="Dead Battery"
 						name="service"
-						onChange={e => setnewService([...newService, e.target.value])}
+						onChange={e => setnewService(newService + e.target.value + ", ")}
 					/>
 					<h6 className="me-2 m-0 d-flex align-items-center">Dead Battery: $150</h6>
 				</label>
@@ -80,9 +68,9 @@ export const ServiceMenu = () => {
 					<input
 						className="form-check-input m-2"
 						type="checkbox"
-						value="Empty Gas: $30"
+						value="Empty Gas"
 						name="service"
-						onChange={e => setnewService([...newService, e.target.value])}
+						onChange={e => setnewService(newService + e.target.value + ", ")}
 					/>
 					<h6 className="me-2 m-0 d-flex align-items-center">Empty Gas: $30</h6>
 				</label>
@@ -90,9 +78,9 @@ export const ServiceMenu = () => {
 					<input
 						className="form-check-input m-2"
 						type="checkbox"
-						value="Jump Start: $50"
+						value="Jump Start"
 						name="service"
-						onChange={e => setnewService([...newService, e.target.value])}
+						onChange={e => setnewService(newService + e.target.value + ", ")}
 					/>
 					<h6 className="me-2 m-0 d-flex align-items-center">Jump Start: $50</h6>
 				</label>
@@ -100,9 +88,9 @@ export const ServiceMenu = () => {
 					<input
 						className="form-check-input m-2"
 						type="checkbox"
-						value="Towing Car: $150"
+						value="Towing Car"
 						name="service"
-						onChange={e => setnewService([...newService, e.target.value])}
+						onChange={e => setnewService(newService + e.target.value + ", ")}
 					/>
 					<h6 className="me-2 m-0 d-flex align-items-center">Towing Car: $150</h6>
 				</label>
@@ -111,12 +99,7 @@ export const ServiceMenu = () => {
 				<button
 					className="btn btn-warning btn-lg m-3"
 					onClick={() => {
-						addRequest({
-							fullName: store.loggedUser.fullName,
-							service: newService,
-							vehicle: newVehicle,
-							zipCode: newZipCode
-						});
+						actions.addRequest(newVehicle, newService, newZipCode);
 					}}>
 					Send Request
 				</button>

@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const SignUpPage = () => {
-	const { actions } = useContext(Context);
+	const { actions, store } = useContext(Context);
 
 	const [newUser, setNewUser] = useState({
 		user_type: "client",
@@ -20,7 +20,7 @@ export const SignUpPage = () => {
 
 	const addUser = myNewUser => {
 		console.log("new user");
-		fetch(`${process.env.BACKEND_URL}/api/user`, {
+		fetch(`${store.backEndUrl}/api/user`, {
 			method: "POST",
 			headers: { "Content-Type": "application/json" },
 			body: JSON.stringify(myNewUser)
@@ -149,7 +149,7 @@ export const SignUpPage = () => {
 								type="text"
 								className="form-control"
 								placeholder="Full Name"
-								name="user_type"
+								name="full_name"
 								onChange={handleChange}
 							/>
 						</div>

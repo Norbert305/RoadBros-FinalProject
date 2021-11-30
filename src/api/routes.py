@@ -14,9 +14,9 @@ def get_users():
     users_query = User.query.all()
     all_users = list(map(lambda x: x.serialize(), users_query))
 
-    return jsonify({
-        "users" : all_users
-    }), 200
+    return jsonify(
+        all_users
+    ), 200
 
 #-------------------------
 #Missing a login action FOR LATER
@@ -73,12 +73,17 @@ def add_request():
 
     body = request.get_json()
 
+    
+
     new_request = Request(
         zip_code=body["zip_code"], 
         service=body["service"], 
+        vehicle=body["vehicle"],
         completed="Not completed",
         trucker_id="None Assigned",
-        user_id=body["user_id"] 
+        user_id=body["user_id"],
+        client_name=body["client_name"],
+        client_phone=body["client_phone"],
     )
 
     db.session.add(new_request)
@@ -95,9 +100,9 @@ def get_requests():
     requests_query = Request.query.all()
     all_requests = list(map(lambda x: x.serialize(), requests_query))
 
-    return jsonify({
-        "requests" : all_requests
-    }), 200
+    return jsonify(
+        all_requests
+    ), 200
 
 #List of vehicles based on user id
 @api.route('/vehicle/user/<user_id>', methods=['GET'])
@@ -106,9 +111,9 @@ def get_vehicles(user_id):
     vehicles_query = Vehicle.query.filter_by(user_id=user_id)
     all_vehicles = list(map(lambda x: x.serialize(), vehicles_query))
 
-    return jsonify({
-        "vehicles" : all_vehicles
-    }), 200
+    return jsonify(
+        all_vehicles
+    ), 200
 
 #Mark requests as accepted (assigning a trucker id)
 @api.route('/request/accepted/<id>', methods=['PUT'])

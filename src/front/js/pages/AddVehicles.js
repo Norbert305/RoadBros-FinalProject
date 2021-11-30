@@ -17,18 +17,6 @@ export const AddVehicles = () => {
 
 	const handleChange = e => setnewVehicle({ ...newVehicle, [e.target.name]: e.target.value });
 
-	const addVehicle = myNewVehicle => {
-		console.log("new vehicle");
-		fetch(`${process.env.BACKEND_URL}/api/vehicle`, {
-			method: "POST",
-			headers: { "Content-Type": "application/json" },
-			body: JSON.stringify(myNewVehicle)
-		})
-			.then(response => response.json())
-			.then(data => actions.addVehicle(data))
-			.catch(err => console.error("Error:", err));
-	};
-
 	return (
 		<div className="container p-4 text-center text-light fs-6 m-auto">
 			<div>
@@ -100,7 +88,7 @@ export const AddVehicles = () => {
 					<button
 						className="btn btn-warning btn-lg p-2 m-3"
 						onClick={() => {
-							addVehicle(newVehicle);
+							actions.addVehicle(newVehicle);
 						}}>
 						Add Vehicle
 					</button>

@@ -12,30 +12,32 @@ export const RequestsList = () => {
 		<div className="container p-4 text-center text-light fs-6">
 			<h1 className="text-center m-3">Requests List</h1>
 			<ul className="list-group position-relative">
-				{store.listOfRequests.map((item, index) => {
-					return (
-						<li className="list-group-item d-flex flex-column p-3" key={index}>
-							<p className="mx-2 m-1 text-start">
-								<strong>Full Name:</strong> {item.fullName}
-							</p>
-							<p className="mx-2 m-1 text-start">
-								<strong>Zip Code:</strong> {item.zipCode}
-							</p>
-							<p className="mx-2 m-1 text-start">
-								<strong>Vehicle:</strong> {item.vehicle}
-							</p>
-							<p className="mx-2 m-1 mb-3 text-start">
-								<strong>Service:</strong>
-								{item.service.map((service, index) => (
-									<li key={index}>{service}</li>
-								))}
-							</p>
-							<Link to="/TruckerMessages">
-								<button className="btn btn-success mx-2 px-3">Accept</button>
-							</Link>
-						</li>
-					);
-				})}
+				{store.listOfRequests.length > 0
+					? store.listOfRequests.map((item, index) => {
+							return (
+								<li className="list-group-item d-flex flex-column p-3" key={index}>
+									<p className="mx-2 m-1 text-start">
+										<strong>Full Name:</strong> {item.client_name}
+									</p>
+									<p className="mx-2 m-1 text-start">
+										<strong>Phone:</strong> {item.client_phone}
+									</p>
+									<p className="mx-2 m-1 text-start">
+										<strong>Zip Code:</strong> {item.zip_code}
+									</p>
+									<p className="mx-2 m-1 text-start">
+										<strong>Vehicle:</strong> {item.vehicle}
+									</p>
+									<p className="mx-2 m-1 mb-3 text-start">
+										<strong>Service:</strong> {item.service}
+									</p>
+									<Link to="/TruckerMessages">
+										<button className="btn btn-success mx-2 px-3">Accept</button>
+									</Link>
+								</li>
+							);
+					  })
+					: "Loading..."}
 			</ul>
 
 			<Link to="/TruckerHomePage">
