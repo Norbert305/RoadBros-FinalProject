@@ -20,14 +20,14 @@ export const NavbarClient = () => {
 						<Link to="/ClientHomePage">
 							<Button className="btn btn-outline-warning border-0 bg-transparent">Home</Button>
 						</Link>
+						<Link to="/ClientProfile">
+							<Button className="btn btn-outline-warning border-0 bg-transparent">Profile</Button>
+						</Link>
 						<Link to="/ServiceMenu">
-							<Button className="btn btn-outline-warning border-0 bg-transparent"> Request Help</Button>
+							<Button className="btn btn-outline-warning border-0 bg-transparent">Request Help</Button>
 						</Link>
 						<Link to="/VehiclesList">
 							<Button className="btn btn-outline-warning border-0 bg-transparent">Vehicle List</Button>
-						</Link>
-						<Link to="/ClientMessages">
-							<Button className="btn btn-outline-warning border-0 bg-transparent">Messages</Button>
 						</Link>
 					</Nav>
 				</Navbar.Collapse>

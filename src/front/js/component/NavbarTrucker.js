@@ -20,11 +20,11 @@ export const NavbarTrucker = () => {
 						<Link to="/TruckerHomePage">
 							<Button className="btn btn-outline-warning border-0 bg-transparent">Home</Button>
 						</Link>
-						<Link to="/RequestsList">
-							<Button className="btn btn-outline-warning border-0 bg-transparent">Request List</Button>
+						<Link to="/TruckerProfile">
+							<Button className="btn btn-outline-warning border-0 bg-transparent">Profile</Button>
 						</Link>
-						<Link to="/TruckerMessages">
-							<Button className="btn btn-outline-warning border-0 bg-transparent">Messages</Button>
+						<Link to="/RequestsList">
+							<Button className="btn btn-outline-warning border-0 bg-transparent">Requests List</Button>
 						</Link>
 					</Nav>
 				</Navbar.Collapse>
