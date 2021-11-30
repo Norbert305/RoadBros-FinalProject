@@ -38,7 +38,7 @@ export const VehiclesList = () => {
 										<button
 											type="button"
 											className="btn btn-danger mx-2  m-1 px-1"
-											onClick={() => actions.deleteVehicle(item)}>
+											onClick={() => actions.deleteVehicles(item.id)}>
 											Remove
 										</button>
 									</p>

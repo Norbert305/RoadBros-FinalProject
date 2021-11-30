@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			backEndUrl: "https://3001-pink-gazelle-jkabqel8.ws-us17.gitpod.io",
+			backEndUrl: "https://3001-olive-rook-2e0e5fm0.ws-us20.gitpod.io",
 			loggedin: "",
 			loggedUser: {
 				email: "paolasc2652@gmail.com",
@@ -60,7 +60,14 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.then(data => setStore({ listOfVehicles: data }))
 					.catch(err => console.error("Error:", err));
 			},
-
+			deleteVehicles: id => {
+				fetch(`${getStore().backEndUrl}/api/vehicle/${id}`, {
+					method: "DELETE"
+				})
+					.then(response => response.json())
+					.then(data => setStore({ listOfVehicles: data }))
+					.catch(err => console.error("Error:", err));
+			},
 			changeUserType: type => {
 				setStore({ userLogin: type });
 			},
