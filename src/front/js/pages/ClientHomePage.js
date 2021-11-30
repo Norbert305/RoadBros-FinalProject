@@ -10,9 +10,7 @@ export const ClientHomePage = () => {
 
 	return (
 		<div className="container py-4 px-3 text-center text-light fs-4">
-			<h1 className="text-center m-3">Home Page</h1>
-
-			<h2 className="text-center m-3">Hi, Welcome back</h2>
+			<h1 className="text-center my-5">Home Page</h1>
 
 			<div className="row my-3 d-flex justify-content-center">
 				<div className="col-4 bg-light text-dark p-3 rounded">

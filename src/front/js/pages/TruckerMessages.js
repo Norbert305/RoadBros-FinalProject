@@ -10,7 +10,7 @@ export const TruckerMessages = () => {
 
 	return (
 		<div className="container p-4 text-center text-light fs-6">
-			<h1>Messaging Page</h1>
+			<h1 className="my-5">Messaging Page</h1>
 			<h5 className="m-3">Here, you can message your client direclty!</h5>
 			<div className="card mb-3">
 				<div className="row d-flex justify-content-end p-3">

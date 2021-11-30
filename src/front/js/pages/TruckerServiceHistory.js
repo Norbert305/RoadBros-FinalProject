@@ -10,7 +10,7 @@ export const TruckerServiceHistory = () => {
 
 	return (
 		<div className="container p-4 text-center text-light fs-6">
-			<h1 className="text-center m-3">Service History</h1>
+			<h1 className="text-center my-5">Service History</h1>
 			<ul className="list-group position-relative">
 				{store.listOfRequests.map((item, index) => {
 					return (

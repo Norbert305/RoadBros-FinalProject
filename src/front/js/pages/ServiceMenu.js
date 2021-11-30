@@ -14,7 +14,7 @@ export const ServiceMenu = () => {
 
 	return (
 		<div className="container p-4 text-center text-light fs-6">
-			<h1 className="text-center m-3">Request Help</h1>
+			<h1 className="text-center my-5">Request Help</h1>
 			<div className="list-group text-start">
 				<label className="list-group-item d-flex align-items-center m-0">
 					<select

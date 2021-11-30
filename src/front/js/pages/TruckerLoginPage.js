@@ -14,10 +14,10 @@ export const TruckerLoginPage = props => {
 	const handleChange = e => setnewContact({ ...newContact, [e.target.name]: e.target.value });
 
 	return (
-		<div className="container p-4 mt-3 text-center text-light fs-6">
+		<div className="container p-4 pt-3 text-center text-light fs-6">
 			<h1 className="text-center m-3">Trucker Login</h1>
 			<form className="text-start">
-				<div className="form-group my-1">
+				<div className="form-group my-3">
 					<label>Email</label>
 					<input
 						type="email"

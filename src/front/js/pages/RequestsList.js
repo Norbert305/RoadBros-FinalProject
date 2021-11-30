@@ -10,7 +10,7 @@ export const RequestsList = () => {
 
 	return (
 		<div className="container p-4 text-center text-light fs-6">
-			<h1 className="text-center m-3">Requests List</h1>
+			<h1 className="text-center my-5">Requests List</h1>
 			<ul className="list-group position-relative">
 				{store.listOfRequests.length > 0
 					? store.listOfRequests.map((item, index) => {

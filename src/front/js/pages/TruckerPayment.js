@@ -11,7 +11,7 @@ export const TruckerPayment = () => {
 	return (
 		<div className="container p-4 text-center text-light fs-6">
 			<div>
-				<h1 className="text-center m-3">Payment Page</h1>
+				<h1 className="text-center my-5">Payment Page</h1>
 				<form className="text-start fs-4">
 					<div className="form-group my-1">
 						<label>Card Information</label>

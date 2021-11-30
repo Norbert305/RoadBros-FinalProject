@@ -20,7 +20,7 @@ export const AddVehicles = () => {
 	return (
 		<div className="container p-4 text-center text-light fs-6 m-auto">
 			<div>
-				<h1 className="text-center m-3">Add Vehicles</h1>
+				<h1 className="text-center my-5">Add Vehicles</h1>
 				<form className="text-start">
 					<div className="form-group my-2">
 						<label>Type</label>

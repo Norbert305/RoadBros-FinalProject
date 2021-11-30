@@ -10,7 +10,7 @@ export const VehiclesList = () => {
 	console.log(store.listOfVehicles);
 	return (
 		<div className="container text-center text-light">
-			<h1 className="text-center m-3">Vehicles List</h1>
+			<h1 className="text-center my-5">Vehicles List</h1>
 			<ul className="list-group position-relative">
 				{store.listOfVehicles.length > 0
 					? store.listOfVehicles.map((item, index) => {

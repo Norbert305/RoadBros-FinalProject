@@ -15,7 +15,7 @@ export const ClientLoginPage = props => {
 
 	return (
 		<div className="container p-4 mt-3 text-center text-light fs-6">
-			<h1 className="m-3">Client Login</h1>
+			<h1 className="my-5">Client Login</h1>
 			<form className="text-start">
 				<div className="form-group my-1">
 					<label>Email</label>

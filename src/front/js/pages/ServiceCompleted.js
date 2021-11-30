@@ -10,7 +10,7 @@ export const ServiceCompleted = () => {
 
 	return (
 		<div className="container py-4 px-3 text-center text-light fs-4">
-			<h1 className="m-3">
+			<h1 className="my-5">
 				Congratulations!
 				<br />
 				Your Service was Completed

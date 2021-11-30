@@ -10,8 +10,7 @@ export const TruckerHomePage = () => {
 
 	return (
 		<div className="container py-4 px-3 text-center text-light fs-4">
-			<h1 className="text-center m-3">Home Page</h1>
-			<h2 className="text-center m-3">Hi, Welcome back _______!</h2>
+			<h1 className="text-center my-5">Home Page</h1>
 			<Link to="/RequestsList">
 				<button className="btn btn-warning btn-lg p-2 m-3">Requests List</button>
 			</Link>

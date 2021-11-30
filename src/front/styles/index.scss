@@ -1,6 +1,6 @@
 
 // FONTS 
-@import url('https://fonts.googleapis.com/css2?family=Playball&family=Roboto&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Economica:wght@700&family=Roboto&display=swap');
 
 // CONTAINER AND BACKGROUND
 
@@ -22,14 +22,15 @@ h1 {
     text-shadow: 15px 10px 30px black;
     margin-top: 70px;
     margin-bottom: 100px;
-    font-family: 'Playball', cursive;
+    font-family: 'Economica', sans-serif;
+    
 
     span {
         font-size: 130px;
         text-shadow: 15px 10px 30px black;
         margin-top: 70px;
         margin-bottom: 100px;
-        font-family: 'Playball', cursive;
+        font-family: 'Economica', sans-serif;
     }
 
 }
@@ -63,8 +64,10 @@ h1 {
         font-size: 20px;
         
         p {
-                margin-top: 5vh;
+            margin-top: 5vh;
+            
             }
+            
 
         #client-btn {
 
@@ -217,8 +220,8 @@ h1 {
 // SOCIAL ICONS SECTIONS
 
 .social {
-    margin: 50px;
-    margin-bottom: 150px;
+    margin-top: 60px;
+    padding-bottom: 150px;
     
     .social p {
     text-align: center;
@@ -240,6 +243,8 @@ h1 {
     font-size: 3rem;
     color: rgb(216, 166, 29);
     }
+
+    
 
 }
 
@@ -289,9 +294,16 @@ h1 {
 @media(max-width: 391px) {
     
 
-    body {
+    html, body {
+        background: url(https://cdn.wallpapersafari.com/32/53/Koy4EZ.jpg);
         background-attachment: fixed;
-        background-position-y: center;
+        width: 100%;
+        height: 100%; 
+        margin: auto;   
+        text-align: center;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
     }
 
     .navbar {
@@ -321,15 +333,15 @@ h1 {
 
     h1 {
         color: white;
-        font-size: 35px;
+        font-size: 45px;
         text-shadow: 15px 10px 30px black;
         padding-top: -50px;
         margin-bottom: 40px;
-        margin-top: -10px;
-        font-family: 'Playball', cursive;
+        margin-top: -20px;
+        font-family: 'Economica', sans-serif;
 
         span {
-            font-size: 40px;
+            font-size: 50px;
         }
     
     }
@@ -376,7 +388,8 @@ h1 {
 
                 p {
                     width: 30vh;
-                    margin-top: 5%;
+                    margin-top: 20%;
+                    margin: 5% auto;
                     font-size: 1.8vh;
                 }
                 .or{
@@ -387,7 +400,7 @@ h1 {
                 }
                 #client-btn {
                     margin: auto;
-                    margin-top: 5vh;
+                    margin-top: 3vh;
                 }
                 #trucker-btn {
                     margin: auto;
@@ -402,22 +415,24 @@ h1 {
     //TITLES
 
     .AboutUsTitleCard {
-        margin-top: 200px;
+        margin-top: 25%;
         margin-bottom: 50px;
-        border-bottom: 4px solid goldenrod;
+        border-bottom: 4px solid rgb(253, 190, 31);
         margin-left: 10%;
         margin-right: 10%;
         padding-bottom: 20px;
+        color: white;
     
         
     }
     .servicesTitleCard {
         margin-top: 40px;
         margin-bottom: 50px;
-        border-bottom: 4px solid goldenrod;
+        border-bottom: 4px solid rgb(253, 190, 31);
         margin-left: 10%;
         margin-right: 10%;
         padding-bottom: 20px;
+        color: white;
     
         
     }
@@ -427,12 +442,13 @@ h1 {
         
     }
     .contactTitleCard {
-        margin-top: 50px;
+        margin-top: 10px;
         margin-bottom: 50px;
-        border-bottom: 4px solid goldenrod;
+        border-bottom: 4px solid rgb(253, 190, 31);
         margin-left: 10%;
         margin-right: 10%;
         padding-bottom: 20px;
+        color: white;
     
         
     }
@@ -465,8 +481,15 @@ h1 {
     }
 
     #service-sliders {
+        margin-bottom: 10%;
+        
+        .carousel {
+            border: 3px solid rgb(253, 190, 31);
+            box-shadow: 0 0 20px 2px black;
+        }
         img {
             height: 300px;
+            
         }
     }
 
@@ -477,13 +500,16 @@ h1 {
     // SOCIAL ICONS SECTIONS
 
     .social {
-        margin: 50px;
-        margin-bottom: 50px;
+        margin-top: 20%;
+        padding-top: 20px;
+        padding-bottom: 30px;
+        background: white;
         
-        p {
+        h2 {
             text-align: center;
-            font-size: 10px;
+            font-size: 20px;
             margin-bottom: 10px;
+            
         }
 
         .links {
@@ -498,9 +524,7 @@ h1 {
         
         .links a i {
             font-size: 2rem;
-            color: rgb(216, 166, 29);
         }
-
     }
 
     // FOOTER SECTION

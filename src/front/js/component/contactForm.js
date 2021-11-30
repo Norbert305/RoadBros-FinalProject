@@ -22,24 +22,24 @@ export const ContactUs = () => {
 		<form className="" ref={form} onSubmit={sendEmail}>
 			<input
 				type="text"
-				className="form-control mx-auto w-50 mb-3 border-2 border-warning justify-content-center"
+				className="form-control mx-auto w-75 mx-5 mb-2 border-3 border-warning justify-content-center"
 				placeholder="Subject"
 				name="subject"
 			/>
 			<input
 				type="text"
-				className="form-control mx-auto w-50 mb-3 border-2 border-warning justify-content-center"
+				className="form-control mx-auto w-75 mx-5 mb-2 border-3 border-warning justify-content-center"
 				placeholder="Name"
 				name="name"
 			/>
 			<input
 				type="email"
-				className="form-control mx-auto w-50 mb-3 border-2 border-warning justify-content-center"
+				className="form-control mx-auto w-75 mx-5 mb-2 border-3 border-warning justify-content-center"
 				placeholder="Email"
 				name="email"
 			/>
 			<textarea
-				className="form-control mx-auto w-50 mb-3 border-2 border-warning justify-content-center"
+				className="form-control mx-auto w-75 mx-5 mb-5 border-3 border-warning justify-content-center"
 				placeholder="Message"
 				name="message"
 			/>

@@ -9,7 +9,7 @@ export const Home = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<>
+		<div className="bg-transparent">
 			<nav className="navbar navbar-expand-lg navbar-dark shadow-5-strong ">
 				<div className="container-fluid ">
 					<button
@@ -126,7 +126,7 @@ export const Home = () => {
 			</h2>
 
 			<div id="service-sliders" className="container">
-				<Carousel>
+				<Carousel className="carousel">
 					<Carousel.Item interval={1000}>
 						<Carousel.Caption>
 							<h1>Flat Tire</h1>
@@ -368,6 +368,6 @@ export const Home = () => {
 					RoadBros Copyrigth <i className="fa fa-registered" aria-hidden="true" />
 				</h3>
 			</footer>
-		</>
+		</div>
 	);
 };

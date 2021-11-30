@@ -27,7 +27,7 @@ export const RatingPage = () => {
 
 	return (
 		<div className="container py-4 px-3 text-center text-light fs-4">
-			<h1 className="m-3">Thank You!</h1>
+			<h1 className="my-5">Thank You!</h1>
 			<h5 className="m-3">How would you rate your experience with ___________ ?</h5>
 
 			<div className="row justify-content-center my-3">

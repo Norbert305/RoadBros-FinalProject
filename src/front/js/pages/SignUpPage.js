@@ -37,7 +37,7 @@ export const SignUpPage = () => {
 				<div className="col" />
 				<div className="col-2 text-center m-2 mb-1 text-light">
 					<ul className="nav nav-pills p-0 m-0 d-flex justify-content-center" id="pills-tab" role="tablist">
-						<li className="nav-item" role="presentation">
+						<div className="nav-item" role="presentation">
 							<button
 								className={tab === "client" ? "nav-link active bg-warning text-dark" : "nav-link"}
 								id="pills-client-tab"
@@ -54,8 +54,8 @@ export const SignUpPage = () => {
 								}}>
 								Client
 							</button>
-						</li>
-						<li className="nav-item" role="presentation">
+						</div>
+						<div className="nav-item" role="presentation">
 							<button
 								className={tab === "trucker" ? "nav-link active bg-warning text-dark" : "nav-link"}
 								id="pills-trucker-tab"
@@ -71,7 +71,7 @@ export const SignUpPage = () => {
 								}}>
 								Trucker
 							</button>
-						</li>
+						</div>
 					</ul>
 				</div>
 				<div className="col" />

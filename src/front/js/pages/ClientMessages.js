@@ -10,7 +10,7 @@ export const ClientMessages = () => {
 
 	return (
 		<div className="container p-4 text-center text-light fs-6">
-			<h1 className="m-3">Messages</h1>
+			<h1 className="my-5">Messages</h1>
 			<h5 className="m-2">Here, you can message your trucker direclty!</h5>
 			<div className="card">
 				<div className="row d-flex justify-content-start p-3">
