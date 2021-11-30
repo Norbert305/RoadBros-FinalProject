@@ -38,7 +38,7 @@ export const TruckerLoginPage = props => {
 					/>
 				</div>
 			</form>
-			<Link to="/TruckerPayment">
+			<Link to="/TruckerHomePage">
 				<button
 					type="button"
 					className="btn btn-warning btn-lg p-2 m-3"

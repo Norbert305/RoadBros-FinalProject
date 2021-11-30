@@ -38,7 +38,7 @@ export const ClientLoginPage = props => {
 					/>
 				</div>
 			</form>
-			<Link to="/ClientPayment">
+			<Link to="/ClientHomePage">
 				<button
 					type="button"
 					className="btn btn-warning btn-lg p-2 m-3"

@@ -17,6 +17,9 @@ export const TruckerHomePage = () => {
 			<Link to="/TruckerServiceHistory">
 				<button className="btn btn-warning btn-lg p-2 m-3">Service History</button>
 			</Link>
+			<Link to="/TruckerProfile">
+				<button className="btn btn-warning btn-lg p-2 m-3">Profile</button>
+			</Link>
 		</div>
 	);
 };

@@ -43,7 +43,7 @@ export const TruckerPayment = () => {
 				</form>
 				<Link to="/TruckerHomePage">
 					<button type="button" className="btn btn-warning btn-lg p-2 m-3">
-						Next
+						Home
 					</button>
 				</Link>
 			</div>

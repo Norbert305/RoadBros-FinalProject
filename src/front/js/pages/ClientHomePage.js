@@ -26,8 +26,8 @@ export const ClientHomePage = () => {
 			<Link to="/ServiceHistory">
 				<button className="btn btn-warning btn-lg m-3">Service History</button>
 			</Link>
-			<Link to="/VehiclesList">
-				<button className="btn btn-warning btn-lg p-2 m-3">Vehicles List</button>
+			<Link to="/ClientProfile">
+				<button className="btn btn-warning btn-lg p-2 m-3">Profile</button>
 			</Link>
 		</div>
 	);

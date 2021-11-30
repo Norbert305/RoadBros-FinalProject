@@ -7,28 +7,32 @@ import { Home } from "./pages/home";
 
 //PAGES
 
-import { NavbarClient } from "./component/navbarClient";
-import { NavbarTrucker } from "./component/navbarTrucker";
+//Navbars
+import { NavbarClient } from "./component/NavbarClient";
+import { NavbarTrucker } from "./component/NavbarTrucker";
 
+//Main Home Page
 import { SignUpPage } from "./pages/SignUpPage";
 import { ClientLoginPage } from "./pages/ClientLoginPage";
 import { TruckerLoginPage } from "./pages/TruckerLoginPage";
 
+//Client Pages
 import { ClientPayment } from "./pages/ClientPayment";
 import { AddVehicles } from "./pages/AddVehicles";
 import { ClientHomePage } from "./pages/ClientHomePage";
+import { ClientProfile } from "./pages/ClientProfile";
 import { VehiclesList } from "./pages/VehiclesList";
 import { ServiceHistory } from "./pages/ServiceHistory";
 import { ServiceMenu } from "./pages/ServiceMenu";
 import { AwaitingResponse } from "./pages/AwaitingResponse";
-import { ClientMessages } from "./pages/ClientMessages";
 import { ServiceCompleted } from "./pages/ServiceCompleted";
 import { RatingPage } from "./pages/RatingPage";
 
+//Trucker Pages
 import { TruckerPayment } from "./pages/TruckerPayment";
 import { TruckerHomePage } from "./pages/TruckerHomePage";
+import { TruckerProfile } from "./pages/TruckerProfile";
 import { RequestsList } from "./pages/RequestsList";
-import { TruckerMessages } from "./pages/TruckerMessages";
 import { ManagingService } from "./pages/ManagingService";
 import { TruckerServiceHistory } from "./pages/TruckerServiceHistory";
 
@@ -70,6 +74,10 @@ const Layout = () => {
 							<NavbarClient />
 							<ClientHomePage />
 						</Route>
+						<Route exact path="/ClientProfile">
+							<NavbarClient />
+							<ClientProfile />
+						</Route>
 						<Route exact path="/VehiclesList">
 							<NavbarClient />
 							<VehiclesList />
@@ -85,10 +93,6 @@ const Layout = () => {
 						<Route exact path="/AwaitingResponse">
 							<NavbarClient />
 							<AwaitingResponse />
-						</Route>
-						<Route exact path="/ClientMessages">
-							<NavbarClient />
-							<ClientMessages />
 						</Route>
 						<Route exact path="/ServiceCompleted">
 							<NavbarClient />
@@ -110,6 +114,10 @@ const Layout = () => {
 							<NavbarTrucker />
 							<TruckerHomePage />
 						</Route>
+						<Route exact path="/TruckerProfile">
+							<NavbarTrucker />
+							<TruckerProfile />
+						</Route>
 						<Route exact path="/TruckerServiceHistory">
 							<NavbarTrucker />
 							<TruckerServiceHistory />
@@ -117,10 +125,6 @@ const Layout = () => {
 						<Route exact path="/RequestsList">
 							<NavbarTrucker />
 							<RequestsList />
-						</Route>
-						<Route exact path="/TruckerMessages">
-							<NavbarTrucker />
-							<TruckerMessages />
 						</Route>
 						<Route exact path="/ManagingService">
 							<NavbarTrucker />

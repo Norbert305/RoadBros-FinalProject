@@ -31,7 +31,7 @@ export const RequestsList = () => {
 									<p className="mx-2 m-1 mb-3 text-start">
 										<strong>Service:</strong> {item.service}
 									</p>
-									<Link to="/TruckerMessages">
+									<Link to="/ManagingService">
 										<button className="btn btn-success mx-2 px-3">Accept</button>
 									</Link>
 								</li>

@@ -33,11 +33,13 @@ export const AwaitingResponse = () => {
 					<Modal.Header closeButton>
 						<Modal.Title>Congratulations!</Modal.Title>
 					</Modal.Header>
-					<Modal.Body>Your request has been accepted, click button below to text your trucker.</Modal.Body>
+					<Modal.Body>
+						Your request has been accepted, click button below to go back to your home page.
+					</Modal.Body>
 					<Modal.Footer>
-						<Link to="/ClientMessages">
+						<Link to="/ClientHomePage">
 							<Button variant="secondary" className="btn btn-warning btn-lg fs-6">
-								Go to Messages
+								Home
 							</Button>
 						</Link>
 					</Modal.Footer>

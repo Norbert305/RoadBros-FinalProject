@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-import { NavbarClient } from "../component/navbarClient";
+import { NavbarClient } from "../component/NavbarClient";
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.scss";
@@ -41,9 +41,9 @@ export const ClientPayment = () => {
 						<input type="text" className="form-control" placeholder="Enter city" name="city" />
 					</div>
 				</form>
-				<Link to="/AddVehicles">
+				<Link to="/ClientHomePage">
 					<button type="button" className="btn btn-warning btn-lg p-2 m-3">
-						Next
+						Home
 					</button>
 				</Link>
 			</div>
