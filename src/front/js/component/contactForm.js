@@ -30,13 +30,13 @@ export const ContactUs = () => {
 				type="text"
 				className="form-control mx-auto w-50 mb-3 border-2 border-warning justify-content-center"
 				placeholder="Name"
-				name="user_name"
+				name="name"
 			/>
 			<input
 				type="email"
 				className="form-control mx-auto w-50 mb-3 border-2 border-warning justify-content-center"
 				placeholder="Email"
-				name="user_email"
+				name="email"
 			/>
 			<textarea
 				className="form-control mx-auto w-50 mb-3 border-2 border-warning justify-content-center"

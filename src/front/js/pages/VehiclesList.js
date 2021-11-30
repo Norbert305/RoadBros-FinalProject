@@ -15,7 +15,7 @@ export const VehiclesList = () => {
 				{store.listOfVehicles.length > 0
 					? store.listOfVehicles.map((item, index) => {
 							return (
-								<li className="list-group-item d-flex flex-column mx-1" key={index}>
+								<li className="list-group-item d-flex flex-column mx-1 mb-2" key={index}>
 									<p className="mx-2 m-1 text-start">
 										<strong>Type:</strong> {item.vehicle_type}
 									</p>

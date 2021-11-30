@@ -474,4 +474,65 @@ h1 {
         display: none;
     }
 
+    // SOCIAL ICONS SECTIONS
+
+    .social {
+        margin: 50px;
+        margin-bottom: 50px;
+        
+        p {
+            text-align: center;
+            font-size: 10px;
+            margin-bottom: 10px;
+        }
+
+        .links {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .links a{
+            margin: 0 30px;
+        }
+        
+        .links a i {
+            font-size: 2rem;
+            color: rgb(216, 166, 29);
+        }
+
+    }
+
+    // FOOTER SECTION
+
+    .footer-links {
+        display: none;
+    }
+
+    .footer-container {
+        display: none;
+    }
+
+    .footer-container ul {
+        display: none;
+    }
+
+    .footer-container ul li {
+        display: none;
+    }
+
+    .footer {
+        background: rgb(78, 78, 78);
+        color: white;
+        font-size: 5px;
+        text-align: center;
+        padding-bottom: 5%;
+    }
+
+
+    // shadow for inputs and cards 
+    input, textarea, li {
+        box-shadow: 0 0 20px 2px black;
+    }
+
 }    
