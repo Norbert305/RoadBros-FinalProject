@@ -14,7 +14,9 @@ export const ServiceHistory = () => {
 			<ul className="list-group position-relative">
 				{store.listOfRequests.map((item, index) => {
 					return (
-						<li className="list-group-item d-flex flex-column p-3" key={index}>
+						<li
+							className="list-group-item d-flex flex-column mx-1 mb-3 shadow-lg border border-warning border-4 rounded-3"
+							key={index}>
 							<p className="mx-2 m-1 text-start">
 								<strong>Trucker Name:</strong> {item.fullName}
 							</p>

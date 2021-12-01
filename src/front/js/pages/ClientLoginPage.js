@@ -21,7 +21,7 @@ export const ClientLoginPage = props => {
 					<label>Email</label>
 					<input
 						type="email"
-						className="form-control"
+						className="form-control shadow-sm"
 						placeholder="Email"
 						name="email"
 						onChange={handleChange}
@@ -31,7 +31,7 @@ export const ClientLoginPage = props => {
 					<label>Password</label>
 					<input
 						type="password"
-						className="form-control"
+						className="form-control shadow-sm"
 						placeholder="Password"
 						name="password"
 						onChange={handleChange}

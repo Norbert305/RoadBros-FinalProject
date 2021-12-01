@@ -151,6 +151,27 @@ def complete_request(id):
         return "Request Completed", 200
     return "Update Failed"
 
+#
+@api.route('/user/<id>', methods=['PUT'])
+def change_profile(id):
+    
+    my_profile = User.query.get(id)
+
+    body = request.get_json()
+
+    my_profile.full_name = body["full_name"]
+    my_profile.email = body["email"]
+    my_profile.phone = body["phone"]
+    my_profile.zip_code = body["zip_code"]
+
+    db.session.commit()
+
+    profile_query = User.query.get(id)
+
+    if profile_query.full_name == body["full_name"]:
+        return "Profile Updated", 200
+    return "Update Failed"
+
 #Delete vehicle
 @api.route('/vehicle/<id>', methods=['DELETE'])
 def delete_request(id):

@@ -15,7 +15,9 @@ export const VehiclesList = () => {
 				{store.listOfVehicles.length > 0
 					? store.listOfVehicles.map((item, index) => {
 							return (
-								<li className="list-group-item d-flex flex-column mx-1 mb-2" key={index}>
+								<li
+									className="list-group-item d-flex flex-column mx-1 mb-3 shadow-lg border border-warning border-4 rounded-3"
+									key={index}>
 									<p className="mx-2 m-1 text-start">
 										<strong>Type:</strong> {item.vehicle_type}
 									</p>
@@ -34,10 +36,10 @@ export const VehiclesList = () => {
 									<p className="mx-2 m-1 text-start">
 										<strong>Plate Number:</strong> {item.vehicle_plate}
 									</p>
-									<p className="text-center">
+									<p className="text-center m-1 mt-3">
 										<button
 											type="button"
-											className="btn btn-danger mx-2  m-1 px-1"
+											className="btn btn-danger mx-2 mb-0 px-1"
 											onClick={() => actions.deleteVehicles(item.id)}>
 											Remove
 										</button>

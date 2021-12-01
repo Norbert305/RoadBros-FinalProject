@@ -36,7 +36,7 @@ export const RatingPage = () => {
 					className="btn btn-light bg-transparent border-0 col-2 text-center"
 					onClick={handleShowUp}>
 					<div className="col-1">
-						<i className="fas fa-thumbs-up fa-4x text-light" />
+						<i className="fas fa-thumbs-up fa-4x text-light shadow-sm" />
 					</div>
 				</button>
 				<Modal show={showUp} onHide={handleCloseUp}>
@@ -56,7 +56,7 @@ export const RatingPage = () => {
 					className="btn btn-light bg-transparent border-0 col-2 text-center"
 					onClick={handleShowDown}>
 					<div className="col-1">
-						<i className="fas fa-thumbs-down text-light fa-4x" />
+						<i className="fas fa-thumbs-down text-light fa-4x shadow-sm" />
 					</div>
 				</button>
 				<Modal show={showDown} onHide={handleCloseDown}>
@@ -77,7 +77,7 @@ export const RatingPage = () => {
 					<h5>Use the field below to write additonal comments:</h5>
 				</label>
 				<textarea
-					className="form-control"
+					className="form-control shadow-sm"
 					id="exampleFormControlTextarea2"
 					rows="3"
 					name="comments"

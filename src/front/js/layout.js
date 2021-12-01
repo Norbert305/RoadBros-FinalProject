@@ -21,6 +21,7 @@ import { ClientPayment } from "./pages/ClientPayment";
 import { AddVehicles } from "./pages/AddVehicles";
 import { ClientHomePage } from "./pages/ClientHomePage";
 import { ClientProfile } from "./pages/ClientProfile";
+import { ClientEditProfile } from "./pages/ClientEditProfile";
 import { VehiclesList } from "./pages/VehiclesList";
 import { ServiceHistory } from "./pages/ServiceHistory";
 import { ServiceMenu } from "./pages/ServiceMenu";
@@ -32,6 +33,7 @@ import { RatingPage } from "./pages/RatingPage";
 import { TruckerPayment } from "./pages/TruckerPayment";
 import { TruckerHomePage } from "./pages/TruckerHomePage";
 import { TruckerProfile } from "./pages/TruckerProfile";
+import { TruckerEditProfile } from "./pages/TruckerEditProfile";
 import { RequestsList } from "./pages/RequestsList";
 import { ManagingService } from "./pages/ManagingService";
 import { TruckerServiceHistory } from "./pages/TruckerServiceHistory";
@@ -78,6 +80,10 @@ const Layout = () => {
 							<NavbarClient />
 							<ClientProfile />
 						</Route>
+						<Route exact path="/ClientEditProfile">
+							<NavbarClient />
+							<ClientEditProfile />
+						</Route>
 						<Route exact path="/VehiclesList">
 							<NavbarClient />
 							<VehiclesList />
@@ -117,6 +123,10 @@ const Layout = () => {
 						<Route exact path="/TruckerProfile">
 							<NavbarTrucker />
 							<TruckerProfile />
+						</Route>
+						<Route exact path="/TruckerEditProfile">
+							<NavbarTrucker />
+							<TruckerEditProfile />
 						</Route>
 						<Route exact path="/TruckerServiceHistory">
 							<NavbarTrucker />

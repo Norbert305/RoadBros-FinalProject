@@ -37,9 +37,9 @@ export const AwaitingResponse = () => {
 						Your request has been accepted, click button below to go back to your home page.
 					</Modal.Body>
 					<Modal.Footer>
-						<Link to="/ClientHomePage">
+						<Link to="/ServiceCompleted">
 							<Button variant="secondary" className="btn btn-warning btn-lg fs-6">
-								Home
+								Service Completed
 							</Button>
 						</Link>
 					</Modal.Footer>

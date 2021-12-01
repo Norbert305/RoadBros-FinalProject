@@ -15,11 +15,11 @@ export const ServiceMenu = () => {
 	return (
 		<div className="container p-4 text-center text-light fs-6">
 			<h1 className="text-center my-5">Request Help</h1>
-			<div className="list-group text-start">
+			<div className="list-group text-start shadow">
 				<label className="list-group-item d-flex align-items-center m-0">
 					<select
 						id="inputState"
-						className="form-select my-1"
+						className="form-select my-1 shadow-sm"
 						name="vehicle"
 						onChange={e => setnewVehicle(e.target.value)}>
 						<option selected>Choose Your Vehicle</option>
@@ -37,7 +37,7 @@ export const ServiceMenu = () => {
 				</label>
 				<label className="list-group-item d-flex align-items-center m-0">
 					<input
-						className="my-2 form-control"
+						className="my-2 form-control shadow-sm"
 						type="text"
 						placeholder="Zip Code"
 						name="zip_code"
@@ -46,7 +46,7 @@ export const ServiceMenu = () => {
 				</label>
 				<label className="list-group-item d-flex align-items-center m-0">
 					<input
-						className="form-check-input m-2"
+						className="form-check-input m-2 shadow-sm"
 						type="checkbox"
 						value="Flat Tire"
 						name="service"
@@ -56,7 +56,7 @@ export const ServiceMenu = () => {
 				</label>
 				<label className="list-group-item d-flex align-items-center m-0">
 					<input
-						className="form-check-input m-2"
+						className="form-check-input m-2 shadow-sm"
 						type="checkbox"
 						value="Dead Battery"
 						name="service"
@@ -66,7 +66,7 @@ export const ServiceMenu = () => {
 				</label>
 				<label className="list-group-item d-flex align-items-center m-0">
 					<input
-						className="form-check-input m-2"
+						className="form-check-input m-2 shadow-sm"
 						type="checkbox"
 						value="Empty Gas"
 						name="service"
@@ -76,7 +76,7 @@ export const ServiceMenu = () => {
 				</label>
 				<label className="list-group-item d-flex align-items-center m-0">
 					<input
-						className="form-check-input m-2"
+						className="form-check-input m-2 shadow-sm"
 						type="checkbox"
 						value="Jump Start"
 						name="service"
@@ -86,7 +86,7 @@ export const ServiceMenu = () => {
 				</label>
 				<label className="list-group-item d-flex align-items-center m-0">
 					<input
-						className="form-check-input m-2"
+						className="form-check-input m-2 shadow-sm"
 						type="checkbox"
 						value="Towing Car"
 						name="service"

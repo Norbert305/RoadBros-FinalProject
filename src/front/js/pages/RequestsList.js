@@ -10,12 +10,14 @@ export const RequestsList = () => {
 
 	return (
 		<div className="container p-4 text-center text-light fs-6">
-			<h1 className="text-center my-5">Requests List</h1>
+			<h1 className="text-center my-3">Requests List</h1>
 			<ul className="list-group position-relative">
 				{store.listOfRequests.length > 0
 					? store.listOfRequests.map((item, index) => {
 							return (
-								<li className="list-group-item d-flex flex-column p-3" key={index}>
+								<li
+									className="list-group-item d-flex flex-column mx-1 mt-3 shadow-lg border border-warning border-4 rounded-3"
+									key={index}>
 									<p className="mx-2 m-1 text-start">
 										<strong>Full Name:</strong> {item.client_name}
 									</p>
@@ -32,7 +34,7 @@ export const RequestsList = () => {
 										<strong>Service:</strong> {item.service}
 									</p>
 									<Link to="/ManagingService">
-										<button className="btn btn-success mx-2 px-3">Accept</button>
+										<button className="btn btn-success mx-2 mb-1 px-2">Accept</button>
 									</Link>
 								</li>
 							);
