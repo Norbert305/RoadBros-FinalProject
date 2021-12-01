@@ -47,9 +47,9 @@ export const TruckerEditProfile = () => {
 				<div className="form-group my-1">
 					<label>Phone</label>
 					<input
-						type="password"
+						type="text"
 						className="form-control"
-						placeholder="Edit Password"
+						placeholder="Edit Phone Number"
 						name="phone"
 						onChange={handleChange}
 					/>
@@ -65,14 +65,15 @@ export const TruckerEditProfile = () => {
 					/>
 				</div>
 			</form>
-			<button
-				className="btn btn-warning btn-lg p-2 m-3"
-				onClick={() => {
-					actions.updateProfile(updatedUser);
-				}}>
-				Save Changes
-			</button>
-
+			<Link to="/TruckerProfile">
+				<button
+					className="btn btn-warning btn-lg p-2 m-3"
+					onClick={() => {
+						actions.updateProfile(updatedUser);
+					}}>
+					Save Changes
+				</button>
+			</Link>
 			<Link to="/TruckerProfile">
 				<button className="btn btn-warning btn-lg p-2 m-3">Back to Profile</button>
 			</Link>

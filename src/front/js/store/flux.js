@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			backEndUrl: "https://3001-pink-gazelle-jkabqel8.ws-us20.gitpod.io",
+			backEndUrl: "https://3001-yellow-prawn-ihoyszbs.ws-us20.gitpod.io",
 			loggedin: "",
 			loggedUser: {
 				email: "paolasc2652@gmail.com",
