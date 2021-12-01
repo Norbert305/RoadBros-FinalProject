@@ -151,7 +151,7 @@ def complete_request(id):
         return "Request Completed", 200
     return "Update Failed"
 
-#
+#Change user info
 @api.route('/user/<id>', methods=['PUT'])
 def change_profile(id):
     
