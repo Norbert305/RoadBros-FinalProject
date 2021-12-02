@@ -8,6 +8,8 @@ import "../../styles/demo.scss";
 export const ClientHomePage = () => {
 	const { store, actions } = useContext(Context);
 
+	const { message, setMessage } = useState("No active request at the time");
+
 	return (
 		<div className="container py-4 px-3 text-center text-light fs-4 mt-3">
 			<h1 className="text-center my-5">Home Page</h1>
@@ -18,15 +20,15 @@ export const ClientHomePage = () => {
 				<div className="col-4 bg-light text-dark p-3 rounded-3">
 					<div
 						onClick={() =>
-							store.listOfRequests.length < 0 ? (
-								<h5>No request active a the time</h5>
-							) : (
-								<h5>
-									{" "}
-									Congratulations! your request has been accepted, please contact your trucker at{" "}
-									{store.loggedTrucker.phone} for further information.
-								</h5>
-							)
+							({ message } == "No active request at the time"
+								? setMessage(`Congratulations! your request has been accepted, please contact your trucker at 
+							${store.loggedUser.phone} for further information.`)
+								: setMessage(`Congratulations! your request has been completed, please rate your trucker by clicking this button 
+							${(
+								<Link to="/RatingPage">
+									<button className="btn btn-warning btn-lg p-2 m-3">Rate Your Trucker</button>
+								</Link>
+							)}`))
 						}
 					/>
 				</div>

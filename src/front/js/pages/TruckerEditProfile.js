@@ -9,10 +9,10 @@ export const TruckerEditProfile = () => {
 	const { store, actions } = useContext(Context);
 
 	const [updatedUser, setUpdatedUser] = useState({
-		full_name: null,
-		email: null,
-		phone: null,
-		zip_code: null
+		full_name: store.loggedUser.full_name,
+		email: store.loggedUser.email,
+		phone: store.loggedUser.phone,
+		zip_code: store.loggedUser.zip_code
 	});
 
 	const handleChange = e => setUpdatedUser({ ...updatedUser, [e.target.name]: e.target.value });
@@ -32,6 +32,7 @@ export const TruckerEditProfile = () => {
 						placeholder="Edit Full Name"
 						name="full_name"
 						onChange={handleChange}
+						value={updatedUser.full_name}
 					/>
 				</div>
 				<div className="form-group my-1">
@@ -42,6 +43,7 @@ export const TruckerEditProfile = () => {
 						placeholder="Edit email"
 						name="email"
 						onChange={handleChange}
+						value={updatedUser.email}
 					/>
 				</div>
 				<div className="form-group my-1">
@@ -52,6 +54,7 @@ export const TruckerEditProfile = () => {
 						placeholder="Edit Phone Number"
 						name="phone"
 						onChange={handleChange}
+						value={updatedUser.phone}
 					/>
 				</div>
 				<div className="form-group my-1">
@@ -62,6 +65,7 @@ export const TruckerEditProfile = () => {
 						placeholder="Edit zip code"
 						name="zip_code"
 						onChange={handleChange}
+						value={updatedUser.zip_code}
 					/>
 				</div>
 			</form>

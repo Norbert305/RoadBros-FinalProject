@@ -35,7 +35,6 @@ export const TruckerProfile = () => {
 					</h5>
 				</div>
 			</div>
-
 			<div className="row my-3 d-flex flex-column justify-content-center">
 				<Link to="/TruckerEditProfile">
 					<button className="btn btn-warning btn-lg p-2 m-3">Edit Profile</button>

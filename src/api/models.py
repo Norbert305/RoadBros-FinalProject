@@ -11,6 +11,7 @@ class User(db.Model):
     password = db.Column(db.String(80), unique=False, nullable=True)
     phone = db.Column(db.String(120), unique=False, nullable=True)
     rating = db.Column(db.String(120), nullable=True)
+    zip_code = db.Column(db.String(120), nullable=True)
     #Relationships
     vehicle = db.relationship('Vehicle', backref='user')
     request= db.relationship('Request', backref='user')
@@ -27,6 +28,7 @@ class User(db.Model):
             "email": self.email,
             "phone": self.phone,
             "rating": self.rating,
+            "zip_code": self.zip_code,
             "vehicle": [vehicle.serialize() for vehicle in self.vehicle],
             "request": [request.serialize() for request in self.request],
             # do not serialize the password, its a security breach

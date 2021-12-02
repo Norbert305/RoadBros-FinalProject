@@ -40,7 +40,8 @@ def add_new_user():
         email=body["email"], 
         password=body["password"], 
         phone=body["phone"],
-        rating="null"
+        rating="null",
+        zip_code="null"
     )
 
     db.session.add(new_user)
@@ -49,28 +50,6 @@ def add_new_user():
     users_query = User.query.all()
     all_users = list(map(lambda x: x.serialize(), users_query))
     return jsonify(all_users), 200
-
-#Adding a new trucker
-@api.route('/trucker', methods=['POST'])
-def add_new_trucker():
-
-    body = request.get_json()
-
-    new_trucker = User(
-        user_type=body["user_type"], 
-        full_name=body["full_name"], 
-        email=body["email"], 
-        password=body["password"], 
-        phone=body["phone"],
-        rating=body["rating"]
-    )
-
-    db.session.add(new_trucker)
-    db.session.commit()
-
-    truckers_query = User.query.all()
-    all_truckers = list(map(lambda x: x.serialize(), truckers_query))
-    return jsonify(all_truckers), 200
 
 #Adding a new vehicle
 @api.route('/vehicle', methods=['POST'])
