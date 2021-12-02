@@ -10,7 +10,6 @@ export const NavbarTrucker = () => {
 	return (
 		<Navbar bg="dark" variant="dark" expand="lg" fixed="top">
 			<Container className="md-mx-5 sm-mx-2">
-<<<<<<< HEAD
 				<Navbar.Brand className="fs-4">
 					<Link to="/" className="name text-decoration-none text-white">
 						<img
@@ -22,7 +21,7 @@ export const NavbarTrucker = () => {
 						/>
 						<h3>RoadBros</h3>
 					</Link>
-=======
+				</Navbar.Brand>
 				<Navbar.Brand className="fs-3">
 					{" "}
 					<img
@@ -33,7 +32,6 @@ export const NavbarTrucker = () => {
 						className="d-inline-block align-top"
 					/>{" "}
 					RoadBros
->>>>>>> 8529f80a51ae99c257b3e7c3fd05128a97b17102
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0 d-inline-block" />
 				<Navbar.Collapse id="basic-navbar-nav">
