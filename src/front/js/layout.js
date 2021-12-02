@@ -25,7 +25,7 @@ import { ClientEditProfile } from "./pages/ClientEditProfile";
 import { VehiclesList } from "./pages/VehiclesList";
 import { ServiceHistory } from "./pages/ServiceHistory";
 import { ServiceMenu } from "./pages/ServiceMenu";
-import { AwaitingResponse } from "./pages/AwaitingResponse";
+
 import { ServiceCompleted } from "./pages/ServiceCompleted";
 import { RatingPage } from "./pages/RatingPage";
 
@@ -95,10 +95,6 @@ const Layout = () => {
 						<Route exact path="/ServiceMenu">
 							<NavbarClient />
 							<ServiceMenu />
-						</Route>
-						<Route exact path="/AwaitingResponse">
-							<NavbarClient />
-							<AwaitingResponse />
 						</Route>
 						<Route exact path="/ServiceCompleted">
 							<NavbarClient />

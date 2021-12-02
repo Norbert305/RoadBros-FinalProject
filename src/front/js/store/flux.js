@@ -3,16 +3,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 		store: {
 			backEndUrl: "https://3001-pink-gazelle-jkabqel8.ws-us20.gitpod.io",
 			loggedin: "",
-			loggedUser: {
-				email: "paolasc2652@gmail.com",
-				full_name: "Paola A Sanchez Carrero",
-				id: 1,
-				phone: "9549825249",
-				rating: "null",
-				request: [],
-				user_type: "client",
-				vehicle: []
-			},
+			loggedUser: {},
 			ratings: [],
 			listOfVehicles: [],
 			listOfRequests: []
@@ -28,6 +19,12 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch(`${getStore().backEndUrl}/api/request`)
 					.then(response => response.json())
 					.then(data => setStore({ listOfRequests: data }))
+					.catch(err => console.error("Error:", err));
+			},
+			getUser: () => {
+				fetch(`${getStore().backEndUrl}/api/user/1`)
+					.then(response => response.json())
+					.then(data => setStore({ loggedUser: data }))
 					.catch(err => console.error("Error:", err));
 			},
 			updateProfile: updatedProfile => {
@@ -81,10 +78,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 			changeUserType: type => {
 				setStore({ userLogin: type });
 			},
-			login: userName => {
-				setStore({ loggedin: userName });
+			login: email => {
+				setStore({ loggedin: email });
+				getActions().getUser();
 			},
-			logout: () => setStore({ loggedin: "" })
+			logout: () => setStore({ loggedUser: null })
 		}
 	};
 };

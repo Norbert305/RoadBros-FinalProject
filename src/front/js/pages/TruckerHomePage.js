@@ -12,14 +12,14 @@ export const TruckerHomePage = () => {
 		<div className="container py-4 px-3 text-center text-light fs-4">
 			<h1 className="text-center my-5">Home Page</h1>
 			<div className="row my-3 d-flex flex-column justify-content-center">
-				<Link to="/TruckerProfile">
-					<button className="btn btn-warning btn-lg p-2 m-3">Profile</button>
-				</Link>
 				<Link to="/RequestsList">
 					<button className="btn btn-warning btn-lg p-2 m-3">Requests List</button>
 				</Link>
 				<Link to="/TruckerServiceHistory">
 					<button className="btn btn-warning btn-lg p-2 m-3">Service History</button>
+				</Link>
+				<Link to="/TruckerProfile">
+					<button className="btn btn-warning btn-lg p-2 m-3">Profile</button>
 				</Link>
 			</div>
 		</div>

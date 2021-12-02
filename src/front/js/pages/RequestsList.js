@@ -8,10 +8,27 @@ import "../../styles/demo.scss";
 export const RequestsList = () => {
 	const { store, actions } = useContext(Context);
 
+	const [zipCode, setzipCode] = useState({
+		zip_code: null
+	});
+
 	return (
 		<div className="container p-4 text-center text-light fs-6">
 			<h1 className="text-center my-3">Requests List</h1>
 			<ul className="list-group position-relative">
+				<div className="input-group mb-3 m-auto">
+					<input
+						type="text"
+						className="form-control"
+						placeholder="Filter by Zip Code"
+						aria-label="Recipient's username"
+						aria-describedby="button-addon2"
+						onChange={e => setzipCode(e.target.value)}
+					/>
+					<button className="btn btn-warning" type="button" id="button-addon2">
+						Filter
+					</button>
+				</div>
 				{store.listOfRequests.length > 0
 					? store.listOfRequests.map((item, index) => {
 							return (
@@ -33,7 +50,11 @@ export const RequestsList = () => {
 									<p className="mx-2 m-1 mb-3 text-start">
 										<strong>Service:</strong> {item.service}
 									</p>
-									<Link to="/ManagingService">
+									<Link
+										to={{
+											pathname: "/ManagingService",
+											state: item
+										}}>
 										<button className="btn btn-success mx-2 mb-1 px-2">Accept</button>
 									</Link>
 								</li>
