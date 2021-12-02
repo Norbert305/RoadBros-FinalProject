@@ -12,26 +12,9 @@ export const NavbarTrucker = () => {
 			<Container className="md-mx-5 sm-mx-2">
 				<Navbar.Brand className="fs-4">
 					<Link to="/" className="name text-decoration-none text-white">
-						<img
-							alt=""
-							src={RoadBrosLogoPhoneView}
-							width="50"
-							height="50"
-							className="d-inline-block align-top"
-						/>
-						<h3>RoadBros</h3>
+						<img alt="" src={RoadBrosLogoPhoneView} width="50" className="d-inline-block align-center" />
+						<h3 className="align-center p-0 m-0">RoadBros</h3>
 					</Link>
-				</Navbar.Brand>
-				<Navbar.Brand className="fs-3">
-					{" "}
-					<img
-						alt=""
-						src="https://duckduckgo.com/?q=car+icon&atb=v289-1&iax=images&ia=images&iai=https%3A%2F%2Fstatic.vecteezy.com%2Fsystem%2Fresources%2Fpreviews%2F000%2F564%2F515%2Foriginal%2Fcar-icon-vector.jpg"
-						width="30"
-						height="30"
-						className="d-inline-block align-top"
-					/>{" "}
-					RoadBros
 				</Navbar.Brand>
 				<Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0 d-inline-block" />
 				<Navbar.Collapse id="basic-navbar-nav">
