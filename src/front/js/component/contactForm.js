@@ -1,8 +1,13 @@
-import React, { useRef } from "react";
+import React, { useRef, useState, setShow } from "react";
 import emailjs from "emailjs-com";
+import { Modal, Button } from "react-bootstrap";
 
 export const ContactUs = () => {
 	const form = useRef();
+	const [show, setShow] = useState(false);
+
+	const handleClose = () => setShow(false);
+	const handleShow = () => setShow(true);
 
 	const sendEmail = e => {
 		e.preventDefault();
@@ -43,9 +48,18 @@ export const ContactUs = () => {
 				placeholder="Message"
 				name="message"
 			/>
-			<button type="submit" className="btn btn-warning btn-lg" value="Send Email">
+			<button type="submit" className="btn btn-warning btn-lg" value="Send Email" onClick={handleShow}>
 				Send Email
 			</button>
+
+			<Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} centered className="text-center">
+				<Modal.Body>Thanks for submiting your message, a representative will contact you shortly</Modal.Body>
+				<Modal.Footer>
+					<Button className="m-auto" variant="warning" onClick={handleClose}>
+						Close
+					</Button>
+				</Modal.Footer>
+			</Modal>
 		</form>
 	);
 };
