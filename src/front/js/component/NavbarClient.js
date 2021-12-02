@@ -9,7 +9,7 @@ export const NavbarClient = () => {
 
 	return (
 		<Navbar bg="dark" variant="dark" expand="lg" fixed="top">
-			<Container className="md-mx-5 sm-mx-2">
+			<Container className="md-mx-5 sm-mx-2 my-0">
 				<Navbar.Brand className="fs-4">
 					<Link to="/" className="name text-decoration-none text-white">
 						<img alt="" src={RoadBrosLogoPhoneView} width="50" className="d-inline-block align-center" />

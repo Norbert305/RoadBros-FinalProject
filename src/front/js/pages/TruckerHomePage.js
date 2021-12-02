@@ -9,7 +9,7 @@ export const TruckerHomePage = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container py-4 px-3 text-center text-light fs-4">
+		<div className="container py-4 px-3 text-center text-light fs-4 my-3">
 			<h1 className="text-center my-5">Home Page</h1>
 			<div className="row my-3 d-flex flex-column justify-content-center">
 				<Link to="/RequestsList">

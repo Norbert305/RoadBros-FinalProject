@@ -5,7 +5,7 @@ import "../../styles/demo.scss";
 
 export const RatingPage = () => {
 	return (
-		<div className="container py-4 px-3 text-center text-light fs-4">
+		<div className="container py-4 px-3 text-center text-light fs-4 mt-3">
 			<h1 className="my-5">Thank You!</h1>
 			<h5 className="m-3">How would you rate your experience with ___________ ?</h5>
 

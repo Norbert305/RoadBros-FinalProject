@@ -9,7 +9,7 @@ export const ClientHomePage = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container py-4 px-3 text-center text-light fs-4">
+		<div className="container py-4 px-3 text-center text-light fs-4 mt-3">
 			<h1 className="text-center my-5">Home Page</h1>
 			<div className="row my-3 d-flex justify-content-center">
 				<Link to="/ServiceMenu">
@@ -37,9 +37,6 @@ export const ClientHomePage = () => {
 				</Link>
 				<Link to="/ServiceMenu">
 					<button className="btn btn-warning btn-lg p-2 m-3">Request Help</button>
-				</Link>
-				<Link to="/ClientProfile">
-					<button className="btn btn-warning btn-lg p-2 m-3">Profile</button>
 				</Link>
 				<Link to="/ServiceHistory">
 					<button className="btn btn-warning btn-lg m-3">Service History</button>

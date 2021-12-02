@@ -13,7 +13,7 @@ export const RequestsList = () => {
 	});
 
 	return (
-		<div className="container p-4 text-center text-light fs-6">
+		<div className="container p-4 text-center text-light fs-6 mt-3">
 			<h1 className="text-center my-5">Requests List</h1>
 			<ul className="list-group position-relative">
 				<div className="input-group mb-3 m-auto">

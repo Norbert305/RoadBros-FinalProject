@@ -13,7 +13,7 @@ export const ServiceMenu = () => {
 	const [newZipCode, setnewZipCode] = useState("");
 
 	return (
-		<div className="container p-4 text-center text-light fs-6">
+		<div className="container p-4 text-center text-light fs-6 mt-3">
 			<h1 className="text-center my-5">Request Help</h1>
 			<div className="list-group text-start shadow">
 				<label className="list-group-item d-flex align-items-center m-0">
@@ -95,7 +95,7 @@ export const ServiceMenu = () => {
 					<h6 className="me-2 m-0 d-flex align-items-center">Towing Car: $150</h6>
 				</label>
 			</div>
-			<Link to="/AwaitingResponse">
+			<Link to="/ClientHomePage">
 				<button
 					className="btn btn-warning btn-lg m-3"
 					onClick={() => {

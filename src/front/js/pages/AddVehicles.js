@@ -18,7 +18,7 @@ export const AddVehicles = () => {
 	const handleChange = e => setnewVehicle({ ...newVehicle, [e.target.name]: e.target.value });
 
 	return (
-		<div className="container p-4 text-center text-light fs-6 m-auto">
+		<div className="container p-4 text-center text-light fs-6 m-auto mt-3">
 			<div>
 				<h1 className="text-center my-5">Add Vehicles</h1>
 				<form className="text-start">

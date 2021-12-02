@@ -9,7 +9,7 @@ export const TruckerProfile = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container py-4 px-3 text-center text-light fs-4">
+		<div className="container py-4 px-3 text-center text-light fs-4 mt-3">
 			<h1 className="text-center my-5">Profile</h1>
 
 			<div className="row d-flex justify-content-center mb-3">

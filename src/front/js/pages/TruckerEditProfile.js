@@ -18,7 +18,7 @@ export const TruckerEditProfile = () => {
 	const handleChange = e => setUpdatedUser({ ...updatedUser, [e.target.name]: e.target.value });
 
 	return (
-		<div className="container py-4 px-3 text-center text-light fs-4">
+		<div className="container py-4 px-3 text-center text-light fs-4 mt-3">
 			<h1 className="text-center my-5">User Information</h1>
 
 			<h2>Change your information on the fields below</h2>

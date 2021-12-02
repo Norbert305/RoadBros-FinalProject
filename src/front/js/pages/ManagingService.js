@@ -8,7 +8,7 @@ export const ManagingService = () => {
 	const { store, actions } = useContext(Context);
 
 	return (
-		<div className="container py-4 px-3 text-center text-light fs-4">
+		<div className="container py-4 px-3 text-center text-light fs-4 mt-3">
 			<h1 className="my-5">Manage your Service</h1>
 			<div className="row my-3 d-flex justify-content-center">
 				<div className="col-9 bg-light text-dark p-3 rounded-3">
