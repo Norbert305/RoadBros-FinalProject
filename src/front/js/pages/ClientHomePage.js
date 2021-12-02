@@ -15,7 +15,7 @@ export const ClientHomePage = () => {
 				<Link to="/ServiceMenu">
 					<button className="btn btn-warning btn-lg p-2 m-3">Request Help</button>
 				</Link>
-				<div className="row my-3 d-flex justify-content-center">
+				<div className="row m-auto d-flex tex-center justify-content-center">
 					<div className="col-4 bg-light text-dark p-3 rounded-3">
 						<div>
 							<h5>No request at the time</h5>

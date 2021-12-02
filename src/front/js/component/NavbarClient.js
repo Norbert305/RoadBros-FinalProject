@@ -2,19 +2,27 @@ import React, { useContext } from "react";
 import { Context } from "../store/appContext";
 import { Navbar, Nav, Container, Button } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import RoadBrosLogoPhoneView from "../../img/RoadBrosLogoPhoneView.png";
 
 export const NavbarClient = () => {
 	const { store } = useContext(Context);
 
 	return (
-		<Navbar className="" bg="dark" variant="dark" expand="lg">
+		<Navbar className="" bg="dark" variant="dark" expand="lg" fixed="top">
 			<Container className="md-mx-5 sm-mx-2">
 				<Navbar.Brand className="fs-3">
 					<Link to="/" className="name text-decoration-none text-white">
-						RoadBros
+						<img
+							alt=""
+							src={RoadBrosLogoPhoneView}
+							width="50"
+							height="50"
+							className="d-inline-block align-top"
+						/>
+						<h3>RoadBros</h3>
 					</Link>
 				</Navbar.Brand>
-				<Navbar.Toggle aria-controls="basic-navbar-nav" />
+				<Navbar.Toggle aria-controls="basic-navbar-nav" className="border-0 d-inline-block" />
 				<Navbar.Collapse id="basic-navbar-nav">
 					<Nav className="m-auto position-absolute bg-dark top-25 end-0">
 						<Link to="/ClientHomePage">

@@ -4,6 +4,7 @@ import "../../styles/index.scss";
 import { Link } from "react-router-dom";
 import { Tabs, Tab, Carousel, CarouselItem, Caption } from "react-bootstrap";
 import { ContactUs } from "../component/contactForm";
+import RoadBrosLogo from "../../img/RoadBrosLogo.png";
 
 export const Home = () => {
 	const { store, actions } = useContext(Context);
@@ -42,10 +43,17 @@ export const Home = () => {
 				</div>
 			</nav>
 
-			<h1>
-				Welcome to
-				<span className="text-warning"> RoadBros</span>
-			</h1>
+			<h1 className="welcome">Welcome to</h1>
+			<span id="home-logo">
+				{" "}
+				<img
+					alt=""
+					src={RoadBrosLogo}
+					width="200"
+					height="200"
+					className="home-logo d-inline-block align-top"
+				/>
+			</span>
 
 			<div className="login-area row row-cols-1 row-cols-md-2 g-4 text-center mx-auto">
 				<div id="nonUser-area" className="col mx-auto ">
@@ -82,7 +90,7 @@ export const Home = () => {
 										Client
 									</button>
 								</Link>
-								<p className="or">or</p>
+								<hr />
 								<Link to="/TruckerLoginPage">
 									<button type="button" id="trucker-btn" className="btn btn-warning btn-lg mb-5">
 										Trucker
