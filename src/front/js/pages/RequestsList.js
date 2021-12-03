@@ -55,7 +55,11 @@ export const RequestsList = () => {
 											pathname: "/ManagingService",
 											state: item
 										}}>
-										<button className="btn btn-success mx-2 mb-1 px-2">Accept</button>
+										<button
+											className="btn btn-success mx-2 mb-1 px-2"
+											onClick={() => actions.pushRequest(item)}>
+											Accept
+										</button>
 									</Link>
 								</li>
 							);

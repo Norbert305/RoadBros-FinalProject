@@ -1,12 +1,13 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			backEndUrl: "https://3001-tan-flyingfish-mmxpzm2s.ws-us21.gitpod.io",
+			backEndUrl: "https://3001-red-fox-ulx9lx1n.ws-us21.gitpod.io",
 			loggedin: "",
 			loggedUser: {},
 			ratings: [],
 			listOfVehicles: [],
-			listOfRequests: []
+			listOfRequests: [],
+			pushRequestInfo: []
 		},
 		actions: {
 			getVehicles: () => {
@@ -82,7 +83,27 @@ const getState = ({ getStore, getActions, setStore }) => {
 				setStore({ loggedin: email });
 				getActions().getUser();
 			},
-			logout: () => setStore({ loggedUser: null })
+			logout: () => setStore({ loggedUser: null }),
+
+			pushRequest: add => {
+				let myNewRequestList = getStore().pushRequestInfo;
+				if (!myNewRequestList.includes(add)) {
+					myNewRequestList.push(add);
+					setStore({ pushRequestInfo: myNewRequestList });
+				}
+			},
+
+			deleteRequest: minus => {
+				let favoriteRequest = getStore().pushRequestInfo;
+				favoriteRequest = favoriteRequest.filter(item => minus !== item);
+				setStore({ pushRequestInfo: favoriteRequest });
+			},
+
+			filterByZip: zip => {
+				let filterZip = getStore().listOfRequests;
+				filterZip = filterZip.filter(item => zip !== item);
+				setStore({ pushRequestInfo: favoriteRequest });
+			}
 		}
 	};
 };
