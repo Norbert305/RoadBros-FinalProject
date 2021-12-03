@@ -8,9 +8,7 @@ import "../../styles/demo.scss";
 export const RequestsList = () => {
 	const { store, actions } = useContext(Context);
 
-	const [zipCode, setzipCode] = useState({
-		zip_code: null
-	});
+	const [zipCode, setzipCode] = useState("");
 
 	return (
 		<div className="container p-4 text-center text-light fs-6 mt-3">
@@ -25,45 +23,79 @@ export const RequestsList = () => {
 						aria-describedby="button-addon2"
 						onChange={e => setzipCode(e.target.value)}
 					/>
-					<button className="btn btn-warning" type="button" id="button-addon2">
-						Filter
-					</button>
 				</div>
 				{store.listOfRequests.length > 0
-					? store.listOfRequests.map((item, index) => {
-							return (
-								<li
-									className="list-group-item d-flex flex-column mx-1 mt-3 shadow-lg border border-warning border-4 rounded-3"
-									key={index}>
-									<p className="mx-2 m-1 text-start">
-										<strong>Full Name:</strong> {item.client_name}
-									</p>
-									<p className="mx-2 m-1 text-start">
-										<strong>Phone:</strong> {item.client_phone}
-									</p>
-									<p className="mx-2 m-1 text-start">
-										<strong>Zip Code:</strong> {item.zip_code}
-									</p>
-									<p className="mx-2 m-1 text-start">
-										<strong>Vehicle:</strong> {item.vehicle}
-									</p>
-									<p className="mx-2 m-1 mb-3 text-start">
-										<strong>Service:</strong> {item.service}
-									</p>
-									<Link
-										to={{
-											pathname: "/ManagingService",
-											state: item
-										}}>
-										<button
-											className="btn btn-success mx-2 mb-1 px-2"
-											onClick={() => actions.pushRequest(item)}>
-											Accept
-										</button>
-									</Link>
-								</li>
-							);
-					  })
+					? !zipCode
+						? store.listOfRequests.map((item, index) => {
+								return (
+									<li
+										className="list-group-item d-flex flex-column mx-1 mt-3 shadow-lg border border-warning border-4 rounded-3"
+										key={index}>
+										<p className="mx-2 m-1 text-start">
+											<strong>Full Name:</strong> {item.client_name}
+										</p>
+										<p className="mx-2 m-1 text-start">
+											<strong>Phone:</strong> {item.client_phone}
+										</p>
+										<p className="mx-2 m-1 text-start">
+											<strong>Zip Code:</strong> {item.zip_code}
+										</p>
+										<p className="mx-2 m-1 text-start">
+											<strong>Vehicle:</strong> {item.vehicle}
+										</p>
+										<p className="mx-2 m-1 mb-3 text-start">
+											<strong>Service:</strong> {item.service}
+										</p>
+										<Link
+											to={{
+												pathname: "/ManagingService",
+												state: item
+											}}>
+											<button
+												className="btn btn-success mx-2 mb-1 px-2"
+												onClick={() => actions.pushRequest(item)}>
+												Accept
+											</button>
+										</Link>
+									</li>
+								);
+						  })
+						: store.listOfRequests
+								.filter((value, index) => value.zip_code.includes(zipCode))
+								.map((item, index) => {
+									return (
+										<li
+											className="list-group-item d-flex flex-column mx-1 mt-3 shadow-lg border border-warning border-4 rounded-3"
+											key={index}>
+											<p className="mx-2 m-1 text-start">
+												<strong>Full Name:</strong> {item.client_name}
+											</p>
+											<p className="mx-2 m-1 text-start">
+												<strong>Phone:</strong> {item.client_phone}
+											</p>
+											<p className="mx-2 m-1 text-start">
+												<strong>Zip Code:</strong> {item.zip_code}
+											</p>
+											<p className="mx-2 m-1 text-start">
+												<strong>Vehicle:</strong> {item.vehicle}
+											</p>
+											<p className="mx-2 m-1 mb-3 text-start">
+												<strong>Service:</strong> {item.service}
+											</p>
+											<Link
+												to={{
+													pathname: "/ManagingService",
+													state: item
+												}}>
+												<button
+													className="btn btn-success mx-2 mb-1 px-2"
+													onClick={() => actions.pushRequest(item)}>
+													Accept
+												</button>
+											</Link>
+										</li>
+									);
+								})
 					: "Loading..."}
 			</ul>
 
