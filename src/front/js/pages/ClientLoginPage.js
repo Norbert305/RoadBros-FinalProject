@@ -1,10 +1,12 @@
 import React, { useState, useContext } from "react";
 import { PropTypes } from "prop-types";
-import { Link } from "react-router-dom";
+import { Link, Redirect } from "react-router-dom";
 import { Context } from "../store/appContext";
 
 export const ClientLoginPage = props => {
 	const { actions, store } = useContext(Context);
+
+	const [valid, setValid] = useState(false);
 
 	const [newContact, setnewContact] = useState({
 		email: null,
@@ -12,6 +14,24 @@ export const ClientLoginPage = props => {
 	});
 
 	const handleChange = e => setnewContact({ ...newContact, [e.target.name]: e.target.value });
+
+	const login = myLogin => {
+		console.log("login");
+		fetch(`${store.backEndUrl}/api/login`, {
+			method: "POST",
+			headers: { "Content-Type": "application/json" },
+			body: JSON.stringify(myLogin)
+		})
+			.then(response => response.json())
+			.then(data => {
+				console.log(data);
+				setValid(true);
+			})
+			.catch(err => {
+				console.error("Error:", err);
+				alert("wrong user information");
+			});
+	};
 
 	return (
 		<div className="container p-4 mt-3 text-center text-light fs-6">
@@ -38,14 +58,12 @@ export const ClientLoginPage = props => {
 					/>
 				</div>
 			</form>
-			<Link to="/ClientHomePage">
-				<button
-					type="button"
-					className="btn btn-warning btn-lg p-2 m-3"
-					onClick={() => actions.login(newContact.email)}>
-					Next
-				</button>
-			</Link>
+
+			<button type="button" className="btn btn-warning btn-lg p-2 m-3" onClick={() => login(newContact)}>
+				Next
+			</button>
+
+			{valid == true ? <Redirect to="/ClientHomePage" /> : ""}
 		</div>
 	);
 };

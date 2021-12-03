@@ -7,7 +7,7 @@ class User(db.Model):
     #Request Body Data
     user_type = db.Column(db.String(120), nullable=True)
     full_name = db.Column(db.String(120), nullable=True)
-    email = db.Column(db.String(120), unique=False, nullable=True)
+    email = db.Column(db.String(120), unique=True, nullable=True)
     password = db.Column(db.String(80), unique=False, nullable=True)
     phone = db.Column(db.String(120), unique=False, nullable=True)
     rating = db.Column(db.String(120), nullable=True)
