@@ -40,8 +40,8 @@ def add_new_user():
         email=body["email"], 
         password=body["password"], 
         phone=body["phone"],
-        rating="null",
-        zip_code="null"
+        rating="",
+        zip_code=""
     )
 
     db.session.add(new_user)
@@ -174,7 +174,7 @@ def change_profile(id):
     profile_query = User.query.get(id)
 
     if profile_query.full_name == body["full_name"]:
-        return "Profile Updated", 200
+        return jsonify(profile_query.serialize()), 200
     return "Update Failed"
 
 #Delete vehicle

@@ -69,20 +69,14 @@ export const ClientEditProfile = () => {
 					/>
 				</div>
 			</form>
-
-			<button
-				className="btn btn-warning btn-lg p-2 w-75 m-auto my-3"
-				onClick={() => {
-					actions.updateProfile(updatedUser);
-				}}>
-				Save Changes
-			</button>
-
 			<Link to="/ClientProfile">
-				<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Back to Profile</button>
-			</Link>
-			<Link to="/ClientHomePage">
-				<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Back to Home</button>
+				<button
+					className="btn btn-warning btn-lg p-2 w-75 m-auto my-3"
+					onClick={() => {
+						actions.updateProfile(updatedUser);
+					}}>
+					Save Changes
+				</button>
 			</Link>
 		</div>
 	);
