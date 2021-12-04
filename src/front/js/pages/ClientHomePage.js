@@ -17,7 +17,7 @@ export const ClientHomePage = () => {
 					<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Request Help</button>
 				</Link>
 				<div
-					className="col-9 bg-light text-dark p-3 rounded-3"
+					className="col-9 bg-light text-dark p-0 rounded-3"
 					onClick={() =>
 						message == "empty"
 							? setMessage("pending")
@@ -28,12 +28,12 @@ export const ClientHomePage = () => {
 									: null
 					}>
 					{message == "pending" ? (
-						<div>
+						<div className="border border-warning border-5 rounded-3 p-3">
 							<p>REQUEST PENDING</p>
 							<p>You have a pending request</p>
 						</div>
 					) : message == "accepted" ? (
-						<div>
+						<div className="border border-success border-5 rounded-3 p-3">
 							<p>ACCEPTED!</p>
 							<p>
 								Your request has been accepted by trucker Rafel Pomares, please contact your trucker at
@@ -41,7 +41,7 @@ export const ClientHomePage = () => {
 							</p>
 						</div>
 					) : message == "completed" ? (
-						<div>
+						<div className="border border-primary border-5 rounded-3 p-3">
 							<p>COMPLETED!</p>
 							<p>Your request has been completed</p>
 							<Link to="/RatingPage">
@@ -49,7 +49,7 @@ export const ClientHomePage = () => {
 							</Link>
 						</div>
 					) : (
-						<div>
+						<div className="rounded-3 p-3">
 							<p>NO REQUEST PENDING</p>
 							<p>You have no pending requests</p>
 						</div>
