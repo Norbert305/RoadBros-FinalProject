@@ -44,6 +44,9 @@ export const ClientHomePage = () => {
 						<div>
 							<p>COMPLETED!</p>
 							<p>Your request has been completed</p>
+							<Link to="/RatingPage">
+								<button className="btn btn-danger m-auto my-2">Rate Trucker</button>
+							</Link>
 						</div>
 					) : (
 						<div>
