@@ -15,7 +15,7 @@ export const ClientHomePage = () => {
 			<h1 className="text-center my-5">Home Page</h1>
 			<div className="row my-3 d-flex justify-content-center">
 				<Link to="/ServiceMenu">
-					<button className="btn btn-warning btn-lg p-2 m-3 mb-4">Request Help</button>
+					<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Request Help</button>
 				</Link>
 				<div className="col-4 bg-light text-dark p-3 rounded-3">
 					<div
@@ -35,16 +35,14 @@ export const ClientHomePage = () => {
 			</div>
 			<div className="row my-3 d-flex flex-column justify-content-center">
 				<Link to="/VehiclesList">
-					<button className="btn btn-warning btn-lg p-2 m-3">Vehicles List</button>
+					<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Vehicles List</button>
 				</Link>
-				<Link to="/ServiceMenu">
-					<button className="btn btn-warning btn-lg p-2 m-3">Request Help</button>
-				</Link>
+
 				<Link to="/ServiceHistory">
-					<button className="btn btn-warning btn-lg m-3">Service History</button>
+					<button className="btn btn-warning btn-lg w-75 m-auto my-3">Service History</button>
 				</Link>
 				<Link to="/ClientProfile">
-					<button className="btn btn-warning btn-lg p-2 m-3">Profile</button>
+					<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Profile</button>
 				</Link>
 			</div>
 		</div>

@@ -28,6 +28,9 @@ html, body {
             
         }
     }
+    .navbar-toggler-icon {
+        display: none;
+    }
 }
 
 h1 {
@@ -328,7 +331,9 @@ h1 {
     .navbar {
         height: 70px;
 
-        
+        .navbar-toggler-icon {
+            display: inline-block;
+        }
         .collapsed show {
             display: inline-block;
             position: relative;

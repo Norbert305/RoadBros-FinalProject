@@ -71,7 +71,7 @@ export const TruckerEditProfile = () => {
 			</form>
 			<Link to="/TruckerProfile">
 				<button
-					className="btn btn-warning btn-lg p-2 m-3"
+					className="btn btn-warning btn-lg p-2 w-75 m-auto my-3"
 					onClick={() => {
 						actions.updateProfile(updatedUser);
 					}}>
@@ -79,10 +79,10 @@ export const TruckerEditProfile = () => {
 				</button>
 			</Link>
 			<Link to="/TruckerProfile">
-				<button className="btn btn-warning btn-lg p-2 m-3">Back to Profile</button>
+				<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Back to Profile</button>
 			</Link>
 			<Link to="/TruckerHomePage">
-				<button className="btn btn-warning btn-lg p-2 m-3">Back to Home</button>
+				<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Back to Home</button>
 			</Link>
 		</div>
 	);

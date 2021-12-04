@@ -37,16 +37,16 @@ export const ClientProfile = () => {
 			</div>
 			<div className="row my-3 d-flex flex-column justify-content-center">
 				<Link to="/ClientEditProfile">
-					<button className="btn btn-warning btn-lg p-2 m-3">Edit Profile</button>
+					<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Edit Profile</button>
 				</Link>
 				<Link to="/ClientPayment">
-					<button className="btn btn-warning btn-lg p-2 m-3">Payment Information</button>
+					<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Payment Information</button>
 				</Link>
 				<Link to="/VehiclesList">
-					<button className="btn btn-warning btn-lg p-2 m-3">Vehicles List</button>
+					<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Vehicles List</button>
 				</Link>
 				<Link to="/ClientHomePage">
-					<button className="btn btn-warning btn-lg p-2 m-3">Back to Home</button>
+					<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Back to Home</button>
 				</Link>
 			</div>
 		</div>
