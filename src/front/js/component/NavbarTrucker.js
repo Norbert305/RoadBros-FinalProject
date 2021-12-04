@@ -28,6 +28,9 @@ export const NavbarTrucker = () => {
 						<Link to="/TruckerProfile">
 							<Button className="btn btn-outline-warning border-0 bg-transparent">Profile</Button>
 						</Link>
+						<Link to="/TruckerContactUs">
+							<Button className="btn btn-outline-warning border-0 bg-transparent">Contact Us</Button>
+						</Link>
 						<Link to="/">
 							<Button className="btn btn-outline-warning border-0 bg-transparent">Log Out</Button>
 						</Link>

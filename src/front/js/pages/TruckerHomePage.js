@@ -21,6 +21,9 @@ export const TruckerHomePage = () => {
 				<Link to="/TruckerProfile">
 					<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Profile</button>
 				</Link>
+				<Link to="/TruckerContactUs">
+					<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Contact Us</button>
+				</Link>
 			</div>
 		</div>
 	);

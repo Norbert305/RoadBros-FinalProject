@@ -31,6 +31,9 @@ export const NavbarClient = () => {
 						<Link to="/ClientProfile">
 							<Button className="btn btn-outline-warning border-0 bg-transparent">Profile</Button>
 						</Link>
+						<Link to="/ClientContactUs">
+							<Button className="btn btn-outline-warning border-0 bg-transparent">Contact Us</Button>
+						</Link>
 						<Link to="/">
 							<Button className="btn btn-outline-warning border-0 bg-transparent">Log Out</Button>
 						</Link>

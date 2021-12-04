@@ -1,9 +1,8 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-
 import { Context } from "../store/appContext";
-
 import "../../styles/demo.scss";
+import "../component/contactForm";
 
 export const ClientHomePage = () => {
 	const { store, actions } = useContext(Context);
@@ -43,6 +42,9 @@ export const ClientHomePage = () => {
 				</Link>
 				<Link to="/ClientProfile">
 					<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Profile</button>
+				</Link>
+				<Link to="/ClientContactUs">
+					<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Contact Us</button>
 				</Link>
 			</div>
 		</div>

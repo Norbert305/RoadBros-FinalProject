@@ -48,14 +48,18 @@ export const ContactUs = () => {
 				placeholder="Message"
 				name="message"
 			/>
-			<button type="submit" className="btn btn-warning btn-lg" value="Send Email" onClick={handleShow}>
+			<button
+				type="submit"
+				className="btn btn-warning btn-lg p-2 w-75 m-auto my-3"
+				value="Send Email"
+				onClick={handleShow}>
 				Send Email
 			</button>
 
 			<Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} centered className="text-center">
 				<Modal.Body>Thanks for submiting your message, a representative will contact you shortly</Modal.Body>
 				<Modal.Footer>
-					<Button className="m-auto" variant="warning" onClick={handleClose}>
+					<Button to="/ClientHomePage" className="m-auto" variant="warning" onClick={handleClose}>
 						Close
 					</Button>
 				</Modal.Footer>

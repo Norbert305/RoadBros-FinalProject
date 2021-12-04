@@ -17,6 +17,7 @@ import { ClientLoginPage } from "./pages/ClientLoginPage";
 import { TruckerLoginPage } from "./pages/TruckerLoginPage";
 
 //Client Pages
+import { ClientContactUs } from "./pages/ClientContactUs";
 import { ClientPayment } from "./pages/ClientPayment";
 import { AddVehicles } from "./pages/AddVehicles";
 import { ClientHomePage } from "./pages/ClientHomePage";
@@ -30,6 +31,7 @@ import { ServiceCompleted } from "./pages/ServiceCompleted";
 import { RatingPage } from "./pages/RatingPage";
 
 //Trucker Pages
+import { TruckerContactUs } from "./pages/TruckerContactUs";
 import { TruckerPayment } from "./pages/TruckerPayment";
 import { TruckerHomePage } from "./pages/TruckerHomePage";
 import { TruckerProfile } from "./pages/TruckerProfile";
@@ -76,6 +78,10 @@ const Layout = () => {
 							<NavbarClient />
 							<ClientHomePage />
 						</Route>
+						<Route exact path="/ClientContactUs">
+							<NavbarClient />
+							<ClientContactUs />
+						</Route>
 						<Route exact path="/ClientProfile">
 							<NavbarClient />
 							<ClientProfile />
@@ -119,6 +125,10 @@ const Layout = () => {
 						<Route exact path="/TruckerProfile">
 							<NavbarTrucker />
 							<TruckerProfile />
+						</Route>
+						<Route exact path="/TruckerContactUs">
+							<NavbarTrucker />
+							<TruckerContactUs />
 						</Route>
 						<Route exact path="/TruckerEditProfile">
 							<NavbarTrucker />
