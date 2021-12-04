@@ -7,8 +7,6 @@ import "../component/contactForm";
 export const ClientHomePage = () => {
 	const { store, actions } = useContext(Context);
 
-	const [message, setMessage] = useState("empty");
-
 	return (
 		<div className="container py-4 px-3 text-center text-light fs-4 mt-3">
 			<h1 className="text-center my-5">Home Page</h1>
@@ -19,20 +17,20 @@ export const ClientHomePage = () => {
 				<div
 					className="col-9 bg-light text-dark p-0 rounded-3"
 					onClick={() =>
-						message == "empty"
-							? setMessage("pending")
-							: message == "pending"
-								? setMessage("accepted")
-								: message == "accepted"
-									? setMessage("completed")
+						store.message == "empty"
+							? actions.changeMessage("pending")
+							: store.message == "pending"
+								? actions.changeMessage("accepted")
+								: store.message == "accepted"
+									? actions.changeMessage("completed")
 									: null
 					}>
-					{message == "pending" ? (
+					{store.message == "pending" ? (
 						<div className="border border-warning border-5 rounded-3 p-3">
 							<p>REQUEST PENDING</p>
 							<p>You have a pending request</p>
 						</div>
-					) : message == "accepted" ? (
+					) : store.message == "accepted" ? (
 						<div className="border border-success border-5 rounded-3 p-3">
 							<p>ACCEPTED!</p>
 							<p>
@@ -40,7 +38,7 @@ export const ClientHomePage = () => {
 								954 785 632 for further information.
 							</p>
 						</div>
-					) : message == "completed" ? (
+					) : store.message == "completed" ? (
 						<div className="border border-primary border-5 rounded-3 p-3">
 							<p>COMPLETED!</p>
 							<p>Your request has been completed</p>

@@ -4,7 +4,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 			backEndUrl: "https://3001-tan-dormouse-oaktk9if.ws-us21.gitpod.io",
 			loggedin: "",
 			loggedUser: {},
-			ratings: [],
+			message: "empty",
 			listOfVehicles: [],
 			listOfRequests: [],
 			pushRequestInfo: []
@@ -47,7 +47,7 @@ const getState = ({ getStore, getActions, setStore }) => {
 					client_name: getStore().loggedUser.full_name,
 					client_phone: getStore().loggedUser.phone
 				};
-				console.log(myNewRequest);
+
 				fetch(`${getStore().backEndUrl}/api/request`, {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
@@ -58,7 +58,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 					.catch(err => console.error("Error:", err));
 			},
 			addVehicle: myNewVehicle => {
-				console.log("new vehicle");
 				fetch(`${getStore().backEndUrl}/api/vehicle`, {
 					method: "POST",
 					headers: { "Content-Type": "application/json" },
@@ -97,6 +96,10 @@ const getState = ({ getStore, getActions, setStore }) => {
 				let favoriteRequest = getStore().pushRequestInfo;
 				favoriteRequest = favoriteRequest.filter(item => minus !== item);
 				setStore({ pushRequestInfo: favoriteRequest });
+			},
+
+			changeMessage: newMessage => {
+				setStore({ message: newMessage });
 			},
 
 			filterByZip: zip => {

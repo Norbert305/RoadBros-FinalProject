@@ -100,6 +100,7 @@ export const ServiceMenu = () => {
 					className="btn btn-warning btn-lg m-3"
 					onClick={() => {
 						actions.addRequest(newVehicle, newService, newZipCode);
+						actions.changeMessage("pending");
 					}}>
 					Send Request
 				</button>
