@@ -7,7 +7,7 @@ import "../component/contactForm";
 export const ClientHomePage = () => {
 	const { store, actions } = useContext(Context);
 
-	let message = "empty";
+	const [message, setMessage] = useState("empty");
 
 	return (
 		<div className="container py-4 px-3 text-center text-light fs-4 mt-3">
@@ -18,13 +18,13 @@ export const ClientHomePage = () => {
 				</Link>
 				<div
 					className="col-9 bg-light text-dark p-3 rounded-3"
-					onClick={
+					onClick={() =>
 						message == "empty"
-							? () => message == "pending"
+							? setMessage("pending")
 							: message == "pending"
-								? () => message == "accepted"
+								? setMessage("accepted")
 								: message == "accepted"
-									? () => message == "completed"
+									? setMessage("completed")
 									: null
 					}>
 					{message == "pending" ? (
