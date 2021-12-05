@@ -104,7 +104,7 @@ export const TruckerServiceHistory = () => {
 						<strong>Vehicle:</strong> Hyper Ferrari 450 2020 Red NSF305
 					</p>
 					<p className="mx-2 m-1 text-start">
-						<strong>Service:</strong>  Empty Gas, Flat Tire
+						<strong>Service:</strong> Empty Gas, Flat Tire
 					</p>
 					<p className="mx-2 m-1 text-start">
 						<strong>Date:</strong> November 15, 2021
