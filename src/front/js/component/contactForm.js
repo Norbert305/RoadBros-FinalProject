@@ -1,6 +1,7 @@
 import React, { useRef, useState, setShow } from "react";
 import emailjs from "emailjs-com";
 import { Modal, Button } from "react-bootstrap";
+import { Link } from "react-router-dom";
 
 export const ContactUs = () => {
 	const form = useRef();
@@ -59,9 +60,11 @@ export const ContactUs = () => {
 			<Modal show={show} onHide={handleClose} backdrop="static" keyboard={false} centered className="text-center">
 				<Modal.Body>Thanks for submiting your message, a representative will contact you shortly</Modal.Body>
 				<Modal.Footer>
-					<Button to="/ClientHomePage" className="m-auto" variant="warning" onClick={handleClose}>
-						Close
-					</Button>
+					<Link to="/ClientHomePage" className="m-auto">
+						<Button variant="warning" onClick={handleClose}>
+							Close
+						</Button>
+					</Link>
 				</Modal.Footer>
 			</Modal>
 		</form>
