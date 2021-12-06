@@ -13,8 +13,7 @@ import { NavbarTrucker } from "./component/NavbarTrucker";
 
 //Main Home Page
 import { SignUpPage } from "./pages/SignUpPage";
-import { ClientLoginPage } from "./pages/ClientLoginPage";
-import { TruckerLoginPage } from "./pages/TruckerLoginPage";
+import { LoginPage } from "./pages/LoginPage";
 
 //Client Pages
 import { ClientContactUs } from "./pages/ClientContactUs";
@@ -50,8 +49,6 @@ const Layout = () => {
 
 	const { store, actions } = useContext(Context);
 
-	const [userLogin, setUserLogin] = useState("");
-
 	return (
 		<div>
 			<BrowserRouter basename={basename}>
@@ -63,8 +60,8 @@ const Layout = () => {
 						<Route exact path="/SignUpPage">
 							<SignUpPage />
 						</Route>
-						<Route exact path="/ClientLoginPage" setUserLogin={setUserLogin}>
-							<ClientLoginPage />
+						<Route exact path="/LoginPage">
+							<LoginPage />
 						</Route>
 						<Route exact path="/ClientPayment">
 							<NavbarClient />
@@ -111,9 +108,6 @@ const Layout = () => {
 							<RatingPage />
 						</Route>
 
-						<Route exact path="/TruckerLoginPage" setUserLogin={setUserLogin}>
-							<TruckerLoginPage />
-						</Route>
 						<Route exact path="/TruckerPayment">
 							<NavbarTrucker />
 							<TruckerPayment />

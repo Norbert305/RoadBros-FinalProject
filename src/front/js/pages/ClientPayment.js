@@ -33,12 +33,9 @@ export const ClientPayment = () => {
 					</div>
 					<div className="form-group my-1">
 						<label>Country or Region</label>
-						<select id="inputState" className="form-select my-1 shadow-sm">
-							<option selected>United States</option>
-							<option>Puerto Rico</option>
-							<option>Colombia</option>
-							<option>Venezuela</option>
-						</select>
+						<input type="text" className="form-control shadow-sm" placeholder="Country" name="country" />
+					</div>
+					<div className="form-group my-1">
 						<input type="phone" className="form-control shadow-sm" placeholder="ZIP" name="zip" />
 					</div>
 					<div className="form-group my-1">

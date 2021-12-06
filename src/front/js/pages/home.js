@@ -85,15 +85,9 @@ export const Home = () => {
 								<p>Already memeber? You can sign as...</p>
 							</div>
 							<div>
-								<Link to="/ClientLoginPage">
-									<button type="button" id="client-btn" className="btn btn-warning btn-lg ">
-										Client
-									</button>
-								</Link>
-								<hr />
-								<Link to="/TruckerLoginPage">
+								<Link to="/LoginPage">
 									<button type="button" id="trucker-btn" className="btn btn-warning btn-lg mb-5">
-										Trucker
+										Sign In
 									</button>
 								</Link>
 							</div>

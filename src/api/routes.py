@@ -51,6 +51,20 @@ def add_new_user():
     all_users = list(map(lambda x: x.serialize(), users_query))
     return jsonify(all_users), 200
 
+#User Login (can be used as valid login just in case)
+@api.route('/login', methods=['POST'])
+def user_login():
+
+    body = request.get_json()
+
+    user = User.query.filter_by(email = body["email"], password = body["password"]).first()
+
+    if user == None:
+        return "email or password is incorrect", 400
+    return jsonify(
+        user.serialize()
+    ), 200
+
 #Adding a new vehicle
 @api.route('/vehicle', methods=['POST'])
 def add_vehicle():
@@ -191,20 +205,6 @@ def delete_request(id):
     vehicles_query = Vehicle.query.all()
     all_vehicles = list(map(lambda x: x.serialize(), vehicles_query))
     return jsonify(all_vehicles), 200
-
-#User Login (can be used as valid login just in case)
-#@api.route('/login', methods=['POST'])
-#def user_login():
-
-#   body = request.get_json()
-
-#    user = User.query.filter_by(email = body["email"], password = body["password"]).first()
-
-#    if user == None:
-#        return "email or password is incorrect", 400
-#    return jsonify(
-#        user.serialize()
-#    ), 200
 
 #Completed requests for Trucker Service History
 #@api.route('/completed_request', methods=['GET'])
