@@ -5,15 +5,19 @@ import { Context } from "../store/appContext";
 
 export const StripeCheckoutButton = ({ price }) => {
 	const { store, actions } = useContext(Context);
+
+	let [showModal, setShowModal] = useState(false);
+
 	const priceForStripe = price * 100;
 	const publishableKey =
 		"pk_test_51HlwtjGXJZUgwlNSdeEBhg8W2knXeFgTLf83YAoD0wRerIEtSBKgIHLHtSCo3JmVlMx81p8SYVGnDModssRkqVSW00LZavL8Xf";
 
 	const onToken = token => {
 		console.log(token);
-		alert("Payment Successful");
+		alert("Payment Succesful");
 		actions.changeMessage("empty");
 	};
+
 	return (
 		<StripeCheckout
 			label="Pay Trucker"
