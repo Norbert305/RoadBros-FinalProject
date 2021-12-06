@@ -1,8 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			backEndUrl: "https://3001-red-fox-ulx9lx1n.ws-us21.gitpod.io",
-			loggedin: "",
+			backEndUrl: "https://3001-bronze-armadillo-49pd8gow.ws-us21.gitpod.io",
 			loggedUser: {},
 			message: "empty",
 			listOfVehicles: [],
@@ -20,12 +19,6 @@ const getState = ({ getStore, getActions, setStore }) => {
 				fetch(`${getStore().backEndUrl}/api/request`)
 					.then(response => response.json())
 					.then(data => setStore({ listOfRequests: data }))
-					.catch(err => console.error("Error:", err));
-			},
-			getUser: () => {
-				fetch(`${getStore().backEndUrl}/api/user/1`)
-					.then(response => response.json())
-					.then(data => setStore({ loggedUser: data }))
 					.catch(err => console.error("Error:", err));
 			},
 			updateProfile: updatedProfile => {
@@ -78,10 +71,11 @@ const getState = ({ getStore, getActions, setStore }) => {
 			changeUserType: type => {
 				setStore({ userLogin: type });
 			},
-			login: email => {
-				setStore({ loggedin: email });
-				getActions().getUser();
+
+			updateUser: loginInfo => {
+				setStore({ loggedUser: loginInfo });
 			},
+
 			logout: () => setStore({ loggedUser: null }),
 
 			pushRequest: add => {
