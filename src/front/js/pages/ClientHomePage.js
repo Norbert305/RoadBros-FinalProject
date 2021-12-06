@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
 import { Context } from "../store/appContext";
+import { StripeCheckoutButton } from "../component/stripe-button";
 import "../../styles/demo.scss";
 import "../component/contactForm";
 
@@ -34,7 +35,7 @@ export const ClientHomePage = () => {
 						<div className="border border-success border-5 rounded-3 p-3">
 							<p>ACCEPTED!</p>
 							<p>
-								Your request has been accepted by trucker Rafel Pomares, please contact your trucker at
+								Your request has been accepted by trucker Rafael Pomares, please contact your trucker at
 								954 785 632 for further information.
 							</p>
 						</div>
@@ -45,6 +46,7 @@ export const ClientHomePage = () => {
 							<Link to="/RatingPage">
 								<button className="btn btn-danger m-auto my-2">Rate Trucker</button>
 							</Link>
+							<StripeCheckoutButton price={150} />
 						</div>
 					) : (
 						<div className="rounded-3 p-3">
