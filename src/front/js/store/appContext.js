@@ -22,7 +22,6 @@ const injectContext = PassedComponent => {
 		);
 
 		useEffect(() => {
-			state.actions.getVehicles(1);
 			state.actions.getRequests();
 		}, []);
 

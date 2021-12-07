@@ -193,7 +193,7 @@ def change_profile(id):
 
 #Delete vehicle
 @api.route('/vehicle/<id>', methods=['DELETE'])
-def delete_request(id):
+def delete_vehicle(id):
 
     body = request.get_json()
     
@@ -205,6 +205,21 @@ def delete_request(id):
     vehicles_query = Vehicle.query.all()
     all_vehicles = list(map(lambda x: x.serialize(), vehicles_query))
     return jsonify(all_vehicles), 200
+
+#Delete request
+@api.route('/request/<id>', methods=['DELETE'])
+def delete_request(id):
+    
+    my_request =  Request.query.get(id)
+
+    body = request.get_json()
+
+    db.session.delete(my_request)
+    db.session.commit()
+
+    requests_query = Request.query.all()
+    all_requests = list(map(lambda x: x.serialize(), requests_query))
+    return jsonify(all_requests), 200
 
 #Completed requests for Trucker Service History
 #@api.route('/completed_request', methods=['GET'])

@@ -38,21 +38,20 @@ export const ManagingService = () => {
 											<strong>Service:</strong> {item.service}
 										</p>
 										<p className="mx-2 m-1 mb-3 text-start">
-											<button
-												type="button"
-												className="btn btn-danger"
-												onClick={() => actions.deleteRequest(item)}>
-												Remove
-											</button>
+											<Link to="/TruckerHomePage">
+												<button
+													type="button"
+													className="btn btn-danger"
+													onClick={() => actions.deleteRequest(item.id)}>
+													End Service
+												</button>
+											</Link>
 										</p>
 									</li>
 								);
 							})}
 						</div>
 					</div>
-					<Link to="/TruckerHomePage">
-						<button className="btn btn-warning btn-lg p-2 m-3">End Service</button>
-					</Link>
 				</div>
 			</ul>
 		</div>

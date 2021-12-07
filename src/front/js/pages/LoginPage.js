@@ -26,6 +26,7 @@ export const LoginPage = props => {
 		})
 			.then(response => response.json())
 			.then(data => {
+				console.log(data);
 				setValid({ state: true, type: data.user_type });
 				actions.updateUser(data);
 			})

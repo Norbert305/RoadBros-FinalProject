@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			backEndUrl: "https://3001-beige-dolphin-vo75obv0.ws-us21.gitpod.io",
+			backEndUrl: process.env.BACKEND_URL,
 			loggedUser: {},
 			message: "empty",
 			listOfVehicles: [],
@@ -86,10 +86,13 @@ const getState = ({ getStore, getActions, setStore }) => {
 				}
 			},
 
-			deleteRequest: minus => {
-				let favoriteRequest = getStore().pushRequestInfo;
-				favoriteRequest = favoriteRequest.filter(item => minus !== item);
-				setStore({ pushRequestInfo: favoriteRequest });
+			deleteRequest: id => {
+				fetch(`${getStore().backEndUrl}/api/request/${id}`, {
+					method: "DELETE"
+				})
+					.then(response => response.json())
+					.then(data => setStore({ listOfRequests: data }))
+					.catch(err => console.error("Error:", err));
 			},
 
 			changeMessage: newMessage => {
@@ -106,3 +109,5 @@ const getState = ({ getStore, getActions, setStore }) => {
 };
 
 export default getState;
+
+/*echo "BACKEND_URL=https://3001-${GITPOD_WORKSPACE_URL:8}" >> .env*/
