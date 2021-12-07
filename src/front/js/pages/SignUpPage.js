@@ -185,9 +185,7 @@ export const SignUpPage = () => {
 						</div>
 					</form>
 					<Link to="/TruckerLoginPage">
-						<button /*Previously, we had addRequest instead of createUser*/
-							className="btn btn-warning btn-lg col-4 p-2 mt-3 mb-5"
-							onClick={() => addUser(newUser)}>
+						<button className="btn btn-warning btn-lg col-4 p-2 mt-3 mb-5" onClick={() => addUser(newUser)}>
 							Save
 						</button>
 					</Link>

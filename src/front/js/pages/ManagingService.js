@@ -50,13 +50,11 @@ export const ManagingService = () => {
 							})}
 						</div>
 					</div>
+					<Link to="/TruckerHomePage">
+						<button className="btn btn-warning btn-lg p-2 m-3">End Service</button>
+					</Link>
 				</div>
-				<button className="btn btn-warning btn-lg p-2 m-3">Start Service</button>
-				<br />
 			</ul>
-			<Link to="/TruckerHomePage">
-				<button className="btn btn-warning btn-lg p-2 m-3">End Service</button>
-			</Link>
 		</div>
 	);
 };

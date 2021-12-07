@@ -11,7 +11,7 @@ export const Home = () => {
 
 	return (
 		<div className="bg-transparent">
-			<nav className="navbar navbar-expand-lg navbar-dark shadow-5-strong ">
+			<nav className="navbar navbar-expand-lg navbar-dark shadow-5-strong">
 				<div className="container-fluid ">
 					<button
 						id="menu-btn"
