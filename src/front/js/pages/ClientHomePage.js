@@ -44,9 +44,13 @@ export const ClientHomePage = () => {
 							<p>COMPLETED!</p>
 							<p>Your request has been completed</p>
 							<Link to="/RatingPage">
-								<button className="btn btn-danger m-auto my-2">Rate Trucker</button>
+								<button className="btn btn-danger m-auto p-1 mt-2 me-3 fs-6 fw-bolder">
+									Rate Trucker
+								</button>
 							</Link>
-							<StripeCheckoutButton price={150} />
+							<div className="d-inline-flex mt-2">
+								<StripeCheckoutButton price={150} />
+							</div>
 						</div>
 					) : (
 						<div className="rounded-3 p-3">
@@ -60,7 +64,6 @@ export const ClientHomePage = () => {
 				<Link to="/VehiclesList">
 					<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Vehicles List</button>
 				</Link>
-
 				<Link to="/ServiceHistory">
 					<button className="btn btn-warning btn-lg w-75 m-auto my-3">Service History</button>
 				</Link>
@@ -74,18 +77,3 @@ export const ClientHomePage = () => {
 		</div>
 	);
 };
-
-/*
-<div
-						onClick={() =>
-							({ message } == "No active request at the time"
-								? setMessage(`Congratulations! Your request has been accepted by trucker Rafel Pomares, please contact your trucker at
-							954 785 632 for further information.`)
-								: setMessage(`Congratulations! your request has been completed, please rate your trucker by clicking this button
-							${(
-								<Link to="/RatingPage">
-									<button className="btn btn-warning btn-lg p-2 m-3">Rate Your Trucker</button>
-								</Link>
-							)}`))
-						}
-					/> */

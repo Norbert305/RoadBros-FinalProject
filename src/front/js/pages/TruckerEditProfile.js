@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from "react";
 import { Link } from "react-router-dom";
-
+import { PropTypes } from "prop-types";
 import { Context } from "../store/appContext";
 
 import "../../styles/demo.scss";
@@ -11,14 +11,13 @@ export const TruckerEditProfile = () => {
 	const [updatedUser, setUpdatedUser] = useState({
 		full_name: store.loggedUser.full_name,
 		email: store.loggedUser.email,
-		phone: store.loggedUser.phone,
-		zip_code: store.loggedUser.zip_code
+		phone: store.loggedUser.phone
 	});
 
 	const handleChange = e => setUpdatedUser({ ...updatedUser, [e.target.name]: e.target.value });
 
 	return (
-		<div className="container py-4 px-3 text-center text-light fs-4 mt-3">
+		<div className="container py-4 px-3 text-center text-light fs-4 my-3">
 			<h1 className="text-center my-5">User Information</h1>
 
 			<h2>Change your information on the fields below</h2>
@@ -57,19 +56,8 @@ export const TruckerEditProfile = () => {
 						value={updatedUser.phone}
 					/>
 				</div>
-				<div className="form-group my-1">
-					<label>Zip Code</label>
-					<input
-						type="text"
-						className="form-control"
-						placeholder="Edit zip code"
-						name="zip_code"
-						onChange={handleChange}
-						value={updatedUser.zip_code}
-					/>
-				</div>
 			</form>
-			<Link to="/TruckerProfile">
+			<Link to="/ClientProfile">
 				<button
 					className="btn btn-warning btn-lg p-2 w-75 m-auto my-3"
 					onClick={() => {
@@ -77,12 +65,6 @@ export const TruckerEditProfile = () => {
 					}}>
 					Save Changes
 				</button>
-			</Link>
-			<Link to="/TruckerProfile">
-				<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Back to Profile</button>
-			</Link>
-			<Link to="/TruckerHomePage">
-				<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Back to Home</button>
 			</Link>
 		</div>
 	);

@@ -17,7 +17,6 @@ import { LoginPage } from "./pages/LoginPage";
 
 //Client Pages
 import { ClientContactUs } from "./pages/ClientContactUs";
-import { ClientPayment } from "./pages/ClientPayment";
 import { AddVehicles } from "./pages/AddVehicles";
 import { ClientHomePage } from "./pages/ClientHomePage";
 import { ClientProfile } from "./pages/ClientProfile";
@@ -31,7 +30,6 @@ import { RatingPage } from "./pages/RatingPage";
 
 //Trucker Pages
 import { TruckerContactUs } from "./pages/TruckerContactUs";
-import { TruckerPayment } from "./pages/TruckerPayment";
 import { TruckerHomePage } from "./pages/TruckerHomePage";
 import { TruckerProfile } from "./pages/TruckerProfile";
 import { TruckerEditProfile } from "./pages/TruckerEditProfile";
@@ -62,10 +60,6 @@ const Layout = () => {
 						</Route>
 						<Route exact path="/LoginPage">
 							<LoginPage />
-						</Route>
-						<Route exact path="/ClientPayment">
-							<NavbarClient />
-							<ClientPayment />
 						</Route>
 						<Route exact path="/AddVehicles">
 							<NavbarClient />
@@ -108,10 +102,6 @@ const Layout = () => {
 							<RatingPage />
 						</Route>
 
-						<Route exact path="/TruckerPayment">
-							<NavbarTrucker />
-							<TruckerPayment />
-						</Route>
 						<Route exact path="/TruckerHomePage">
 							<NavbarTrucker />
 							<TruckerHomePage />

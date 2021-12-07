@@ -29,18 +29,11 @@ export const TruckerProfile = () => {
 						<strong>Phone: </strong>
 						{store.loggedUser.phone}
 					</h5>
-					<h5>
-						<strong>Zip Code: </strong>
-						{store.loggedUser.zip_code}
-					</h5>
 				</div>
 			</div>
 			<div className="row my-3 d-flex flex-column justify-content-center">
 				<Link to="/TruckerEditProfile">
 					<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Edit Profile</button>
-				</Link>
-				<Link to="/TruckerPayment">
-					<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Payment Information</button>
 				</Link>
 				<Link to="/RequestsList">
 					<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Requests List</button>

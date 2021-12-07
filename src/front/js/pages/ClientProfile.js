@@ -39,9 +39,6 @@ export const ClientProfile = () => {
 				<Link to="/ClientEditProfile">
 					<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Edit Profile</button>
 				</Link>
-				<Link to="/ClientPayment">
-					<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Payment Information</button>
-				</Link>
 				<Link to="/VehiclesList">
 					<button className="btn btn-warning btn-lg p-2 w-75 m-auto my-3">Vehicles List</button>
 				</Link>

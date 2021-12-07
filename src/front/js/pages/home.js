@@ -82,7 +82,7 @@ export const Home = () => {
 					<div className="card">
 						<div className=" card-body text-center">
 							<div>
-								<p>Already memeber? You can sign as...</p>
+								<p>Already memeber?</p> <p>Sign in below!</p>
 							</div>
 							<div>
 								<Link to="/LoginPage">
