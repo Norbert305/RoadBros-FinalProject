@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			backEndUrl: process.env.BACKEND_URL,
+			backEndUrl: "https://3001-coral-pelican-4t0w2ve2.ws-us21.gitpod.io",
 			loggedUser: {},
 			message: "empty",
 			listOfVehicles: [],
@@ -111,3 +111,5 @@ const getState = ({ getStore, getActions, setStore }) => {
 export default getState;
 
 /*echo "BACKEND_URL=https://3001-${GITPOD_WORKSPACE_URL:8}" >> .env*/
+
+//process.env.BACKEND_URL
