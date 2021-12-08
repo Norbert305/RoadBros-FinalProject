@@ -13,7 +13,7 @@ export const ClientProfile = () => {
 			<h1 className="text-center my-5">Profile</h1>
 
 			<div className="row d-flex justify-content-center mb-3">
-				<div className="col mx-4 text-start">
+				<div className="col mx-4 text-start bg-dark bg-opacity-75 shadow-lg p-3">
 					<h3 className="text-center">
 						<strong>User Information</strong>
 					</h3>

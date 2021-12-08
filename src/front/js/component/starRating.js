@@ -28,7 +28,7 @@ export function StarRating() {
 					</>
 				);
 			})}
-			<p className="mt-5">Your Rating is {rating} Stars.</p>
+			<p className="mt-4 fs-5">Your Rating is {rating} Stars</p>
 		</div>
 	);
 }
