@@ -1,7 +1,7 @@
 const getState = ({ getStore, getActions, setStore }) => {
 	return {
 		store: {
-			backEndUrl: "https://3001-coral-pelican-4t0w2ve2.ws-us21.gitpod.io",
+			backEndUrl: process.env.BACKEND_URL,
 			loggedUser: {},
 			message: "empty",
 			listOfVehicles: [],
