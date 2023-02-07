@@ -1,7 +1,6 @@
 # WebApp boilerplate with React JS and Flask API
 
 <h1>Oh yah. Please fork and then test out before use. Thank You!!!!!</h1>
-<br/>
 <h1>Hello Everyone!!!</h1>
 <p></p>
 <h3>prerequisites needed:</h3>
