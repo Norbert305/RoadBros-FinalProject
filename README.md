@@ -1,6 +1,7 @@
 # WebApp boilerplate with React JS and Flask API
 
-
+<h1>Oh yah. Please fork and then test out before use. Thank You!!!!!</h1>
+<br/>
 <h1>Hello Everyone!!!</h1>
 <p></p>
 <h3>prerequisites needed:</h3>
@@ -32,7 +33,11 @@ To Access in the browser please use commands in terminal:
 <p></p>
 <p></p>
 <p></p>
+<p>In the Right terminal. Forgot there was 2 terminals lol 😅</p>
 <p></p>
+<p>pipenv run migrate</p>
+<p>pipenv run upgrade</p>
+<p>pipenv run start</p>
 
 
 
