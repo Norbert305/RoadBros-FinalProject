@@ -1,4 +1,46 @@
 # WebApp boilerplate with React JS and Flask API
+
+
+<h1>Hello Everyone!!!</h1>
+<p></p>
+<h3>prerequisites needed:</h3>
+<p></p>
+Download Gitpod Chrome Extension: https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki
+<p></p>
+<strong>Dont forget to refresh repo after you install.</strong>
+<p></p>
+Open Project by clicking on the Green GitPod Button
+<p></p>
+<p></p>
+<p></p>
+
+![image](https://user-images.githubusercontent.com/83515541/217136142-82669610-21cf-4e66-be02-2f3b2c49d3bb.png)
+
+To Access in the browser please use commands in terminal: 
+<br/>
+<p>$rm -rf node_modules</p>
+<p>$nvm install 14</p>
+<p>$npm install</p>
+<p>$cp ./.env.example ./.env</p>
+<p>$ echo "BACKEND_URL=https://3001-${GITPOD_WORKSPACE_URL:8}" >> .env</p>
+<p>$npm run start</p>
+<p></p>
+<p></p>
+<p></p>
+<strong>Not a command :) I will currently work on deployment when the time comes.</strong>
+<p></p>
+<p></p>
+<p></p>
+<p></p>
+
+
+
+
+
+
+
+
+
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io#https://github.com/4GeeksAcademy/react-flask-hello.git)
 
 <p align="center">
