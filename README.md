@@ -17,6 +17,7 @@ Open Project by clicking on the Green GitPod Button
 ![image](https://user-images.githubusercontent.com/83515541/217136142-82669610-21cf-4e66-be02-2f3b2c49d3bb.png)
 
 To Access in the browser please use commands in terminal: 
+<strong>Please copy paste without the $$ dollar sign</strong>
 <br/>
 <p>$rm -rf node_modules</p>
 <p>$nvm install 14</p>
