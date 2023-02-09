@@ -25,7 +25,7 @@ To Access in the browser please use commands in terminal:
 <p>$cp ./.env.example ./.env</p>
 <p>$ echo "BACKEND_URL=https://3001-${GITPOD_WORKSPACE_URL:8}" >> .env</p>
 <p>$npm run start</p>
-<p></p>
+<p>npm install react-stripe-checkout</p>
 <p></p>
 <p></p>
 <strong>Not a command :) I will currently work on deployment when the time comes.</strong>
