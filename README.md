@@ -1,4 +1,13 @@
-# WebApp boilerplate with React JS and Flask API
+
+
+# <a href="https://4geeksacademy.com/us/index">4Geeks Academy_</a>Class of 2021
+<h1>Creators</h1>
+<ul>
+<li><a href="https://www.linkedin.com/in/paola-sanchez98/">Paola Sanchez</a></li>
+<li><a href="https://www.linkedin.com/in/norbert-seals/">Norbert Seals</a></li>
+<li><a href="https://www.linkedin.com/in/rafa-morejon-85533a150/">Rafa Morejon </a></li>
+</ul>
+# RoadBros: Roadside Assistance WebApp boilerplate with React JS, Flask API, SQL Alchamey, and Bootstrap. Create an account, add/delete a vehicle, create a roadside assistance request, and pay with fake stripe!!
 
 <h1>Oh yah. Please fork and then test out before use. Thank You!!!!!</h1>
 <h1>Hello Everyone!!!</h1>
