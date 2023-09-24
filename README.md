@@ -1,3 +1,17 @@
+# Welcome to Road-Bros ** The Roadside Assistance Web Application
+
+
+![image](https://github.com/Norbert305/RoadBros-FinalProject/assets/83515541/b407500a-06da-4c33-a42e-0db7ca2573ec)
+![image](https://github.com/Norbert305/RoadBros-FinalProject/assets/83515541/346c165c-93da-4b18-9675-1d42678a7540)
+![image](https://github.com/Norbert305/RoadBros-FinalProject/assets/83515541/1e05d64e-e927-4bcc-9a9a-98268035d152)
+
+
+
+<a href="https://medium.com/strategio/my-final-fullstack-application-project-on-the-road-we-go-welcome-to-roadbros-f86858c74703">Read Road Bros-Blog Here</a>
+
+
+
+
 
 
 # <a href="https://4geeksacademy.com/us/index">4Geeks Academy_</a>Class of 2021
@@ -9,14 +23,14 @@
 </ul>
 # RoadBros: Roadside Assistance WebApp boilerplate with React JS, Flask API, SQL Alchamey, and Bootstrap. Create an account, add/delete a vehicle, create a roadside assistance request, and pay with fake stripe!!
 
-<h1>Oh yah. Please fork and then test out before use. Thank You!!!!!</h1>
+<h1>Oh yeah. Please fork and then test it out before use. Thank You!!!!!</h1>
 <h1>Hello Everyone!!!</h1>
 <p></p>
 <h3>prerequisites needed:</h3>
 <p></p>
 Download Gitpod Chrome Extension: https://chrome.google.com/webstore/detail/gitpod-always-ready-to-co/dodmmooeoklaejobgleioelladacbeki
 <p></p>
-<strong>Dont forget to refresh repo after you install.</strong>
+<strong> Don't forget to refresh the repo after you install.</strong>
 <p></p>
 Open Project by clicking on the Green GitPod Button
 <p></p>
@@ -25,7 +39,7 @@ Open Project by clicking on the Green GitPod Button
 
 ![image](https://user-images.githubusercontent.com/83515541/217136142-82669610-21cf-4e66-be02-2f3b2c49d3bb.png)
 
-To Access in the browser please use commands in terminal: 
+To Access the browser please use the commands in the terminal: 
 <strong>Please copy paste without the $$ dollar sign</strong>
 <br/>
 <p>$rm -rf node_modules</p>
@@ -41,11 +55,13 @@ To Access in the browser please use commands in terminal:
 <p></p>
 <p></p>
 <p></p>
-<p>In the Right terminal. Forgot there was 2 terminals lol 😅</p>
+<p>In the Right terminal. Forgot there were 2 terminals lol 😅</p>
 <p></p>
 <p>pipenv run migrate</p>
 <p>pipenv run upgrade</p>
 <p>pipenv run start</p>
+
+
 
 
 
